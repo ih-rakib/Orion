@@ -19,7 +19,11 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install
+      - name: Check TypeScript
+        run: npm run typecheck
+      - name: Test content integrity
+        run: npm test
       - name: Lint
         run: npm run lint
-      - name: Build
+      - name: Production build
         run: npm run build
