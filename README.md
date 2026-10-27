@@ -4,7 +4,7 @@
 
 Orion is an evolving knowledge platform built to explore the cosmos and the connections between it and our own world. From planets, stars, galaxies, and black holes to Earth's oceans, the history of life, ancient worlds, and the future of science, Orion is designed to keep growing as new questions and discoveries emerge.
 
-This is a long-term project. Its architecture is being designed so that new subjects can be added over time without rebuilding the website for every topic.
+This is a long-term project. Its architecture is designed so new subjects can be added over time without rebuilding the website for every topic.
 
 ## Vision
 
@@ -27,8 +27,6 @@ These are starting points, not limits. The platform should be able to accommodat
 
 ## Technology
 
-The initial foundation is planned around:
-
 - **Next.js and React** for the web application and reusable, dynamic pages.
 - **TypeScript** for safer, maintainable code.
 - **Tailwind CSS** for a responsive, consistent interface.
@@ -37,6 +35,25 @@ The initial foundation is planned around:
 - **GitHub** for source control and **Vercel** for deployment.
 
 Technology choices can evolve as the project's needs become clearer. The priority is a maintainable platform, not complexity for its own sake.
+
+## Current foundation
+
+The initial version includes a responsive homepage, six subject categories, a searchable and filterable knowledge library, reusable subject detail pages, related-subject navigation, page metadata, a custom favicon, and a custom not-found page. The first subjects are starter content, not a complete or fully sourced encyclopedia.
+
+Planned future directions include source-backed articles, timelines, richer media, interactive visualizations, structured content management, scientific data integrations, and contributor tools.
+
+## Run locally
+
+Requirements: Node.js 20.9 or newer.
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+Before a production deployment, set `NEXT_PUBLIC_SITE_URL` to the canonical public URL so the generated sitemap uses the correct domain.
 
 ## Guiding principles
 
@@ -47,13 +64,9 @@ Technology choices can evolve as the project's needs become clearer. The priorit
 5. **Build for the long term.** Prefer reusable systems and documented decisions over one-off solutions.
 6. **Respect the reader.** Keep explanations clear and make sources discoverable.
 
-## Development
+## Project status
 
-Orion is being built in stages. The first milestone is a responsive web foundation with navigation, a subject library, reusable subject pages, and an initial set of carefully presented topics. Search, a structured content system, timelines, rich media, interactive visualizations, and contribution tools can be introduced as the platform matures.
-
-## Status
-
-The project is at its foundation stage. Planned capabilities are not presented as completed features; the README and implementation will evolve alongside the platform.
+Orion is at its foundation stage. Planned capabilities are not presented as completed features; the README and implementation will evolve alongside the platform.
 
 ---
 
