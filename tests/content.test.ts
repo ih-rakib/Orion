@@ -31,7 +31,11 @@ test("category subject counts match the content model",()=>{
   }
 });
 
-test("current starter library contains subjects across the intended areas",()=>{
+test("each starter subject has the content required for a readable page",()=>{
   assert.ok(subjects.length>=12,"Keep a meaningful starter set in the library");
-  assert.deepEqual(new Set(subjects.map(subject=>subject.category)),new Set(categories.map(category=>category.name).filter(name=>subjects.some(subject=>subject.category===name)));
+  for(const subject of subjects){
+    assert.ok(subject.summary.trim().length>0,`Missing summary for ${subject.title}`);
+    assert.ok(subject.description.trim().length>0,`Missing overview for ${subject.title}`);
+    assert.ok(subject.facts.length>0,`Missing facts for ${subject.title}`);
+  }
 });
