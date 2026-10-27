@@ -55,6 +55,19 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Before a production deployment, set `NEXT_PUBLIC_SITE_URL` to the canonical public URL so the generated sitemap uses the correct domain.
 
+## Quality checks
+
+Run the same core checks locally before publishing changes:
+
+```bash
+npm run typecheck
+npm test
+npm run lint
+npm run build
+```
+
+The content tests check that subject URLs are unique, category URLs resolve, every related-subject link points to an existing entry, and starter pages include the content fields they need. GitHub Actions is configured to run these checks on pushes to `master` and pull requests.
+
 ## Guiding principles
 
 1. **Curiosity first.** Make exploration intuitive and enjoyable.
