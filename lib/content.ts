@@ -18,3 +18,7 @@ export const subjects:Subject[]=[
 ];
 export function getSubject(slug:string){return subjects.find((subject)=>subject.slug===slug)}
 export function getRelatedSubjects(subject:Subject){return subject.related.map(getSubject).filter((item):item is Subject=>Boolean(item))}
+
+export function categorySlug(name:OrionCategory){return name.toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}
+export function getCategoryBySlug(slug:string){return categories.find((category)=>categorySlug(category.name)===slug)}
+export function getSubjectsByCategory(category:OrionCategory){return subjects.filter((subject)=>subject.category===category)}
