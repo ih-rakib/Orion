@@ -51,3 +51,11 @@ test("each starter subject has the content required for a readable page",()=>{
     assert.ok(subject.facts.length>0,`Missing facts for ${subject.title}`);
   }
 });
+
+test("the library spans space, Earth, life, human history, mathematics, and technology",()=>{
+  for(const slug of ["galaxies","exoplanets","climate-change","whales","human-origins","ancient-civilizations","mathematics","artificial-intelligence"]){
+    assert.ok(getSubject(slug),`Missing cross-disciplinary subject: ${slug}`);
+  }
+  assert.ok(categories.some(category=>category.name==="Technology & Engineering"));
+  assert.ok(categories.some(category=>category.name==="People & Culture"));
+});
