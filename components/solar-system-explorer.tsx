@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import { solarSystemObjects, solarSystemGroups } from "@/lib/solar-system";
 
@@ -21,7 +22,7 @@ export function SolarSystemExplorer() {
               onClick={() => setSelectedSlug(object.slug)}
               aria-pressed={selectedSlug === object.slug}
               aria-label={"Explore " + object.name}
-              style={{ "--object-color": object.color } as React.CSSProperties}
+              style={{ "--object-color": object.color } as CSSProperties}
             >
               <span className={"solar-object-orb orb-" + object.slug} aria-hidden="true">{object.symbol}</span>
               <span className="solar-object-name">{object.name}</span>
