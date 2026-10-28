@@ -233,6 +233,22 @@ export function SolarSystem3D() {
   const [selectedSlug, setSelectedSlug] = useState<SelectableSlug>("earth");
   const [paused, setPaused] = useState(false);
   const [selectedLandmark, setSelectedLandmark] = useState<string | null>(null);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const requestedObject = params.get("object");
+    const requestedLandmark = params.get("landmark");
+    if (requestedLandmark) {
+      const landmark = landmarks.find((item) => item.slug === requestedLandmark);
+      if (landmark) {
+        setSelectedSlug(landmark.parent);
+        setSelectedLandmark(landmark.slug);
+        return;
+      }
+    }
+    if (requestedObject && (bodies.some((body) => body.slug === requestedObject) || moons.some((moon) => moon.slug === requestedObject))) {
+      setSelectedSlug(requestedObject as SelectableSlug);
+    }
+  }, []);
   const selectedBody = bodies.find((body) => body.slug === selectedSlug) ?? moons.find((moon) => moon.slug === selectedSlug) ?? bodies[3];
   const object = solarSystemObjects.find((item) => item.slug === selectedSlug);
   const selectedMoon = moons.find((moon) => moon.slug === selectedSlug);
