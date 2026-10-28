@@ -237,17 +237,18 @@ export function SolarSystem3D() {
     const params = new URLSearchParams(window.location.search);
     const requestedObject = params.get("object");
     const requestedLandmark = params.get("landmark");
-    if (requestedLandmark) {
-      const landmark = landmarks.find((item) => item.slug === requestedLandmark);
+    const landmark = requestedLandmark ? landmarks.find((item) => item.slug === requestedLandmark) : undefined;
+    const validObject = requestedObject && (bodies.some((body) => body.slug === requestedObject) || moons.some((moon) => moon.slug === requestedObject));
+    if (!landmark && !validObject) return;
+    const frame = window.requestAnimationFrame(() => {
       if (landmark) {
         setSelectedSlug(landmark.parent);
         setSelectedLandmark(landmark.slug);
-        return;
+      } else if (requestedObject && validObject) {
+        setSelectedSlug(requestedObject as SelectableSlug);
       }
-    }
-    if (requestedObject && (bodies.some((body) => body.slug === requestedObject) || moons.some((moon) => moon.slug === requestedObject))) {
-      setSelectedSlug(requestedObject as SelectableSlug);
-    }
+    });
+    return () => window.cancelAnimationFrame(frame);
   }, []);
   const selectedBody = bodies.find((body) => body.slug === selectedSlug) ?? moons.find((moon) => moon.slug === selectedSlug) ?? bodies[3];
   const object = solarSystemObjects.find((item) => item.slug === selectedSlug);
