@@ -1,7 +1,7 @@
-import { categories, categorySlug, subjects } from "@/lib/content";
-import { solarSystemObjects } from "@/lib/solar-system";
-import { landmarks, moons } from "@/lib/solar-system-3d-data";
-import { timelineEvents } from "@/lib/timeline";
+import { categories, categorySlug, subjects } from "./content";
+import { solarSystemObjects } from "./solar-system";
+import { landmarks, moons } from "./solar-system-3d-data";
+import { timelineEvents } from "./timeline";
 
 export type SearchKind = "Subject" | "Timeline event" | "Solar System" | "Moon" | "Landmark" | "Collection" | "Page";
 export type SearchEntry = {
@@ -40,7 +40,7 @@ export const searchIndex: SearchEntry[] = [
     title: object.name,
     subtitle: `Solar System · ${object.kind}`,
     description: object.summary,
-    href: object.orionPath ?? "/solar-system",
+    href: object.orionPath ?? `/solar-system/3d?object=${object.slug}`,
     kind: "Solar System",
     keywords: [object.slug, object.group, object.kind, object.detail, object.fact, object.sourceTitle],
     featured: ["sun", "earth", "mars", "pluto", "moon"].includes(object.slug),
@@ -50,7 +50,7 @@ export const searchIndex: SearchEntry[] = [
     title: moon.label,
     subtitle: `3D Solar System · Moon of ${solarSystemObjects.find((object) => object.slug === moon.parent)?.name ?? moon.parent}`,
     description: moon.summary,
-    href: "/solar-system/3d",
+    href: `/solar-system/3d?object=${moon.slug}`,
     kind: "Moon",
     keywords: [moon.slug, moon.parent, moon.fact],
   })),
@@ -59,7 +59,7 @@ export const searchIndex: SearchEntry[] = [
     title: landmark.label,
     subtitle: `3D Solar System · Landmark on ${landmark.parent === "earth" ? "Earth" : "Mars"}`,
     description: landmark.summary,
-    href: "/solar-system/3d",
+    href: `/solar-system/3d?landmark=${landmark.slug}`,
     kind: "Landmark",
     keywords: [landmark.slug, landmark.parent, landmark.fact],
   })),
@@ -76,10 +76,13 @@ export const searchIndex: SearchEntry[] = [
   { id: "page:timeline", title: "Timeline of Everything", subtitle: "Page · Past, present and future", description: "Travel through cosmic history, Earth, life, humanity, and possible futures.", href: "/timeline", kind: "Page", keywords: ["history", "dates", "chronology", "events", "time"] },
   { id: "page:solar-system", title: "Solar System Explorer", subtitle: "Interactive explorer", description: "Explore the Sun, eight planets, Pluto, and Earth's Moon.", href: "/solar-system", kind: "Page", keywords: ["planets", "sun", "worlds", "moon", "space"] },
   { id: "page:solar-system-3d", title: "3D Solar System Explorer", subtitle: "Interactive 3D experience", description: "Explore planets, moons, and notable surface landmarks in a 3D scene.", href: "/solar-system/3d", kind: "Page", keywords: ["three dimensional", "3d", "planets", "moons", "landmarks", "interactive"] },
+  { id: "page:collections", title: "Explore collections", subtitle: "Page section · Browse by field", description: "Browse Orion’s knowledge collections across the cosmos, Solar System, Earth, life, history, and science.", href: "/#collections", kind: "Page", keywords: ["collections", "topics", "categories", "browse"] },
+  { id: "page:vision", title: "Our vision", subtitle: "Page section · Why Orion exists", description: "Discover Orion’s goal: a growing, connected atlas of the universe, life, time, and scientific discovery.", href: "/#about", kind: "Page", keywords: ["vision", "mission", "about", "purpose", "project"] },
+  { id: "page:creator", title: "Meet the creator", subtitle: "Page section · About the project builder", description: "Learn about the person building Orion and find professional links and contact details.", href: "/#creator", kind: "Page", keywords: ["creator", "author", "builder", "contact", "portfolio"] },
 ];
 
 function normalize(value: string): string {
-  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[’']/g, "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 }
 
 export function searchContent(query: string, limit = 8): SearchEntry[] {
