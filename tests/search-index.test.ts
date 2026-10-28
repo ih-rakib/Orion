@@ -37,3 +37,10 @@ test("global search returns useful popular suggestions when the query is empty",
 test("global search normalizes accents and punctuation", () => {
   assert.ok(searchContent("earths moon").some((entry) => entry.title === "Earth’s Moon"));
 });
+
+test("global search finds knowledge outside astronomy",()=>{
+  assert.ok(searchContent("whales ocean mammals").some((entry)=>entry.href==="/subjects/whales"));
+  assert.ok(searchContent("artificial intelligence machine learning").some((entry)=>entry.href==="/subjects/artificial-intelligence"));
+  assert.ok(searchContent("ancient civilizations history").some((entry)=>entry.href==="/subjects/ancient-civilizations"));
+  assert.ok(searchContent("technology engineering").some((entry)=>entry.kind==="Collection" && entry.title==="Technology & Engineering"));
+});
