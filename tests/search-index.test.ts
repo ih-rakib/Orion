@@ -11,6 +11,8 @@ test("global index covers subjects, timeline events, planets, moons, landmarks, 
 
 test("global search finds subjects by title and descriptive keywords", () => {
   assert.ok(searchContent("black holes").some((entry) => entry.href === "/subjects/black-holes"));
+  assert.ok(searchContent("creator").some((entry) => entry.href === "/#creator"));
+  assert.ok(searchContent("Europa").some((entry) => entry.href === "/solar-system/3d?object=europa"));
   assert.ok(searchContent("volcanic moon").some((entry) => entry.title === "Io"));
   assert.ok(searchContent("red planet").some((entry) => entry.href === "/subjects/mars" || entry.title === "Mars"));
 });
