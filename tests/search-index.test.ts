@@ -21,8 +21,8 @@ test("global search finds timeline events and links to their anchors", () => {
 });
 
 test("global search finds 3D moons and landmarks from shared content data", () => {
-  assert.ok(searchContent("Europa ocean").some((entry) => entry.kind === "Moon" && entry.title === "Europa"));
-  assert.ok(searchContent("Olympus Mons volcano").some((entry) => entry.kind === "Landmark"));
+  assert.ok(searchContent("Europa ocean").some((entry) => entry.kind === "Moon" && entry.title === "Europa" && entry.href === "/solar-system/3d?object=europa"));
+  assert.ok(searchContent("Olympus Mons volcano").some((entry) => entry.kind === "Landmark" && entry.href === "/solar-system/3d?landmark=olympus-mons"));
 });
 
 test("global search returns useful popular suggestions when the query is empty", () => {
