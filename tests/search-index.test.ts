@@ -3,9 +3,9 @@ import assert from "node:assert/strict";
 import { searchContent, searchIndex } from "../lib/search-index";
 
 test("global index covers subjects, timeline events, planets, moons, landmarks, and pages", () => {
-  const kinds = new Set(searchIndex.map((entry) => entry.kind));
+  const kinds = new Set<string>(searchIndex.map((entry) => entry.kind));
   for (const kind of ["Subject", "Timeline event", "Solar System", "Moon", "Landmark", "Collection", "Page"]) {
-    assert.ok(kinds.has(kind as never), `Missing search kind: ${kind}`);
+    assert.ok(kinds.has(kind), `Missing search kind: ${kind}`);
   }
 });
 
