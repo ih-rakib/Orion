@@ -22,7 +22,7 @@ export default function SolarSystemPage() {
       <div className="solar-system-stats"><div><strong>1</strong><span>star</span></div><div><strong>8</strong><span>planets</span></div><div><strong>∞</strong><span>questions</span></div></div>
     </section>
     <section className="solar-system-content">
-      <div className="solar-content-heading"><p className="eyebrow">CHOOSE YOUR DESTINATION</p><h2>Every world has a story.</h2><p>The Solar System formed about 4.6 billion years ago. It includes the Sun and everything bound to it by gravity. <a href="https://science.nasa.gov/solar-system/solar-system-facts/" target="_blank" rel="noopener noreferrer">NASA’s Solar System overview ↗</a></p></div>
+      <div className="solar-content-heading"><p className="eyebrow">CHOOSE YOUR DESTINATION</p><h2>Every world has a story.</h2><p>The Solar System formed about 4.6 billion years ago. It includes the Sun and everything bound to it by gravity. <a href="https://science.nasa.gov/solar-system/solar-system-facts/" target="_blank" rel="noopener noreferrer">NASA’s Solar System overview ↗</a></p><Link className="button-primary solar-launch-3d" href="/solar-system/3d">Launch the 3D explorer <span aria-hidden="true">↗</span></Link></div>
       <SolarSystemExplorer />
       <p className="solar-disclaimer">This is an educational schematic, not a real-time orbital simulation. Object sizes, positions and distances are not shown to scale. Content links to NASA resources for further reading.</p>
     </section>
