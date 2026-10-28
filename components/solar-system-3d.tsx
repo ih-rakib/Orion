@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -49,10 +49,85 @@ const landmarks = [
   { slug: "gale-crater", label: "Gale Crater", parent: "mars", lat: -5.4, lon: 137.8, color: "#f2c078", summary: "A large impact crater explored by NASA’s Curiosity rover to investigate ancient Martian environments.", fact: "Curiosity landed inside Gale Crater in August 2012.", sourceUrl: "https://science.nasa.gov/mission/msl-curiosity/" },
 ] as const;
 
+function createPlanetTexture(slug: string, baseColor: string) {
+  const width = 256;
+  const height = 128;
+  const data = new Uint8Array(width * height * 4);
+  const base = new THREE.Color(baseColor);
+  const hash = (x: number, y: number) => {
+    const n = Math.sin(x * 127.1 + y * 311.7 + slug.length * 74.7) * 43758.5453;
+    return n - Math.floor(n);
+  };
+  for (let y = 0; y < height; y++) {
+    const lat = (y / height - 0.5) * Math.PI;
+    for (let x = 0; x < width; x++) {
+      const lon = (x / width - 0.5) * Math.PI * 2;
+      const i = (y * width + x) * 4;
+      const broad = Math.sin(lon * 2.1 + Math.sin(lat * 3.2)) * Math.cos(lat * 2.8)
+        + Math.sin(lon * 4.4 - lat * 3.1) * 0.43
+        + Math.cos(lon * 7.1 + lat * 5.2) * 0.2;
+      const detail = (hash(x >> 1, y >> 1) - 0.5) * 0.22 + (hash(x, y) - 0.5) * 0.12;
+      let r = base.r, g = base.g, b = base.b;
+      if (slug === "earth") {
+        const land = broad + detail > 0.23;
+        if (Math.abs(lat) > 1.22) { r = 0.78; g = 0.84; b = 0.88; }
+        else if (land) {
+          const green = Math.sin(lat * 8 + lon * 2) + detail;
+          r = green > 0.75 ? 0.65 : 0.32 + detail;
+          g = green > 0.75 ? 0.58 : 0.39 + detail;
+          b = green > 0.75 ? 0.31 : 0.19 + detail;
+        } else {
+          const ocean = 0.78 + detail;
+          r = 0.025 * ocean; g = 0.16 * ocean; b = 0.48 * ocean;
+        }
+      } else if (slug === "mars") {
+        const crater = Math.sin(lon * 18 + Math.sin(lat * 11)) * Math.cos(lat * 22) > 0.82;
+        const shade = 0.75 + broad * 0.12 + detail;
+        r = crater ? 0.36 * shade : 0.72 * shade;
+        g = crater ? 0.20 * shade : 0.34 * shade;
+        b = crater ? 0.14 * shade : 0.24 * shade;
+      } else if (["jupiter", "saturn", "uranus", "neptune"].includes(slug)) {
+        const bands = 0.72 + 0.25 * Math.sin(lat * (slug === "jupiter" ? 29 : 19) + Math.sin(lon * 2) * 0.28) + detail;
+        r *= bands; g *= bands; b *= bands;
+        if (slug === "jupiter" && Math.sin(lon * 3.1 + lat * 5) > 0.88 && lat < 0.1 && lat > -0.55) { r *= 0.72; g *= 0.57; b *= 0.48; }
+      } else {
+        const shade = 0.82 + broad * 0.12 + detail;
+        r *= shade; g *= shade; b *= shade;
+      }
+      data[i] = Math.max(0, Math.min(255, Math.round(r * 255)));
+      data[i + 1] = Math.max(0, Math.min(255, Math.round(g * 255)));
+      data[i + 2] = Math.max(0, Math.min(255, Math.round(b * 255)));
+      data[i + 3] = 255;
+    }
+  }
+  const texture = new THREE.DataTexture(data, width, height, THREE.RGBAFormat);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.needsUpdate = true;
+  return texture;
+}
+
+function createCloudTexture() {
+  const width = 256, height = 128;
+  const data = new Uint8Array(width * height * 4);
+  for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
+    const i = (y * width + x) * 4;
+    const pattern = Math.sin(x * 0.11 + Math.sin(y * 0.15) * 2) * Math.cos(y * 0.22)
+      + Math.sin(x * 0.045 - y * 0.1) * 0.7 + Math.sin(x * 0.23 + y * 0.17) * 0.24;
+    const alpha = pattern > 0.55 ? Math.min(225, 70 + (pattern - 0.55) * 190) : 0;
+    data[i] = 236; data[i + 1] = 245; data[i + 2] = 255; data[i + 3] = alpha;
+  }
+  const texture = new THREE.DataTexture(data, width, height, THREE.RGBAFormat);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.needsUpdate = true;
+  return texture;
+}
+
 function Planet({ body, selected, onSelect, paused, selectedLandmark, onSelectLandmark }: { body: typeof bodies[number]; selected: boolean; onSelect: (slug: SelectableSlug) => void; paused: boolean; selectedLandmark: string | null; onSelectLandmark: (slug: string) => void }) {
   const group = useRef<THREE.Group>(null);
   const mesh = useRef<THREE.Mesh>(null);
   const [hovered, setHovered] = useState(false);
+  const surfaceTexture = useMemo(() => createPlanetTexture(body.slug, body.color), [body.slug, body.color]);
+  const cloudTexture = useMemo(() => createCloudTexture(), []);
   useFrame(({ clock }) => {
     if (!group.current || paused || body.period === 0) return;
     const angle = clock.getElapsedTime() / body.period;
@@ -71,9 +146,12 @@ function Planet({ body, selected, onSelect, paused, selectedLandmark, onSelectLa
       scale={selected ? 1.2 : hovered ? 1.12 : 1}
     >
       <sphereGeometry args={[body.radius, 32, 32]} />
-      <meshStandardMaterial color={body.color} roughness={body.slug === "sun" ? 0.8 : 0.92} emissive={body.slug === "sun" ? "#ff9c36" : body.color} emissiveIntensity={body.slug === "sun" ? 1.5 : selected ? 0.14 : 0.02} />
+      <meshStandardMaterial map={body.slug === "sun" ? undefined : surfaceTexture} color={body.slug === "sun" ? body.color : "#ffffff"} roughness={body.slug === "sun" ? 0.8 : 0.94} emissive={body.slug === "sun" ? "#ff9c36" : "#000000"} emissiveIntensity={body.slug === "sun" ? 1.5 : 0} />
     </mesh>
     {body.slug === "saturn" && <mesh rotation={[0.25, 0, -0.22]}><ringGeometry args={[body.radius * 1.35, body.radius * 2.05, 64]} /><meshStandardMaterial color="#ddc9a0" side={THREE.DoubleSide} transparent opacity={0.75} /></mesh>}
+    {body.slug === "earth" && <mesh rotation={[0, 0.08, 0]}><sphereGeometry args={[body.radius * 1.012, 40, 40]} /><meshStandardMaterial map={cloudTexture} transparent opacity={0.48} depthWrite={false} side={THREE.FrontSide} /></mesh>}
+    {["earth", "venus", "mars", "jupiter", "saturn", "uranus", "neptune"].includes(body.slug) && <mesh><sphereGeometry args={[body.radius * (body.slug === "venus" ? 1.12 : 1.075), 32, 32]} /><meshBasicMaterial color={body.slug === "mars" ? "#e58d70" : body.slug === "venus" ? "#f0bc79" : body.slug === "earth" ? "#4b9cff" : body.slug === "neptune" ? "#5689ff" : "#a6d7e8"} side={THREE.BackSide} transparent opacity={body.slug === "earth" ? 0.17 : body.slug === "venus" ? 0.2 : 0.11} blending={THREE.AdditiveBlending} depthWrite={false} /></mesh>}
+
     {landmarks.filter((landmark) => landmark.parent === body.slug).map((landmark) => {
       const latitude = landmark.lat * Math.PI / 180;
       const longitude = landmark.lon * Math.PI / 180;
