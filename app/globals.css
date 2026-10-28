@@ -239,3 +239,16 @@
 .global-search-empty p{font-size:11px;color:#8e9ab4}
 .global-search-footer{display:flex;justify-content:space-between;gap:14px;padding:12px 24px;border-top:1px solid #252b40;color:#707c98;font-size:9px}
 @media(max-width:640px){.global-search-launcher{left:12px;bottom:14px;padding:10px 12px;gap:8px}.global-search-launcher kbd{display:none}.global-search-backdrop{padding:5vh 10px 16px}.global-search-dialog{max-height:88vh;border-radius:12px}.global-search-heading{padding:18px 16px 13px}.global-search-heading h2{font-size:22px}.global-search-input-wrap{margin:0 15px 12px;height:50px;padding:0 11px}.global-search-meta{padding:0 16px 9px;font-size:8px}.global-search-results{padding:0 7px 8px}.global-search-result{grid-template-columns:28px minmax(0,1fr) 12px;gap:9px;padding:10px 8px}.global-search-result-mark{width:28px;height:28px;font-size:16px}.global-search-result-kind{display:none}.global-search-result-copy strong{font-size:11px}.global-search-result-copy small{font-size:8px}.global-search-result-copy>span{font-size:9px}.global-search-footer{padding:10px 15px;font-size:8px}.back-to-top{right:12px;bottom:14px}.global-search-launcher{bottom:14px}}
+
+/* Global search results in the homepage knowledge library */
+.global-library-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.global-library-result{display:flex;min-width:0;flex-direction:column;align-items:flex-start;gap:7px;padding:20px;border:1px solid var(--line);background:linear-gradient(145deg,#111729a6,transparent);transition:background .2s,border-color .2s,transform .2s}
+.global-library-result:hover{background:#171c31;border-color:#68629a;transform:translateY(-2px)}
+.global-library-result-kind{font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:#a99bff}
+.global-library-result h3{font-size:18px;line-height:1.3;font-weight:500;margin:0;color:#f0f2fc}
+.global-library-result-subtitle{font-size:10px;color:#aaa0ff;margin:0}
+.global-library-result-description{font-size:11px;line-height:1.75;color:#929db7;margin:3px 0 8px}
+.global-library-result-link{margin-top:auto;font-size:10px;color:#c5bbff}
+.global-library-result-link span{margin-left:8px}
+@media(max-width:900px){.global-library-results{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.global-library-results{grid-template-columns:1fr;gap:9px}.global-library-result{padding:16px}.global-library-result h3{font-size:16px}.global-library-result-description{font-size:10px}}
