@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -22,18 +22,6 @@ const bodies = [
 ] as const;
 
 type BodySlug = typeof bodies[number]["slug"];
-
-function OrbitRing({ radius, selected }: { radius: number; selected: boolean }) {
-  const points = useMemo(() => {
-    const result: THREE.Vector3[] = [];
-    for (let i = 0; i <= 180; i++) {
-      const angle = (i / 180) * Math.PI * 2;
-      result.push(new THREE.Vector3(Math.cos(angle) * radius, 0, Math.sin(angle) * radius));
-    }
-    return new THREE.BufferGeometry().setFromPoints(result);
-  }, [radius]);
-  return <primitive object={points} attach="geometry" dispose={null}><lineBasicMaterial color={selected ? "#c8beff" : "#53607d"} transparent opacity={selected ? 0.6 : 0.22} /></primitive>;
-}
 
 function Planet({ body, selected, onSelect, paused }: { body: typeof bodies[number]; selected: boolean; onSelect: (slug: BodySlug) => void; paused: boolean }) {
   const group = useRef<THREE.Group>(null);
@@ -67,13 +55,6 @@ function Planet({ body, selected, onSelect, paused }: { body: typeof bodies[numb
 }
 
 function Scene({ selectedSlug, onSelect, paused }: { selectedSlug: BodySlug; onSelect: (slug: BodySlug) => void; paused: boolean }) {
-  const controls = useRef<any>(null);
-  useFrame(() => {
-    const selected = bodies.find((body) => body.slug === selectedSlug);
-    if (selected && controls.current && selectedSlug !== "sun") {
-      // Camera movement is left to the visitor; the selection is highlighted without stealing orbit control.
-    }
-  });
   return <>
     <color attach="background" args={["#070a15"]} />
     <fog attach="fog" args={["#070a15", 18, 45]} />
@@ -82,7 +63,7 @@ function Scene({ selectedSlug, onSelect, paused }: { selectedSlug: BodySlug; onS
     <Stars radius={90} depth={55} count={1800} factor={2.3} saturation={0} fade speed={paused ? 0 : 0.15} />
     {bodies.filter((body) => body.orbit > 0).map((body) => <group key={"orbit-" + body.slug} rotation={[0, 0, 0]}><lineLoop><bufferGeometry><bufferAttribute attach="attributes-position" args={[new Float32Array(Array.from({ length: 181 }, (_, i) => { const a = i / 180 * Math.PI * 2; return [Math.cos(a) * body.orbit, 0, Math.sin(a) * body.orbit]; }).flat()), 3]} /></bufferGeometry><lineBasicMaterial color={body.slug === selectedSlug ? "#a99bff" : "#53607d"} transparent opacity={body.slug === selectedSlug ? 0.65 : 0.23} /></lineLoop></group>)}
     {bodies.map((body) => <Planet key={body.slug} body={body} selected={selectedSlug === body.slug} onSelect={onSelect} paused={paused} />)}
-    <OrbitControls ref={controls} makeDefault enableDamping dampingFactor={0.07} minDistance={4} maxDistance={30} maxPolarAngle={Math.PI * 0.92} />
+    <OrbitControls makeDefault enableDamping dampingFactor={0.07} minDistance={4} maxDistance={30} maxPolarAngle={Math.PI * 0.92} />
   </>;
 }
 
