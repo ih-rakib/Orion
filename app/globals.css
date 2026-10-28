@@ -25,3 +25,44 @@
 .source-list a:hover, .source-list a:focus-visible { text-decoration: underline; }
 .source-list li p { margin: .35rem 0 .2rem; color: var(--muted, #aab2c5); font-size: .9rem; }
 .source-url { color: var(--muted, #aab2c5); font-size: .78rem; overflow-wrap: anywhere; }
+
+
+/* Orion deep-time timeline */
+.timeline-page{min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#29234b4d,transparent 38%),var(--bg)}
+.timeline-hero{max-width:var(--max);margin:0 auto;padding:48px 30px 68px;border-bottom:1px solid var(--line)}
+.timeline-hero .back-link{display:inline-block;margin-bottom:44px}
+.timeline-hero h1{font-size:clamp(54px,9vw,100px);line-height:.98;letter-spacing:-5px;font-weight:500;margin:20px 0}
+.timeline-hero h1 span{color:var(--purple)}
+.timeline-hero>p:not(.eyebrow):not(.back-link){max-width:620px;color:#aab4ca;line-height:1.9;font-size:16px}
+.timeline-stats{display:flex;gap:clamp(22px,5vw,70px);margin-top:42px;flex-wrap:wrap}
+.timeline-stats div{display:flex;flex-direction:column;gap:4px}
+.timeline-stats strong{font-size:20px;font-weight:500;letter-spacing:-.4px}
+.timeline-stats span{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.timeline-content{max-width:900px;margin:0 auto;padding:70px 30px 100px}
+.timeline-intro{max-width:620px;margin-bottom:28px}
+.timeline-intro h2{font-size:clamp(30px,4vw,44px);font-weight:500;letter-spacing:-1.5px;line-height:1.1;margin:12px 0}
+.timeline-intro>p:last-child{color:var(--muted);line-height:1.8}
+.timeline-legend{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 42px}
+.timeline-tag{display:inline-flex;align-items:center;width:fit-content;padding:5px 9px;border:1px solid #8e9ab526;border-radius:2px;color:#b6bfd4;font-size:9px;letter-spacing:1px;text-transform:uppercase}
+.era-cosmos{border-color:#a99bff55;color:#c5bcff}.era-solar-system{border-color:#6fc6ee55;color:#8ed9f4}.era-earth-life{border-color:#76d9b455;color:#91e3bd}.era-humanity{border-color:#f2c77c55;color:#f2cf91}.era-future{border-color:#ee91ce55;color:#f1addb}
+.timeline-list{list-style:none;margin:0;padding:0}
+.timeline-event{display:grid;grid-template-columns:26px minmax(0,1fr);gap:20px}
+.timeline-rail{position:relative;display:flex;justify-content:center}
+.timeline-node{position:relative;z-index:1;margin-top:28px;width:11px;height:11px;border-radius:50%;border:2px solid var(--purple);background:var(--bg);box-shadow:0 0 16px #a99bff4a}
+.timeline-line{position:absolute;top:40px;bottom:-1px;width:1px;background:linear-gradient(#a99bff66,#a99bff0a)}
+.timeline-event:last-child .timeline-line{display:none}
+.timeline-card{min-width:0;margin-bottom:18px;padding:23px 25px 24px;border:1px solid var(--line);background:linear-gradient(130deg,#151b2b,#0c1020);border-radius:4px}
+.timeline-card-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.timeline-index{font-size:9px;letter-spacing:1px;color:#7f8ba7}
+.timeline-date{margin:18px 0 5px;color:var(--purple);font-size:11px;letter-spacing:.6px}
+.timeline-card h3{font-size:clamp(19px,3vw,25px);font-weight:500;line-height:1.25;letter-spacing:-.5px;margin:4px 0 10px}
+.timeline-description{margin:0;color:#aab4ca;font-size:13px;line-height:1.85}
+.timeline-source{display:inline-flex;gap:8px;align-items:center;margin-top:18px;font-size:11px;color:#e0dcff;text-decoration:underline;text-decoration-color:#a99bff55;text-underline-offset:4px}
+.timeline-source:hover{color:white}
+.timeline-future .timeline-card{border-style:dashed;background:linear-gradient(130deg,#1c1428,#0c1020)}
+.timeline-future .timeline-node{border-color:#ee91ce}
+.timeline-note{display:flex;gap:14px;margin:28px 0 0;padding:20px;border:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.8}
+.timeline-note>span{color:var(--purple);font-size:18px}
+.timeline-note p{margin:0}
+.timeline-note strong{color:var(--text)}
+@media(max-width:640px){.timeline-hero{padding:28px 18px 48px}.timeline-hero .back-link{margin-bottom:34px}.timeline-hero h1{letter-spacing:-2.8px}.timeline-hero>p:not(.eyebrow):not(.back-link){font-size:14px}.timeline-stats{gap:22px}.timeline-stats strong{font-size:17px}.timeline-stats span{font-size:8px;letter-spacing:.6px}.timeline-content{padding:48px 18px 70px}.timeline-event{grid-template-columns:18px minmax(0,1fr);gap:12px}.timeline-card{padding:17px 15px 19px}.timeline-index{font-size:8px}.timeline-card h3{font-size:20px}.timeline-description{font-size:12px}}
