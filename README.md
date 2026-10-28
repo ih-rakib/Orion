@@ -38,9 +38,9 @@ Technology choices can evolve as the project's needs become clearer. The priorit
 
 ## Current foundation
 
-The initial version includes a responsive homepage, six subject categories, a searchable and filterable knowledge library, reusable subject detail pages, related-subject navigation, page metadata, a custom favicon, and a custom not-found page. The first subjects are starter content, not a complete encyclopedia. Each starter guide now includes at least one external reference from a scientific agency or museum; these are further-reading starting points, not yet claim-by-claim citations.
+The initial version includes a responsive homepage, six subject categories, a searchable and filterable knowledge library, reusable subject detail pages, related-subject navigation, a source-aware subject template, a 15-milestone deep-time timeline with cited further reading, page metadata, a custom favicon, and a custom not-found page. The first subjects are starter content, not a complete encyclopedia. Each starter guide now includes at least one external reference from a scientific agency or museum; these are further-reading starting points, not yet claim-by-claim citations.
 
-Planned future directions include claim-level citations, source review dates, timelines, richer media, interactive visualizations, structured content management, scientific data integrations, and contributor tools.
+Planned future directions include claim-level citations, source review dates, richer media, interactive visualizations, structured content management, scientific data integrations, and contributor tools.
 
 ## Run locally
 
