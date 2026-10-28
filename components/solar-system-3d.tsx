@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -25,6 +25,19 @@ type BodySlug = typeof bodies[number]["slug"];
 
 type MoonSlug = typeof moons[number]["slug"];
 type SelectableSlug = BodySlug | MoonSlug;
+
+const sourcedTextureFiles: Partial<Record<BodySlug, string>> = {
+  mercury: "2k_mercury.jpg",
+  venus: "2k_venus_surface.jpg",
+  earth: "2k_earth_daymap.jpg",
+  mars: "2k_mars.jpg",
+  jupiter: "2k_jupiter.jpg",
+  saturn: "2k_saturn.jpg",
+  uranus: "2k_uranus.jpg",
+  neptune: "2k_neptune.jpg",
+  pluto: "2k_pluto.jpg",
+};
+const sourcedTextureBaseUrl = "https://www.solarsystemscope.com/textures/download/";
 
 const moons = [
   { slug: "moon", label: "Earth’s Moon", parent: "earth", radius: 0.075, orbit: 0.48, period: 1.8, color: "#d4d8e2", summary: "Earth’s natural satellite, shaped by ancient impacts and volcanic plains.", fact: "The Moon is slowly moving away from Earth.", sourceUrl: "https://science.nasa.gov/moon/" },
@@ -128,6 +141,38 @@ function Planet({ body, selected, onSelect, paused, selectedLandmark, onSelectLa
   const [hovered, setHovered] = useState(false);
   const surfaceTexture = useMemo(() => createPlanetTexture(body.slug, body.color), [body.slug, body.color]);
   const cloudTexture = useMemo(() => createCloudTexture(), []);
+  const [sourcedTexture, setSourcedTexture] = useState<THREE.Texture | null>(null);
+  useEffect(() => {
+    const filename = sourcedTextureFiles[body.slug];
+    if (!filename) {
+      setSourcedTexture(null);
+      return;
+    }
+    let active = true;
+    setSourcedTexture(null);
+    const loader = new THREE.TextureLoader();
+    loader.setCrossOrigin("anonymous");
+    loader.load(
+      sourcedTextureBaseUrl + filename,
+      (texture) => {
+        if (!active) {
+          texture.dispose();
+          return;
+        }
+        texture.colorSpace = THREE.SRGBColorSpace;
+        texture.anisotropy = 4;
+        setSourcedTexture(texture);
+      },
+      undefined,
+      () => {
+        // Keep the generated procedural map as a resilient offline/network fallback.
+        if (active) setSourcedTexture(null);
+      },
+    );
+    return () => {
+      active = false;
+    };
+  }, [body.slug]);
   useFrame(({ clock }) => {
     if (!group.current || paused || body.period === 0) return;
     const angle = clock.getElapsedTime() / body.period;
@@ -146,7 +191,7 @@ function Planet({ body, selected, onSelect, paused, selectedLandmark, onSelectLa
       scale={selected ? 1.2 : hovered ? 1.12 : 1}
     >
       <sphereGeometry args={[body.radius, 32, 32]} />
-      <meshStandardMaterial map={body.slug === "sun" ? undefined : surfaceTexture} color={body.slug === "sun" ? body.color : "#ffffff"} roughness={body.slug === "sun" ? 0.8 : 0.94} emissive={body.slug === "sun" ? "#ff9c36" : "#000000"} emissiveIntensity={body.slug === "sun" ? 1.5 : 0} />
+      <meshStandardMaterial map={body.slug === "sun" ? undefined : sourcedTexture ?? surfaceTexture} color={body.slug === "sun" ? body.color : "#ffffff"} roughness={body.slug === "sun" ? 0.8 : 0.94} emissive={body.slug === "sun" ? "#ff9c36" : "#000000"} emissiveIntensity={body.slug === "sun" ? 1.5 : 0} />
     </mesh>
     {body.slug === "saturn" && <mesh rotation={[0.25, 0, -0.22]}><ringGeometry args={[body.radius * 1.35, body.radius * 2.05, 64]} /><meshStandardMaterial color="#ddc9a0" side={THREE.DoubleSide} transparent opacity={0.75} /></mesh>}
     {body.slug === "earth" && <mesh rotation={[0, 0.08, 0]}><sphereGeometry args={[body.radius * 1.012, 40, 40]} /><meshStandardMaterial map={cloudTexture} transparent opacity={0.48} depthWrite={false} side={THREE.FrontSide} /></mesh>}
@@ -227,6 +272,6 @@ export function SolarSystem3D() {
       <div className="solar-3d-selector"><p className="eyebrow">CHOOSE A WORLD</p><div className="solar-3d-buttons">{bodies.map((body) => <button type="button" key={body.slug} className={body.slug === selectedSlug ? "active" : ""} aria-pressed={body.slug === selectedSlug} onClick={() => { setSelectedSlug(body.slug); setSelectedLandmark(null); }}><span style={{ "--object-color": body.color } as CSSProperties} className="solar-3d-dot" />{body.label}</button>)}</div><p className="eyebrow solar-3d-moon-heading">MOONS · SELECT TO EXPLORE</p><div className="solar-3d-buttons">{moons.map((moon) => <button type="button" key={moon.slug} className={moon.slug === selectedSlug ? "active" : ""} aria-pressed={moon.slug === selectedSlug} onClick={() => { setSelectedSlug(moon.slug); setSelectedLandmark(null); }}><span style={{ "--object-color": moon.color } as CSSProperties} className="solar-3d-dot" />{moon.label}</button>)}</div><p className="eyebrow solar-3d-moon-heading">SURFACE LANDMARKS · EARTH & MARS</p><div className="solar-3d-buttons">{landmarks.map((landmark) => <button type="button" key={landmark.slug} className={landmark.slug === selectedLandmark ? "active" : ""} aria-pressed={landmark.slug === selectedLandmark} onClick={() => { setSelectedSlug(landmark.parent); setSelectedLandmark(landmark.slug); }}><span style={{ "--object-color": landmark.color } as CSSProperties} className="solar-3d-dot" />{landmark.label}<small> · {landmark.parent === "earth" ? "Earth" : "Mars"}</small></button>)}</div></div>
       <aside className="solar-3d-info"><p className="eyebrow">{activeLandmark ? "SURFACE LANDMARK" : object?.kind.toUpperCase() ?? (selectedMoon ? "NATURAL SATELLITE" : "SOLAR SYSTEM OBJECT")}</p><h3>{activeLandmark?.label ?? selectedBody.label}</h3><p>{activeLandmark?.summary ?? object?.summary ?? selectedMoon?.summary ?? "The star at the heart of our planetary system."}</p><p className="solar-3d-fact">{activeLandmark?.fact ?? object?.fact ?? selectedMoon?.fact ?? "The Sun contains more than 99% of the Solar System’s mass."}</p><div className="solar-3d-links">{!activeLandmark && object?.orionPath && <Link href={object.orionPath}>Read Orion guide ↗</Link>}<a href={activeLandmark?.sourceUrl ?? object?.sourceUrl ?? selectedMoon?.sourceUrl ?? "https://science.nasa.gov/sun/"} target="_blank" rel="noopener noreferrer">{activeLandmark ? "Explore scientific source ↗" : "NASA further reading ↗"}</a></div></aside>
     </div>
-    <p className="solar-3d-disclaimer">Illustrative 3D model: planet sizes and orbital distances are compressed and not to scale. Motion is an educational visualization, not a precise ephemeris or prediction tool. Surface landmark pins are illustrative locations on stylized spheres; they are not high-resolution geographic maps. Earth’s Moon is shown as an individually selectable body.</p>
+    <p className="solar-3d-disclaimer">Illustrative 3D model: planet sizes and orbital distances are compressed and not to scale. Motion is an educational visualization, not a precise ephemeris or prediction tool. Planet surface maps load from <a href="https://www.solarsystemscope.com/textures/" target="_blank" rel="noopener noreferrer">Solar System Scope</a> under CC BY 4.0; generated procedural maps remain as a fallback if a texture cannot load. The maps are educational visualizations, not validated datasets for scientific analysis. Surface landmark pins are illustrative locations, not high-resolution geographic maps.</p>
   </div>;
 }
