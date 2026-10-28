@@ -31,16 +31,16 @@ These are starting points, not limits. The platform should be able to accommodat
 - **TypeScript** for safer, maintainable code.
 - **Tailwind CSS** for a responsive, consistent interface.
 - **Supabase / PostgreSQL** when the project is ready for structured content, relationships, and editorial tools.
-- **Three.js** for future interactive 3D experiences where they add real value.
+- **Three.js, React Three Fiber, and Drei** for interactive 3D experiences.
 - **GitHub** for source control and **Vercel** for deployment.
 
 Technology choices can evolve as the project's needs become clearer. The priority is a maintainable platform, not complexity for its own sake.
 
 ## Current foundation
 
-The initial version includes a responsive homepage, six subject categories, a searchable and filterable knowledge library, reusable subject detail pages, related-subject navigation, a source-aware subject template, a 15-milestone deep-time timeline with cited further reading, and an interactive Solar System explorer. The explorer lets visitors select the Sun, all eight planets, Pluto, or Earth's Moon to see concise descriptions, facts, and NASA reading links. Earth, Mars, and Pluto also link to Orion's own subject guides. The Solar System view is an educational schematic—not a scale-accurate model or live orbital simulation. The site also includes page metadata, a custom favicon, and a custom not-found page. The first subjects are starter content, not a complete encyclopedia. Each starter guide now includes at least one external reference from a scientific agency or museum; these are further-reading starting points, not yet claim-by-claim citations.
+The initial version includes a responsive homepage, six subject categories, a searchable and filterable knowledge library, reusable subject detail pages, related-subject navigation, a source-aware subject template, a 15-milestone deep-time timeline with cited further reading, an interactive Solar System explorer, and a WebGL-powered 3D Solar System scene built with Three.js and React Three Fiber. The 2D explorer lets visitors select the Sun, all eight planets, Pluto, or Earth's Moon to see concise descriptions, facts, and NASA reading links. The 3D view lets visitors rotate and zoom the scene, select the Sun and planets, pause/resume illustrative orbital motion, and open related guides. Earth, Mars, and Pluto also link to Orion's own subject guides. Both views are educational models—not scale-accurate representations or precision orbital simulations. The 3D model compresses planetary sizes and distances for visibility. The site also includes page metadata, a custom favicon, and a custom not-found page. The first subjects are starter content, not a complete encyclopedia. Each starter guide now includes at least one external reference from a scientific agency or museum; these are further-reading starting points, not yet claim-by-claim citations.
 
-Planned future directions include claim-level citations, source review dates, richer media, more detailed interactive visualizations, structured content management, scientific data integrations, and contributor tools.
+Planned future directions include claim-level citations, source review dates, richer media, more detailed interactive visualizations, structured content management, scientific data integrations, moon-specific exploration, and contributor tools.
 
 ## Run locally
 
