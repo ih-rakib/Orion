@@ -54,7 +54,7 @@ export function GlobalSearch() {
     <>
       <button type="button" className="global-search-launcher" onClick={() => setOpen(true)} aria-haspopup="dialog" aria-expanded={open} aria-label="Search all Orion content">
         <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" strokeWidth="1.7"/><path d="m16 16 4.2 4.2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
-        <span>Search Orion</span><kbd>⌘ K</kbd>
+        <span>Search Orion</span><kbd>Ctrl / ⌘ K</kbd>
       </button>
 
       {open && (
