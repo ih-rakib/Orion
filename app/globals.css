@@ -149,6 +149,7 @@
 .solar-3d-controls button:hover{border-color:var(--purple);color:white}
 .solar-3d-stage{height:clamp(360px,55vw,610px);position:relative;overflow:hidden;border:1px solid #9eabcb18;background:#070a15}
 .solar-3d-stage canvas{display:block;touch-action:pan-y}
+.solar-3d-fallback{display:grid;place-items:center;min-height:100%;padding:28px;text-align:center;color:#d0d5e6;background:radial-gradient(ellipse at center,#18213a 0%,#070a15 70%);font-size:14px;line-height:1.7}
 .solar-3d-hint{position:absolute;bottom:15px;left:16px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:#78849f;font-size:9px;pointer-events:none}
 .solar-3d-hint span{color:#d0d5e6;letter-spacing:1px}
 .solar-3d-hint i{display:inline-block;width:3px;height:3px;background:#746aa9;border-radius:50%;margin:0 3px}
