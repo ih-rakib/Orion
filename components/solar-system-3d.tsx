@@ -75,14 +75,14 @@ export function SolarSystem3D() {
   return <div className="solar-3d-app">
     <div className="solar-3d-toolbar"><div><p className="eyebrow">ORION · INTERACTIVE MODEL</p><h2>Navigate the neighbourhood.</h2></div><div className="solar-3d-controls"><button type="button" onClick={() => setPaused((value) => !value)}>{paused ? "▶ Resume" : "Ⅱ Pause"}</button><button type="button" onClick={() => setSelectedSlug("earth")}>↺ Reset selection</button></div></div>
     <div className="solar-3d-stage">
-      <Canvas camera={{ position: [0, 12, 17], fov: 46 }} dpr={[1, 1.6]} gl={{ antialias: true, alpha: false }} onCreated={({ gl }) => { gl.setClearColor("#070a15"); }}>
+      <Canvas fallback={<div className="solar-3d-fallback" role="status">3D graphics are not available in this browser. You can still choose a world from the list below.</div>} camera={{ position: [0, 12, 17], fov: 46 }} dpr={[1, 1.5]} gl={{ antialias: true, alpha: false }} onCreated={({ gl }) => { gl.setClearColor("#070a15"); }}>
         <Scene selectedSlug={selectedSlug} onSelect={setSelectedSlug} paused={paused} />
       </Canvas>
       <div className="solar-3d-hint"><span>DRAG</span> rotate <i /> <span>SCROLL</span> zoom <i /> <span>TAP</span> select</div>
       <div className="solar-3d-object-count">10 OBJECTS · {paused ? "MOTION PAUSED" : "ORBITAL MOTION ON"}</div>
     </div>
     <div className="solar-3d-lower">
-      <div className="solar-3d-selector"><p className="eyebrow">CHOOSE A WORLD</p><div className="solar-3d-buttons">{bodies.map((body) => <button type="button" key={body.slug} className={body.slug === selectedSlug ? "active" : ""} onClick={() => setSelectedSlug(body.slug)}><span style={{ "--object-color": body.color } as CSSProperties} className="solar-3d-dot" />{body.label}</button>)}</div></div>
+      <div className="solar-3d-selector"><p className="eyebrow">CHOOSE A WORLD</p><div className="solar-3d-buttons">{bodies.map((body) => <button type="button" key={body.slug} className={body.slug === selectedSlug ? "active" : ""} aria-pressed={body.slug === selectedSlug} onClick={() => setSelectedSlug(body.slug)}><span style={{ "--object-color": body.color } as CSSProperties} className="solar-3d-dot" />{body.label}</button>)}</div></div>
       <aside className="solar-3d-info"><p className="eyebrow">{object?.kind.toUpperCase() ?? "SOLAR SYSTEM OBJECT"}</p><h3>{selectedBody.label}</h3><p>{object?.summary ?? "The star at the heart of our planetary system."}</p><p className="solar-3d-fact">{object?.fact ?? "The Sun contains more than 99% of the Solar System’s mass."}</p><div className="solar-3d-links">{object?.orionPath && <Link href={object.orionPath}>Read Orion guide ↗</Link>}<a href={object?.sourceUrl ?? "https://science.nasa.gov/sun/"} target="_blank" rel="noopener noreferrer">NASA further reading ↗</a></div></aside>
     </div>
     <p className="solar-3d-disclaimer">Illustrative 3D model: planet sizes and orbital distances are compressed and not to scale. Motion is an educational visualization, not a precise ephemeris or prediction tool. Earth’s Moon is shown near Earth for orientation and is not a separate selectable body in this view.</p>
