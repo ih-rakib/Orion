@@ -10,10 +10,10 @@ export function MobileMenu(){
   useEffect(()=>{
     if(!open)return;
     const onPointerDown=(event:PointerEvent)=>{
-      if(event.target instanceof Node&&!rootRef.current?.contains(event.target))close();
+      if(event.target instanceof Node&&!rootRef.current?.contains(event.target))setOpen(false);
     };
     const onKeyDown=(event:KeyboardEvent)=>{
-      if(event.key==="Escape")close();
+      if(event.key==="Escape")setOpen(false);
     };
     document.addEventListener("pointerdown",onPointerDown);
     document.addEventListener("keydown",onKeyDown);
@@ -24,16 +24,16 @@ export function MobileMenu(){
   },[open]);
 
   return <div className="mobile-menu" ref={rootRef}>
-    <button type="button" className="mobile-menu-toggle" aria-expanded={open} aria-controls="mobile-navigation" aria-label={open?"Close navigation":"Open navigation"} title={open?"Close navigation":"Open navigation"} onClick={()=>setOpen(value=>!value)}>
+    <button type="button" className="mobile-menu-toggle" aria-expanded={open} aria-controls="mobile-navigation" aria-label={open?"Close navigation":"Open navigation"} onClick={()=>setOpen(value=>!value)}>
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">{open?<path d="m6 6 12 12M18 6 6 18"/>:<path d="M3 6h18M3 12h18M3 18h18"/>}</svg>
     </button>
-    {open&&<nav id="mobile-navigation" className="mobile-menu-panel" aria-label="Mobile navigation">
+    {open&&<><button type="button" className="mobile-menu-backdrop" aria-label="Close navigation" onClick={close}/><nav id="mobile-navigation" className="mobile-menu-panel" aria-label="Mobile navigation">
       <a href="/#explore" onClick={close}>Explore & Search</a>
       <a href="/#collections" onClick={close}>Collections</a>
       <Link href="/timeline" onClick={close}>Timeline</Link>
       <Link href="/solar-system" onClick={close}>Solar System</Link>
       <a href="/#about" onClick={close}>Our vision</a>
       <a href="/#creator" onClick={close}>Creator</a>
-    </nav>}
+    </nav></>}
   </div>
 }
