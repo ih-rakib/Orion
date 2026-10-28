@@ -31,7 +31,7 @@ test("category subject counts match the content model",()=>{
   }
 });
 
-test("each starter subject has the content required for a readable page",()=>{
+test("every starter subject has at least one valid source reference",()=>{\n  for(const subject of subjects){\n    assert.ok(subject.sources.length>0,`Missing sources for ${subject.title}`);\n    for(const source of subject.sources){\n      assert.ok(source.title.trim(),`Missing source title for ${subject.title}`);\n      assert.ok(source.publisher.trim(),`Missing source publisher for ${subject.title}`);\n      assert.match(source.url,/^https:\\/\\//,`Source URL must use HTTPS for ${subject.title}`);\n      assert.doesNotThrow(()=>new URL(source.url),`Invalid source URL for ${subject.title}`);\n    }\n  }\n});\n\ntest("each starter subject has the content required for a readable page",()=>{
   assert.ok(subjects.length>=12,"Keep a meaningful starter set in the library");
   for(const subject of subjects){
     assert.ok(subject.summary.trim().length>0,`Missing summary for ${subject.title}`);
