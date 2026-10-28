@@ -306,3 +306,61 @@
   .solar-3d-content{max-width:1520px}
   .solar-3d-stage{height:760px}
 }
+
+
+/* Slow, atmospheric motion for Orion's decorative cosmic illustrations */
+.planet{overflow:hidden}
+.planet::before{
+  content:"";
+  position:absolute;
+  inset:-35%;
+  border-radius:50%;
+  pointer-events:none;
+  background:repeating-linear-gradient(108deg,transparent 0 22px,rgba(190,205,255,.10) 25px 30px,transparent 34px 54px);
+  opacity:.55;
+  animation:planet-surface-turn 100s linear infinite;
+}
+.planet-one{animation:planet-float 28s ease-in-out infinite alternate}
+.planet-two{animation:planet-float 21s ease-in-out infinite alternate-reverse}
+.orbit-one{animation:orbit-turn-a 120s linear infinite}
+.orbit-two{animation:orbit-turn-b 150s linear infinite}
+.ring-a{animation:vision-ring-a 115s linear infinite}
+.ring-b{animation:vision-ring-b 135s linear infinite}
+.ring-c{animation:vision-ring-c 180s linear infinite}
+.vision-core{animation:vision-core-turn 100s linear infinite}
+
+@keyframes planet-surface-turn{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+@keyframes planet-float{
+  from{translate:0 -5px;rotate:-1deg}
+  to{translate:0 7px;rotate:1deg}
+}
+@keyframes orbit-turn-a{
+  from{transform:rotate(-28deg) scaleY(.43)}
+  to{transform:rotate(332deg) scaleY(.43)}
+}
+@keyframes orbit-turn-b{
+  from{transform:rotate(34deg) scaleY(.48)}
+  to{transform:rotate(394deg) scaleY(.48)}
+}
+@keyframes vision-ring-a{
+  from{transform:rotate(35deg) scaleY(.52)}
+  to{transform:rotate(395deg) scaleY(.52)}
+}
+@keyframes vision-ring-b{
+  from{transform:rotate(-35deg) scaleY(.52)}
+  to{transform:rotate(325deg) scaleY(.52)}
+}
+@keyframes vision-ring-c{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+@keyframes vision-core-turn{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+@media(prefers-reduced-motion:reduce){
+  .planet,.planet::before,.orbit-one,.orbit-two,.ring-a,.ring-b,.ring-c,.vision-core{animation:none!important}
+}
