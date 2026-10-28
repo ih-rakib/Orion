@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {MobileMenu} from "@/components/mobile-menu";
 import { SolarSystemExplorer } from "@/components/solar-system-explorer";
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export default function SolarSystemPage() {
       <Link href="/" className="brand" aria-label="Orion home"><span className="brand-mark" aria-hidden="true">✳</span><span>orion<span className="brand-period">.</span></span></Link>
       <nav aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span>Solar System</span></nav>
       <Link href="/#explore" className="header-cta">Explore subjects <span aria-hidden="true">↗</span></Link>
+      <MobileMenu/>
     </header>
     <section className="solar-system-hero">
       <Link href="/" className="back-link">← Back to Orion</Link>
