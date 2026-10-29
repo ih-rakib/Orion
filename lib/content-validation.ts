@@ -34,7 +34,7 @@ export function validateContentLibrary(records: readonly Subject[]): ContentIssu
     if (!accents.has(subject.accent)) add("accent", "Choose a supported accent.");
     if (!subject.symbol?.trim()) add("symbol", "Add a short symbol for the subject card.");
     if (subject.editorialStatus !== "draft" && subject.editorialStatus !== "published") add("editorialStatus", "Status must be draft or published.");
-    if (subject.lastReviewedAt !== null && (typeof subject.lastReviewedAt !== "string" || !/^\\d{4}-\\d{2}-\\d{2}$/.test(subject.lastReviewedAt) || Number.isNaN(Date.parse(subject.lastReviewedAt)))) {
+    if (subject.lastReviewedAt !== null && (typeof subject.lastReviewedAt !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(subject.lastReviewedAt) || Number.isNaN(Date.parse(subject.lastReviewedAt)))) {
       add("lastReviewedAt", "Use an ISO calendar date (YYYY-MM-DD) or null.");
     }
 
