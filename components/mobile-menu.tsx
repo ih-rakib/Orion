@@ -32,6 +32,7 @@ export function MobileMenu(){
       <a href="/#collections" onClick={close}>Collections</a>
       <Link href="/timeline" onClick={close}>Timeline</Link>
       <Link href="/knowledge-graph" onClick={close}>Knowledge Graph</Link>
+      <Link href="/learning-paths" onClick={close}>Learning Paths</Link>
       <Link href="/solar-system" onClick={close}>Solar System</Link>
       <a href="/#about" onClick={close}>Our vision</a>
       <a href="/#creator" onClick={close}>Creator</a>
