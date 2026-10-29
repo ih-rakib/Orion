@@ -364,3 +364,44 @@
 @media(prefers-reduced-motion:reduce){
   .planet,.planet::before,.orbit-one,.orbit-two,.ring-a,.ring-b,.ring-c,.vision-core{animation:none!important}
 }
+
+
+/* Knowledge graph */
+.knowledge-graph-page{min-height:100vh}
+.graph-hero{max-width:var(--max);margin:0 auto;padding:62px 30px 42px}
+.graph-hero .back-link{display:inline-flex;margin-bottom:36px}
+.graph-hero h1{font-size:clamp(52px,7vw,88px);line-height:.98;letter-spacing:-4.5px;font-weight:500;margin:15px 0 22px}
+.graph-hero>p:not(.eyebrow):not(.back-link){max-width:650px;color:var(--muted);font-size:14px;line-height:1.9}
+.graph-stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:30px;color:#8793ad;font-size:9px;letter-spacing:1px}
+.graph-stats span{display:flex;align-items:center;gap:8px}
+.graph-stats strong{font-size:17px;color:#e3e5fa;letter-spacing:0}
+.graph-workspace{max-width:1500px;margin:0 auto;padding:0 30px 90px}
+.graph-toolbar{display:flex;flex-direction:column;gap:14px;margin-bottom:18px}
+.graph-search{display:flex;align-items:center;gap:12px;max-width:440px;height:46px;padding:0 14px;border:1px solid var(--line);background:#0d1221;color:#9aa5bd}
+.graph-search>span{font-size:23px}
+.graph-search input{width:100%;background:transparent;border:0;outline:0;color:var(--text);font-size:12px}
+.graph-filters{display:flex;gap:7px;flex-wrap:wrap}
+.graph-filter{background:transparent;border:1px solid #293249;color:#9da8c0;border-radius:99px;padding:7px 11px;font-size:10px;cursor:pointer}
+.graph-filter:hover,.graph-filter.active{background:#c1b7ff;border-color:#c1b7ff;color:#0b0c19}
+.graph-canvas-wrap{border:1px solid var(--line);background:radial-gradient(ellipse at 50% 45%,#171a32 0, #0a0f1d 68%);overflow:hidden}
+.knowledge-graph-svg{display:block;width:100%;height:auto;min-height:400px;max-height:760px}
+.graph-edge{stroke:#7773b2;stroke-opacity:.48;stroke-width:1.35;transition:stroke-opacity .2s}
+.graph-edge-muted{stroke-opacity:.055}
+.graph-node-link{cursor:pointer;outline:none}
+.graph-node{transition:r .2s,stroke-width .2s,filter .2s}
+.graph-node-link:hover .graph-node,.graph-node-link:focus .graph-node{stroke-width:4;filter:drop-shadow(0 0 7px currentColor)}
+.graph-node-label{font-size:12px;fill:#d8dcef;paint-order:stroke;stroke:#0b1020;stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+.graph-canvas-caption{display:flex;justify-content:space-between;gap:15px;padding:13px 17px;border-top:1px solid var(--line);font-size:8px;letter-spacing:1.3px;color:#8792ab}
+.graph-canvas-caption span:first-child{display:flex;align-items:center;gap:9px}
+.graph-subject-list{padding-top:58px}
+.graph-subject-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.graph-subject-card{display:flex;align-items:flex-start;gap:12px;padding:15px;border:1px solid var(--line);background:#0c1120;min-width:0;transition:border-color .2s,background .2s}
+.graph-subject-card:hover{border-color:#6f6a9c;background:#12172a}
+.graph-subject-dot{width:8px;height:8px;flex-shrink:0;border-radius:50%;margin-top:7px}
+.graph-subject-card>span:nth-child(2){display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.graph-subject-card strong{font-size:12px;font-weight:600}
+.graph-subject-card small{font-size:9px;line-height:1.6;color:#8995ad}
+.graph-subject-card>span:last-child{color:#b9b2ff}
+@media(max-width:900px){.graph-subject-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.graph-workspace{padding-left:20px;padding-right:20px}.graph-hero{padding-left:24px;padding-right:24px}.knowledge-graph-svg{min-height:330px}}
+@media(max-width:640px){.graph-hero{padding:38px 18px 30px}.graph-hero .back-link{margin-bottom:28px}.graph-hero h1{font-size:clamp(46px,12vw,64px);letter-spacing:-2.8px}.graph-hero>p:not(.eyebrow):not(.back-link){font-size:12px}.graph-stats{gap:15px}.graph-stats strong{font-size:15px}.graph-workspace{padding:0 12px 65px}.graph-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:5px}.graph-filter{white-space:nowrap;flex-shrink:0}.knowledge-graph-svg{min-height:0;min-width:720px;max-height:none}.graph-canvas-wrap{overflow-x:auto}.graph-canvas-caption{font-size:7px;padding:12px}.graph-subject-grid{grid-template-columns:1fr}.graph-subject-list{padding-top:40px}.graph-subject-card{padding:13px}}
+@media(prefers-reduced-motion:reduce){.graph-edge,.graph-node,.graph-subject-card{transition:none}}
