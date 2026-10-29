@@ -27,6 +27,10 @@ This is a long-term project. Its architecture is designed so new subjects can be
 
 These are starting points, not limits. Orion is not a space-only website: the same knowledge system is intended to support any worthwhile field, from medicine and economics to philosophy, music, agriculture, sport, and topics that have not been imagined yet.
 
+## Content authoring
+
+Subject records follow a shared content contract and are checked for unique slugs, registered categories, valid HTTPS references, and working related-subject links. See [`content/README.md`](content/README.md) for the authoring checklist and [`content/subjects/template.json`](content/subjects/template.json) for a starter record. These checks run in the project validation workflow.
+
 ## Technology
 
 - **Next.js and React** for the web application and reusable, dynamic pages.
