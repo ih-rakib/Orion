@@ -60,7 +60,8 @@ function shortestPath(from:string,to:string):string[]{
   while(queue.length){
     const path=queue.shift()!,last=path[path.length-1];
     const current=subjects.find(s=>s.slug===last);
-    for(const next of current?.related??[]){
+    const neighbors=subjects.filter(s=>current?.related.includes(s.slug)||s.related.includes(last)).map(s=>s.slug);
+    for(const next of neighbors){
       if(visited.has(next))continue;
       const nextPath=[...path,next];
       if(next===to)return nextPath;
