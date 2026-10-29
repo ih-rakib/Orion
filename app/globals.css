@@ -405,3 +405,40 @@
 @media(max-width:900px){.graph-subject-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.graph-workspace{padding-left:20px;padding-right:20px}.graph-hero{padding-left:24px;padding-right:24px}.knowledge-graph-svg{min-height:330px}}
 @media(max-width:640px){.graph-hero{padding:38px 18px 30px}.graph-hero .back-link{margin-bottom:28px}.graph-hero h1{font-size:clamp(46px,12vw,64px);letter-spacing:-2.8px}.graph-hero>p:not(.eyebrow):not(.back-link){font-size:12px}.graph-stats{gap:15px}.graph-stats strong{font-size:15px}.graph-workspace{padding:0 12px 65px}.graph-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:5px}.graph-filter{white-space:nowrap;flex-shrink:0}.knowledge-graph-svg{min-height:0;min-width:720px;max-height:none}.graph-canvas-wrap{overflow-x:auto}.graph-canvas-caption{font-size:7px;padding:12px}.graph-subject-grid{grid-template-columns:1fr}.graph-subject-list{padding-top:40px}.graph-subject-card{padding:13px}}
 @media(prefers-reduced-motion:reduce){.graph-edge,.graph-node,.graph-subject-card{transition:none}}
+
+
+/* Explanations and path-finding for the Knowledge Graph */
+.graph-node-link{cursor:pointer}
+.graph-node-link:focus-visible{outline:none}
+.graph-node-link:focus-visible .graph-node{stroke:#fff;stroke-width:4}
+.graph-detail-panel{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.5fr);gap:30px;margin-top:18px;padding:clamp(20px,3vw,34px);border:1px solid var(--line);background:linear-gradient(135deg,#111729,#0c1120)}
+.graph-detail-main{padding:5px 0}
+.graph-detail-main h2{font-size:clamp(27px,3vw,40px);letter-spacing:-1.3px;line-height:1.15;margin:10px 0}
+.graph-detail-main>p:not(.eyebrow){color:var(--muted);font-size:13px;line-height:1.85}
+.graph-open-guide{display:inline-flex;gap:10px;align-items:center;margin-top:14px;padding:10px 14px;background:#c1b7ff;color:#0b0c19;font-size:11px;font-weight:700}
+.graph-detail-connections h3{font-size:16px;margin:0 0 4px}
+.graph-detail-intro{color:var(--muted);font-size:11px;margin:0 0 12px}
+.graph-relationship{width:100%;display:grid;grid-template-columns:8px minmax(0,1fr) 18px;gap:12px;align-items:start;text-align:left;padding:13px 0;border:0;border-top:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer}
+.graph-relationship:hover .graph-relationship-copy strong{color:#c9c0ff}
+.graph-relationship-line{width:7px;height:7px;border-radius:50%;margin-top:6px}
+.graph-relationship-copy{display:grid;gap:4px}
+.graph-relationship-copy strong{font-size:12px}
+.graph-relationship-copy small{font-size:11px;line-height:1.7;color:var(--muted)}
+.graph-relationship-arrow{color:#b9b2ff}
+.graph-pathfinder{margin-top:20px;padding:clamp(20px,3vw,34px);border:1px solid var(--line);background:#0d1221}
+.graph-pathfinder h2{font-size:clamp(22px,3vw,32px);letter-spacing:-.8px;margin:6px 0}
+.graph-pathfinder>div:first-child>p:last-child{max-width:700px;color:var(--muted);font-size:12px;line-height:1.8}
+.graph-path-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) auto;align-items:end;gap:12px;margin-top:22px}
+.graph-path-controls label{display:grid;gap:7px;color:#aab4cb;font-size:10px}
+.graph-path-controls select{width:100%;min-width:0;background:#111729;border:1px solid #293249;color:var(--text);padding:11px 10px;font-size:12px}
+.graph-find-path{border-radius:0;padding:12px 15px;white-space:nowrap}
+.graph-path-result{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.graph-path-result>p{color:var(--muted);font-size:11px}
+.graph-path-steps{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.graph-path-step{display:inline-flex;align-items:center;gap:10px;color:#a99bff}
+.graph-path-step button{border:1px solid #393453;background:#14182a;color:#f0edff;padding:8px 11px;font-size:11px;cursor:pointer}
+.graph-path-step button:hover{border-color:#a99bff}
+.graph-path-note{line-height:1.7}
+.graph-subject-card{font:inherit;text-align:left;color:var(--text);cursor:pointer}
+.graph-subject-card-active{border-color:#8f83db;background:#15182c}
+@media(max-width:760px){.graph-detail-panel{grid-template-columns:1fr;gap:25px}.graph-path-controls{grid-template-columns:1fr}.graph-find-path{justify-self:start}}
