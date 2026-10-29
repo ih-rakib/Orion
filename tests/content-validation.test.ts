@@ -21,3 +21,22 @@ test("the validator catches duplicate slugs, broken relationships, and invalid s
   assert.ok(issues.some((issue) => issue.field === "related" && issue.message.includes("does-not-exist")));
   assert.ok(issues.some((issue) => issue.field === "sources[0].url"));
 });
+
+
+test("structured records include explicit editorial status and review metadata", () => {
+  for (const subject of subjects) {
+    assert.ok(["draft", "published"].includes(subject.editorialStatus));
+    assert.ok(subject.lastReviewedAt === null || /^\\d{4}-\\d{2}-\\d{2}$/.test(subject.lastReviewedAt));
+  }
+});
+
+test("the validator rejects invalid editorial status and review dates", () => {
+  const invalid = {
+    ...subjects[0],
+    editorialStatus: "public" as "published",
+    lastReviewedAt: "not-a-date",
+  };
+  const issues = validateContentLibrary([invalid]);
+  assert.ok(issues.some((issue) => issue.field === "editorialStatus"));
+  assert.ok(issues.some((issue) => issue.field === "lastReviewedAt"));
+});
