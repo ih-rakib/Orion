@@ -18,10 +18,11 @@ export type Subject = {
 };
 
 export const categories = library.categories as unknown as { name: OrionCategory; description: string }[];
-export const subjects = library.subjects as unknown as Subject[];
+export const allSubjectRecords = library.subjects as unknown as Subject[];
+export const subjects: Subject[] = allSubjectRecords.filter((subject) => subject.editorialStatus === "published");
 
 export function getSubject(slug: string) {
-  return subjects.find((subject) => subject.slug === slug && subject.editorialStatus === "published");
+  return subjects.find((subject) => subject.slug === slug);
 }
 export function getRelatedSubjects(subject: Subject) {
   return subject.related.map(getSubject).filter((item): item is Subject => Boolean(item));
