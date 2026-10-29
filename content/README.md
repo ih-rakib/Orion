@@ -4,7 +4,7 @@ Orion keeps subject data separate from the reusable page template. Adding a subj
 
 ## Current source of truth
 
-The source of truth for subject records and category definitions is [`content/orion-library.json`](./orion-library.json). The reusable TypeScript model and lookup helpers live in `lib/content.ts`. Page routes, categories, related links, and global search read from that shared registry.
+The source of truth for subject records and category definitions is [`content/orion-library.json`](./orion-library.json). Records carry an explicit `editorialStatus` (`draft` or `published`) and `lastReviewedAt` date (or `null` when no review has been recorded). Public subject routes and category listings include published records only. The reusable TypeScript model and lookup helpers live in `lib/content.ts`. Page routes, categories, related links, and global search read from that shared registry.
 
 ## Subject record checklist
 
