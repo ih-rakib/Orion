@@ -29,7 +29,7 @@ These are starting points, not limits. Orion is not a space-only website: the sa
 
 ## Content authoring
 
-Subject records follow a shared content contract and are checked for unique slugs, registered categories, valid HTTPS references, and working related-subject links. See [`content/README.md`](content/README.md) for the authoring checklist and [`content/subjects/template.json`](content/subjects/template.json) for a starter record. These checks run in the project validation workflow.
+Subject records are maintained in [`content/orion-library.json`](content/orion-library.json) and follow a shared content contract. Checks cover unique slugs, registered categories, valid HTTPS references, working related-subject links, and editorial metadata. See [`content/README.md`](content/README.md) for the authoring checklist and [`content/subjects/template.json`](content/subjects/template.json) for a starter record. These checks run in the project validation workflow.
 
 ## Technology
 
