@@ -442,3 +442,33 @@
 .graph-subject-card{font:inherit;text-align:left;color:var(--text);cursor:pointer}
 .graph-subject-card-active{border-color:#8f83db;background:#15182c}
 @media(max-width:760px){.graph-detail-panel{grid-template-columns:1fr;gap:25px}.graph-path-controls{grid-template-columns:1fr}.graph-find-path{justify-self:start}}
+
+/* Guided, cross-disciplinary learning paths */
+.learning-paths-page{min-height:100vh}
+.learning-paths-hero{max-width:var(--max);margin:0 auto;padding:48px 30px 66px;border-bottom:1px solid var(--line)}
+.learning-paths-hero h1{font-size:clamp(48px,8vw,88px);line-height:.99;letter-spacing:-4px;margin:24px 0}
+.learning-paths-hero>p:not(.eyebrow):not(.back-link){max-width:680px;color:var(--muted);font-size:15px;line-height:1.9}
+.learning-path-grid{max-width:var(--max);margin:0 auto;padding:34px 30px 70px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.learning-path-card{min-width:0;border:1px solid var(--line);background:linear-gradient(145deg,#111729,#0c1120);padding:clamp(20px,3vw,32px);display:flex;flex-direction:column}
+.learning-path-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.learning-path-number{font-size:12px;color:#a99bff;letter-spacing:2px}
+.learning-path-eyebrow{font-size:9px;letter-spacing:1.4px;color:var(--muted);text-align:right}
+.learning-path-card h2{font-size:clamp(24px,3vw,34px);letter-spacing:-1px;line-height:1.2;margin:24px 0 10px}
+.learning-path-description,.learning-path-why{color:var(--muted);font-size:12px;line-height:1.85}
+.learning-path-meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.learning-path-meta span{border:1px solid var(--line);padding:5px 8px;color:#d1d7e8;font-size:10px}
+.learning-path-why{border-left:2px solid #a99bff;padding-left:13px;margin:18px 0 20px}
+.learning-path-card h3{font-size:11px;text-transform:uppercase;letter-spacing:1.3px;color:#c7cde0}
+.learning-path-steps{list-style:none;padding:0;margin:0}
+.learning-path-steps li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:center;border-top:1px solid var(--line)}
+.learning-path-step-index{font-size:10px;color:#7f8ba5}
+.learning-path-steps li>a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0}
+.learning-path-steps li>a>span:first-child{display:grid;gap:2px}
+.learning-path-steps strong{font-size:12px}
+.learning-path-steps small{font-size:10px;color:var(--muted)}
+.learning-path-steps li>a:hover strong{color:#c4baff}
+.learning-path-start{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:24px;font-size:11px;font-weight:700;color:#c3b9ff}
+.learning-paths-footer{max-width:var(--max);margin:0 auto;padding:10px 30px 90px;text-align:center}
+.learning-paths-footer h2{font-size:clamp(26px,4vw,42px);letter-spacing:-1.4px;margin:10px 0}
+.learning-paths-footer>p:not(.eyebrow){color:var(--muted);font-size:12px;margin-bottom:24px}
+@media(max-width:760px){.learning-paths-hero{padding:34px 20px 45px}.learning-paths-hero h1{letter-spacing:-2.5px}.learning-path-grid{grid-template-columns:1fr;padding:22px 20px 50px}.learning-paths-footer{padding:0 20px 60px}}
