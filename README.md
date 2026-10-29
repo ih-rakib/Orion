@@ -9,7 +9,7 @@ This is a long-term project. Its architecture is designed so new subjects can be
 ## Vision
 
 - **Explore:** discover subjects across space, Earth, life, history, and science.
-- **Connect:** follow relationships between objects, events, ideas, and discoveries.
+- **Connect:** follow relationships between objects, events, ideas, and discoveries through the interactive Knowledge Graph.
 - **Understand:** present clear explanations that welcome curious readers.
 - **Verify:** make room for sources, references, dates, and scientific uncertainty.
 - **Grow:** build a flexible foundation for new categories and experiences.
