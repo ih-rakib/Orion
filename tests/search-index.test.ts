@@ -44,3 +44,8 @@ test("global search finds knowledge outside astronomy",()=>{
   assert.ok(searchContent("ancient civilizations history").some((entry)=>entry.href==="/subjects/ancient-civilizations"));
   assert.ok(searchContent("technology engineering").some((entry)=>entry.kind==="Collection" && entry.title==="Technology & Engineering"));
 });
+
+
+test("global search can discover the interactive knowledge graph",()=>{
+  assert.ok(searchContent("knowledge graph connections").some((entry)=>entry.href==="/knowledge-graph"));
+});
