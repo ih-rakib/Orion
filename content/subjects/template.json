@@ -20,5 +20,7 @@
       "publisher": "A trusted institution",
       "url": "https://example.org/reference"
     }
-  ]
+  ],
+  "editorialStatus": "draft",
+  "lastReviewedAt": null
 }
