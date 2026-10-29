@@ -17,8 +17,8 @@ export type Subject = {
   lastReviewedAt: string | null;
 };
 
-export const categories = library.categories as { name: OrionCategory; description: string }[];
-export const subjects = library.subjects as Subject[];
+export const categories = library.categories as unknown as { name: OrionCategory; description: string }[];
+export const subjects = library.subjects as unknown as Subject[];
 
 export function getSubject(slug: string) {
   return subjects.find((subject) => subject.slug === slug && subject.editorialStatus === "published");
