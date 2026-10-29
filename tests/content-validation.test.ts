@@ -26,7 +26,7 @@ test("the validator catches duplicate slugs, broken relationships, and invalid s
 test("structured records include explicit editorial status and review metadata", () => {
   for (const subject of subjects) {
     assert.ok(["draft", "published"].includes(subject.editorialStatus));
-    assert.ok(subject.lastReviewedAt === null || /^\\d{4}-\\d{2}-\\d{2}$/.test(subject.lastReviewedAt));
+    assert.ok(subject.lastReviewedAt === null || /^\d{4}-\d{2}-\d{2}$/.test(subject.lastReviewedAt));
   }
 });
 
