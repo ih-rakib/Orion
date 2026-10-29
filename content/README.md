@@ -4,7 +4,7 @@ Orion keeps subject data separate from the reusable page template. Adding a subj
 
 ## Current source of truth
 
-Starter subject records currently live in `lib/content.ts` in the `subjects` array. The reusable model is the `Subject` type in that file. Category definitions and slug/lookup helpers are in the same module.
+The source of truth for subject records and category definitions is [`content/orion-library.json`](./orion-library.json). The reusable TypeScript model and lookup helpers live in `lib/content.ts`. Page routes, categories, related links, and global search read from that shared registry.
 
 ## Subject record checklist
 
@@ -16,11 +16,13 @@ Every published subject should include:
 - `facts`: one or more useful, specific statements.
 - `related`: existing subject slugs only; these power connected exploration.
 - `sources`: at least one named, HTTPS further-reading reference with a publisher.
+- `editorialStatus`: `draft` or `published`; only published subjects are resolved by public subject routes.
+- `lastReviewedAt`: `YYYY-MM-DD` after a human source review, or `null` until one has actually happened.
 - `accent` and `symbol`: a supported visual accent and a compact card symbol.
 
 ## Safe authoring workflow
 
-1. Add the record to the `subjects` registry; do not create a one-off page component.
+1. Add the record to the `subjects` array in `content/orion-library.json`; do not create a one-off page component.
 2. Reuse existing subject slugs in `related`. Add the reciprocal link where it improves discovery.
 3. Prefer primary sources and recognized scientific, educational, cultural, or public institutions. A source list is further reading, not a claim-by-claim citation.
 4. Run `npm run content:check`, `npm run typecheck`, `npm test`, `npm run lint`, and `npm run build`.
@@ -32,4 +34,4 @@ Every published subject should include:
 
 ## Growth direction
 
-This registry is a lightweight starting point, not a full editorial CMS. When the library grows beyond comfortable code review, move records into structured JSON/MDX or a database-backed editorial workflow while preserving the same subject contract and reusable routes. A future CMS should add draft/published state, source review dates, claim-level citations, change history, and editorial review without coupling content to page layout.
+This JSON registry is a lightweight starting point, not a full editorial CMS. When the library grows beyond comfortable code review, move records into structured JSON/MDX or a database-backed editorial workflow while preserving the same subject contract and reusable routes. A future CMS should add draft/published state, source review dates, claim-level citations, change history, and editorial review without coupling content to page layout.
