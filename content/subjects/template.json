@@ -1,0 +1,24 @@
+{
+  "slug": "example-topic",
+  "title": "Example topic",
+  "category": "Science",
+  "eyebrow": "A short contextual label",
+  "summary": "A concise summary used in cards and search.",
+  "description": "A longer introduction that explains the topic clearly and gives readers useful context.",
+  "facts": [
+    "A specific, verifiable fact with clear wording."
+  ],
+  "related": [
+    "mathematics",
+    "earth"
+  ],
+  "accent": "blue",
+  "symbol": "✧",
+  "sources": [
+    {
+      "title": "A useful reference",
+      "publisher": "A trusted institution",
+      "url": "https://example.org/reference"
+    }
+  ]
+}
