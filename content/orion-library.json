@@ -343,11 +343,73 @@
       "category": "Earth",
       "eyebrow": "Our pale blue home",
       "summary": "A dynamic planet with liquid oceans, a protective atmosphere and an extraordinary diversity of life.",
-      "description": "Earth is shaped by interacting systems: rock, water, air, ice and living organisms. Studying how these systems change helps us understand our planet's past, its present challenges and the conditions that make life possible.",
+      "description": "Earth is the third planet from the Sun and, so far, the only world known to be alive. It is the only planet in our solar system with liquid water on its surface, an oxygen-rich atmosphere breathed out by life itself, and an internally generated magnetic shield — and the only one whose crust is broken into moving plates that continually rebuild its surface. A single large Moon steadies its tilt and, with it, its climate. Everything humanity knows about how planets work is anchored to this one example, which is both Earth's scientific value and its limitation. Even its name is an exception: every other planet carries the name of a Greek or Roman god; 'Earth' simply means 'the ground.'",
       "facts": [
-        "About 71% of Earth's surface is covered by water.",
-        "Earth's atmosphere and magnetic field help protect the surface environment.",
-        "Life has altered the planet's atmosphere, oceans and geology over billions of years."
+        "Earth is the only planet in our solar system with liquid water on its surface. Its global ocean covers about 71% of the surface, averages about 3.6 kilometres deep, and holds 97% of all Earth's water.",
+        "Earth is the biggest of the four rocky terrestrial planets and the fifth largest planet overall, with an equatorial diameter of 12,756 kilometres.",
+        "Earth orbits exactly one astronomical unit — about 150 million kilometres — from the Sun, by definition; sunlight takes about eight minutes to reach us.",
+        "Earth spins once every 23.9 hours and takes 365.25 days to orbit the Sun. The extra quarter-day is why our calendar adds a leap day every four years.",
+        "Earth formed about 4.5 billion years ago, when gravity pulled swirling gas and dust together; life began in its vast oceans about 3.8 billion years ago.",
+        "The atmosphere is 78% nitrogen, 21% oxygen and 1% other gases. It shields the surface from much of the Sun's harmful radiation, and most incoming meteoroids burn up in it as meteors before they can strike.",
+        "Earth's rapid rotation and molten nickel-iron core generate a magnetic field. The geologic record shows its polarity flips on average about every 300,000 years — but at very irregular intervals.",
+        "Earth is the only body in the solar system known to show plate tectonics in action: its outer layer is broken into a dozen or more plates moving between less than 1 and more than 15 centimetres a year, and more than 80% of the world's earthquakes and volcanoes occur along their boundaries."
+      ],
+      "factSources": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ],
+      "sections": [
+        {
+          "heading": "A planet built in layers",
+          "body": "Slice Earth open and it is not solid rock all the way down. At the centre sits an inner core: a solid sphere of iron and nickel about 1,221 kilometres in radius, where the temperature reaches about 5,400 °C — as hot as the Sun's surface. Around it churns a liquid outer core of iron and nickel some 2,300 kilometres thick; Earth's rotation in that molten metal is what generates the planet's magnetic field, the shield that deflects the solar wind and paints the aurorae at the poles. Above the core lies the mantle, roughly 2,900 kilometres of hot, slowly flowing rock that NASA compares to caramel, and finally the crust — about 30 kilometres thick under the continents, but only about 5 kilometres thick under the oceans. Everything we have ever directly sampled is that thin outer skin.",
+          "sources": [
+            0
+          ]
+        },
+        {
+          "heading": "The restless surface",
+          "body": "The crust and upper mantle are not one shell but a mosaic — a dozen or more rigid plates riding on hotter, softer rock beneath, drifting between less than 1 and more than 15 centimetres a year. At mid-ocean ridges the plates pull apart and new seafloor is born; at subduction zones an old, cold plate sinks back into the interior and is recycled. That conveyor is why the oldest seafloor is only about 180 million years old while the oldest known continental rock, in Australia, dates back about 4.3 billion years — the oceans keep renewing their floors while continents mostly survive. The present continents are fragments of a supercontinent, Pangaea, that broke up about 225 million years ago. And the process is not gentle: more than 80% of earthquakes and volcanoes happen along the plate boundaries. Earth is, as far as anyone has found, the only planet where this is happening.",
+          "sources": [
+            2
+          ]
+        },
+        {
+          "heading": "A common misconception: summer is not Earth moving closer to the Sun",
+          "body": "It feels obvious: summer is hot, so Earth must be nearer the Sun. NASA calls the idea out directly — it is incorrect. Earth's orbit is slightly lopsided, but the timing gives it away: Earth is closest to the Sun (perihelion, about 91.4 million miles) in January and farthest (aphelion, about 94.5 million miles) in July — so the Northern Hemisphere has winter at closest approach and summer at the farthest point, and the roughly 3-million-mile difference is too small, relative to the whole distance, to drive the weather. The real cause is tilt. Earth's axis leans 23.4 degrees, so as the planet orbits, each hemisphere takes its turn leaning toward the Sun and receiving its rays more directly — summer where you lean in, winter where you lean away, and opposite seasons in the two hemispheres. The same tilt is thought to be a souvenir of the collision with a body called Theia early in Earth's history — the impact that most scientists believe blasted out the rubble that became our Moon.",
+          "sources": [
+            0,
+            1
+          ]
+        },
+        {
+          "heading": "An open question: how did a rocky planet become a living one?",
+          "body": "Earth is the only place in the universe where life is known to exist, and we still cannot say exactly how it started. NASA's summary is deliberately modest: Earth's oceans provided a convenient place for life to begin about 3.8 billion years ago. The steps from ocean chemistry to the first living cell — which molecules came first, where exactly it happened, and how likely it is anywhere else — remain unresolved, and they matter far beyond Earth: the answer shapes how scientists judge the odds of life on ocean worlds and exoplanets. Some of Earth's other basics are just as unsettled. We know the magnetic field has reversed many times, at irregular intervals averaging about 300,000 years — and that a reversal is very unlikely in the next thousand years — but there is no way to schedule the next one. Our home planet is the best-studied world there is, and parts of its own story are still open.",
+          "sources": [
+            0
+          ]
+        }
       ],
       "related": [
         "mars",
@@ -361,10 +423,20 @@
           "title": "Facts About Earth",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/earth/facts/"
+        },
+        {
+          "title": "What Causes the Seasons?",
+          "publisher": "NASA Space Place",
+          "url": "https://spaceplace.nasa.gov/seasons/en/"
+        },
+        {
+          "title": "Plate Tectonics in a Nutshell",
+          "publisher": "U.S. Geological Survey",
+          "url": "https://volcanoes.usgs.gov/about/edu/dynamicplanet/nutshell.php"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-10"
     },
     {
       "slug": "dinosaurs",
