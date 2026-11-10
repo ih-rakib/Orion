@@ -28,14 +28,14 @@ export function MobileMenu(){
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">{open?<path d="m6 6 12 12M18 6 6 18"/>:<path d="M3 6h18M3 12h18M3 18h18"/>}</svg>
     </button>
     {open&&<><button type="button" className="mobile-menu-backdrop" aria-label="Close navigation" onClick={close}/><nav id="mobile-navigation" className="mobile-menu-panel" aria-label="Mobile navigation">
-      <a href="/#explore" onClick={close}>Explore & Search</a>
-      <a href="/#collections" onClick={close}>Collections</a>
+      <Link href="/#explore" onClick={close}>Explore & Search</Link>
+      <Link href="/#collections" onClick={close}>Collections</Link>
       <Link href="/timeline" onClick={close}>Timeline</Link>
       <Link href="/knowledge-graph" onClick={close}>Knowledge Graph</Link>
       <Link href="/learning-paths" onClick={close}>Learning Paths</Link>
       <Link href="/solar-system" onClick={close}>Solar System</Link>
-      <a href="/#about" onClick={close}>Our vision</a>
-      <a href="/#creator" onClick={close}>Creator</a>
+      <Link href="/#about" onClick={close}>Our vision</Link>
+      <Link href="/#creator" onClick={close}>Creator</Link>
     </nav></>}
   </div>
 }

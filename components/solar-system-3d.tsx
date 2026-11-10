@@ -119,15 +119,12 @@ function Planet({ body, selected, onSelect, paused, selectedLandmark, onSelectLa
   const [hovered, setHovered] = useState(false);
   const surfaceTexture = useMemo(() => createPlanetTexture(body.slug, body.color), [body.slug, body.color]);
   const cloudTexture = useMemo(() => createCloudTexture(), []);
-  const [sourcedTexture, setSourcedTexture] = useState<THREE.Texture | null>(null);
+  const [sourced, setSourced] = useState<{ slug: string; texture: THREE.Texture } | null>(null);
+  const sourcedTexture = sourced?.slug === body.slug ? sourced.texture : null;
   useEffect(() => {
     const filename = sourcedTextureFiles[body.slug];
-    if (!filename) {
-      setSourcedTexture(null);
-      return;
-    }
+    if (!filename) return;
     let active = true;
-    setSourcedTexture(null);
     const loader = new THREE.TextureLoader();
     loader.setCrossOrigin("anonymous");
     loader.load(
@@ -139,12 +136,12 @@ function Planet({ body, selected, onSelect, paused, selectedLandmark, onSelectLa
         }
         texture.colorSpace = THREE.SRGBColorSpace;
         texture.anisotropy = 4;
-        setSourcedTexture(texture);
+        setSourced({ slug: body.slug, texture });
       },
       undefined,
       () => {
-        // Keep the generated procedural map as a resilient offline/network fallback.
-        if (active) setSourcedTexture(null);
+        // Keep the generated procedural map as a resilient offline/network fallback:
+        // a failed load simply never replaces the derived texture for this body.
       },
     );
     return () => {

@@ -14,7 +14,7 @@ export function SolarSystemExplorer() {
       <div className="solar-system-map" aria-label="Schematic of Solar System objects">
         <div className="solar-map-caption"><span className="live-dot" /> SELECT A WORLD TO EXPLORE</div>
         <div className="solar-object-track">
-          {solarSystemObjects.filter((object) => object.slug !== "moon").map((object, index) => (
+          {solarSystemObjects.filter((object) => object.slug !== "moon").map((object) => (
             <button
               type="button"
               key={object.slug}

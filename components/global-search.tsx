@@ -40,7 +40,6 @@ export function GlobalSearch() {
     }
   }, [open]);
 
-  useEffect(() => setActiveIndex(0), [query]);
 
   const close = () => setOpen(false);
   const navigateToActive = () => {
@@ -67,12 +66,12 @@ export function GlobalSearch() {
             <label className="global-search-input-wrap">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" strokeWidth="1.7"/><path d="m16 16 4.2 4.2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
               <span className="sr-only">Search all Orion content</span>
-              <input ref={inputRef} value={query} onChange={(event) => setQuery(event.target.value)} onKeyDown={(event) => {
+              <input ref={inputRef} value={query} onChange={(event) => { setQuery(event.target.value); setActiveIndex(0); }} onKeyDown={(event) => {
                 if (event.key === "ArrowDown" && results.length) { event.preventDefault(); setActiveIndex((index) => (index + 1) % results.length); }
                 else if (event.key === "ArrowUp" && results.length) { event.preventDefault(); setActiveIndex((index) => (index - 1 + results.length) % results.length); }
                 else if (event.key === "Enter") { event.preventDefault(); navigateToActive(); }
               }} type="search" placeholder="Search planets, moons, galaxies, dinosaurs, events…" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-controls="orion-search-results" aria-activedescendant={results[activeIndex] ? `orion-search-option-${results[activeIndex].id.replace(/[^a-zA-Z0-9_-]/g, "-")}` : undefined}/>
-              {query && <button type="button" className="global-search-clear" onClick={() => setQuery("")}>Clear</button>}
+              {query && <button type="button" className="global-search-clear" onClick={() => { setQuery(""); setActiveIndex(0); }}>Clear</button>}
             </label>
             <div className="global-search-meta"><span>{query.trim() ? `${results.length} matching results` : "Popular starting points"}</span><span>↑ ↓ navigate · Enter open</span></div>
             <div id="orion-search-results" className="global-search-results" role="listbox" aria-label="Search suggestions">
