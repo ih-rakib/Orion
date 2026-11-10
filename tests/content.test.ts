@@ -52,6 +52,22 @@ test("each starter subject has the content required for a readable page",()=>{
   }
 });
 
+test("deepened subjects cite every fact and section against the source list",()=>{
+  for(const subject of subjects){
+    if(subject.factSources){
+      assert.equal(subject.factSources.length,subject.facts.length,`${subject.title} fact citations must align with its facts`);
+      for(const cited of subject.factSources){
+        assert.ok(cited.length>0,`${subject.title} has an uncited fact`);
+        for(const n of cited) assert.ok(Number.isInteger(n)&&n>=0&&n<subject.sources.length,`${subject.title} cites a missing source`);
+      }
+    }
+    for(const section of subject.sections??[]){
+      assert.ok(section.heading.trim().length>0&&section.body.trim().length>0,`${subject.title} has an empty in-depth section`);
+      for(const n of section.sources??[]) assert.ok(n>=0&&n<subject.sources.length,`${subject.title} section cites a missing source`);
+    }
+  }
+});
+
 test("the library spans space, Earth, life, human history, mathematics, and technology",()=>{
   for(const slug of ["galaxies","exoplanets","climate-change","whales","human-origins","ancient-civilizations","mathematics","artificial-intelligence"]){
     assert.ok(getSubject(slug),`Missing cross-disciplinary subject: ${slug}`);

@@ -9,6 +9,8 @@ export type Subject = {
   summary: string;
   description: string;
   facts: string[];
+  factSources?: number[][];
+  sections?: { heading: string; body: string; sources?: number[] }[];
   related: string[];
   sources: { title: string; publisher: string; url: string }[];
   accent: "blue" | "violet" | "teal" | "amber" | "rose";

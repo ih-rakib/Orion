@@ -42,6 +42,19 @@ test("the validator rejects invalid editorial status and review dates", () => {
 });
 
 
+test("the validator checks claim-level citations on deepened subjects", () => {
+  const mars = subjects.find((subject) => subject.slug === "mars");
+  assert.ok(mars?.factSources, "Mars pilot should carry fact citations");
+  assert.equal(mars.factSources.length, mars.facts.length);
+  assert.ok(mars.sections?.length, "Mars pilot should carry in-depth sections");
+  const misaligned = { ...mars, factSources: mars.factSources.slice(1) } as Subject;
+  assert.ok(validateContentLibrary([misaligned]).some((issue) => issue.field === "factSources"));
+  const outOfRange = { ...mars, factSources: mars.factSources.map((cited, i) => (i === 0 ? [99] : cited)) } as Subject;
+  assert.ok(validateContentLibrary([outOfRange]).some((issue) => issue.field === "factSources[0]"));
+  const bodiless = { ...mars, sections: [{ heading: "Empty", body: " ", sources: [0] }] } as Subject;
+  assert.ok(validateContentLibrary([bodiless]).some((issue) => issue.field === "sections[0].body"));
+});
+
 test("draft records are excluded from public subject routes and listings", async () => {
   const { getSubject, getSubjectsByCategory } = await import("../lib/content");
   const draft = { ...allSubjectRecords[0], slug: "private-draft", editorialStatus: "draft" as const };

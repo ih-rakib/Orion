@@ -38,6 +38,31 @@ export function validateContentLibrary(records: readonly Subject[]): ContentIssu
       add("lastReviewedAt", "Use an ISO calendar date (YYYY-MM-DD) or null.");
     }
 
+    if (subject.factSources !== undefined) {
+      if (!Array.isArray(subject.factSources) || !Array.isArray(subject.facts) || subject.factSources.length !== subject.facts.length) {
+        add("factSources", "Fact citations must line up one-to-one with the facts list.");
+      } else {
+        for (const [index, cited] of subject.factSources.entries()) {
+          if (!Array.isArray(cited) || cited.length === 0 || cited.some((n) => !Number.isInteger(n) || n < 0 || !Array.isArray(subject.sources) || n >= subject.sources.length)) {
+            add(`factSources[${index}]`, "Cite at least one existing source index for this fact.");
+          }
+        }
+      }
+    }
+    if (subject.sections !== undefined) {
+      if (!Array.isArray(subject.sections) || subject.sections.length === 0) {
+        add("sections", "In-depth sections must be a non-empty list when present.");
+      } else {
+        for (const [index, section] of subject.sections.entries()) {
+          if (!section?.heading?.trim()) add(`sections[${index}].heading`, "Section heading is required.");
+          if (!section?.body?.trim()) add(`sections[${index}].body`, "Section body is required.");
+          if (section?.sources !== undefined && (!Array.isArray(section.sources) || section.sources.length === 0 || section.sources.some((n) => !Number.isInteger(n) || n < 0 || !Array.isArray(subject.sources) || n >= subject.sources.length))) {
+            add(`sections[${index}].sources`, "Cite at least one existing source index for this section.");
+          }
+        }
+      }
+    }
+
     if (!Array.isArray(subject.sources) || subject.sources.length === 0) {
       add("sources", "Add at least one further-reading source.");
     } else {

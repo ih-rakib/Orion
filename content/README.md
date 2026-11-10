@@ -14,6 +14,10 @@ Every published subject should include:
 - `title`, `eyebrow`, `summary`, and `description`: clear language written for curious readers.
 - `category`: one of the registered categories.
 - `facts`: one or more useful, specific statements.
+
+- `factSources` (optional, deepened guides): one list of source indexes per fact, in the same order as `facts` — `factSources[0]` cites the sources that support `facts[0]`, by their position in `sources`. Every fact must cite at least one existing source.
+
+- `sections` (optional, deepened guides): in-depth sections, each with a `heading`, a `body`, and `sources` (source indexes the section's claims rest on). Use them for the story behind the facts, a common misconception, and an open question.
 - `related`: existing subject slugs only; these power connected exploration.
 - `sources`: at least one named, HTTPS further-reading reference with a publisher.
 - `editorialStatus`: `draft` or `published`; only published subjects are resolved by public subject routes.
@@ -24,7 +28,7 @@ Every published subject should include:
 
 1. Add the record to the `subjects` array in `content/orion-library.json`; do not create a one-off page component.
 2. Reuse existing subject slugs in `related`. Add the reciprocal link where it improves discovery.
-3. Prefer primary sources and recognized scientific, educational, cultural, or public institutions. A source list is further reading, not a claim-by-claim citation.
+3. Prefer primary sources and recognized scientific, educational, cultural, or public institutions. A source list is further reading, not a claim-by-claim citation — unless the record is a deepened guide, where `factSources` and section `sources` pair claims with the specific sources behind them. Set `lastReviewedAt` only after actually checking the record's claims against its sources.
 4. Run `npm run content:check`, `npm run typecheck`, `npm test`, `npm run lint`, and `npm run build`.
 5. Check that the new subject appears in the library and search, opens at `/subjects/<slug>`, and has working related links.
 

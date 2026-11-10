@@ -127,11 +127,75 @@
       "category": "Solar System",
       "eyebrow": "The red planet",
       "summary": "A cold desert world with ancient river-like landscapes and clues to a wetter past.",
-      "description": "Mars preserves evidence that liquid water once shaped parts of its surface. Robotic orbiters, landers and rovers investigate its geology and climate, helping researchers understand whether the planet ever offered conditions suitable for microbial life.",
+      "description": "Mars is a cold, dusty desert world with a very thin atmosphere, seasons, polar ice caps, extinct volcanoes and the largest canyon in the Solar System. It was not always so: billions of years ago Mars was warmer and wetter, with rivers, lakes and a thicker atmosphere. Today, robotic orbiters, landers and rovers investigate how the planet changed — and whether the environments it once had could ever have supported microbial life.",
       "facts": [
-        "Mars has the largest volcano known in the Solar System: Olympus Mons.",
-        "Its two small moons are Phobos and Deimos.",
-        "Past water activity makes Mars a major target in the search for ancient life."
+        "Mars is about half Earth's size — its radius is about 3,390 kilometres — and it orbits on average 228 million kilometres (1.5 AU) from the Sun.",
+        "A Martian day, called a sol, lasts 24.6 hours, and a Martian year lasts 687 Earth days.",
+        "Olympus Mons is the largest volcano in the Solar System; its base covers an area about the size of Arizona.",
+        "Valles Marineris, the largest canyon system in the Solar System, stretches about 3,870 kilometres — more than 10 times longer and wider than Earth's Grand Canyon.",
+        "Its two small, potato-shaped moons, Phobos and Deimos, may be captured asteroids. Phobos is slowly moving toward Mars and will crash into it or break apart in about 50 million years.",
+        "Ancient river-valley networks, deltas and lakebeds show that liquid water once flowed on Mars. Today its water is found mainly as ice, because the atmosphere is too thin for liquid water to last on the surface.",
+        "Mars has distinct seasons, because its axis is tilted 25 degrees — close to Earth's 23.4 degrees — but its seasons vary in length because its orbit is noticeably elliptical.",
+        "NASA's Perseverance rover landed in Jezero Crater, an ancient lakebed, on 18 February 2021. Its passenger, the Ingenuity helicopter, became the first aircraft to achieve powered, controlled flight on another planet and completed 72 flights."
+      ],
+      "factSources": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "sections": [
+        {
+          "heading": "A world that used to be wetter",
+          "body": "Mars was not always a frozen desert. NASA missions have found extensive evidence that early Mars was much wetter and warmer, with a thicker atmosphere. River-valley networks, deltas and lakebeds survive on the surface, along with rocks and minerals that could only have formed in liquid water, and some features suggest huge floods about 3.5 billion years ago. Jezero Crater tells the story in one place: more than 3.5 billion years ago, river channels spilled over the crater wall and created a lake, carrying clay minerals in from the surrounding area. Perseverance has since confirmed that Jezero once held a habitable, stable lake, delta and river system.",
+          "sources": [
+            0,
+            1
+          ]
+        },
+        {
+          "heading": "Where did the air go?",
+          "body": "A thicker atmosphere needs protection, and Mars lost its shield early. Mars has no global magnetic field today, but parts of its southern crust are highly magnetised — traces of a magnetic field from about 4 billion years ago. Without that protection, the solar wind can reach the upper atmosphere directly. NASA's MAVEN spacecraft, in orbit since September 2014, was the first mission devoted to understanding that upper atmosphere: how it interacts with the Sun and the solar wind, and how its gas is lost to space. That loss is the leading explanation for how a planet that once hosted rivers and lakes became the cold, dry desert seen today — and MAVEN's own mission record describes its task as determining what happened to the once-dense atmosphere of Mars.",
+          "sources": [
+            0,
+            2
+          ]
+        },
+        {
+          "heading": "A common misconception: the canals of Mars",
+          "body": "In the late 1800s, astronomer Percival Lowell popularised the idea that Mars was crossed by canals built by an intelligent civilisation to carry water from the polar ice caps across a drying planet. The claim rested on fine linear markings reported at the limit of what telescopes of the era could see, beginning with Giovanni Schiaparelli's 'canali'. Many astronomers were sceptical and could not see the markings; in 1909 a larger telescope at Mount Wilson showed the supposed canals were irregular natural geological features. NASA's Mariner missions in the 1960s and the Mariner 9 orbiter in 1972 then disproved canal-like features definitively: they photographed an ancient, cratered surface, and the 'canals' are now regarded as an optical illusion.",
+          "sources": [
+            3
+          ]
+        },
+        {
+          "heading": "An open question: did anything ever live there?",
+          "body": "No life has been confirmed on Mars, and scientists do not expect to find living things thriving there today. The real question is whether microbial life existed long ago, when Mars was warmer and covered with water. That search is Perseverance's central task: its objectives include seeking signs of past microbial life and collecting samples of rock and soil that might preserve those signs. In 2024 the rover investigated a rock nicknamed 'Cheyava Falls' whose sample, 'Sapphire Canyon', shows signs of past water and organic material and contains potential biosignatures — clues that past life may have been present. After a year of peer review, the results were published in Nature in September 2025, with the emphasis exactly where it belongs: a potential biosignature requires more data and further study before any conclusion about life on Mars, past or present.",
+          "sources": [
+            0,
+            1
+          ]
+        }
       ],
       "related": [
         "earth",
@@ -145,10 +209,25 @@
           "title": "Mars Facts",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/mars/facts/"
+        },
+        {
+          "title": "Mars 2020: Perseverance Rover",
+          "publisher": "NASA Science",
+          "url": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+        },
+        {
+          "title": "MAVEN",
+          "publisher": "NASA Science",
+          "url": "https://science.nasa.gov/mission/maven/"
+        },
+        {
+          "title": "Percival Lowell",
+          "publisher": "Royal Astronomical Society of Canada",
+          "url": "https://www.rasc.ca/honorary-member-percival-lowell"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-10"
     },
     {
       "slug": "pluto",

@@ -8,6 +8,20 @@
   "facts": [
     "A specific, verifiable fact with clear wording."
   ],
+  "factSources": [
+    [
+      0
+    ]
+  ],
+  "sections": [
+    {
+      "heading": "An in-depth section",
+      "body": "A longer, sourced explanation for deepened guides. Optional — remove for starter guides.",
+      "sources": [
+        0
+      ]
+    }
+  ],
   "related": [
     "mathematics",
     "earth"

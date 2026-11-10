@@ -472,3 +472,15 @@
 .learning-paths-footer h2{font-size:clamp(26px,4vw,42px);letter-spacing:-1.4px;margin:10px 0}
 .learning-paths-footer>p:not(.eyebrow){color:var(--muted);font-size:12px;margin-bottom:24px}
 @media(max-width:760px){.learning-paths-hero{padding:34px 20px 45px}.learning-paths-hero h1{letter-spacing:-2.5px}.learning-path-grid{grid-template-columns:1fr;padding:22px 20px 50px}.learning-paths-footer{padding:0 20px 60px}}
+
+/* Deepened guides: claim-level citations */
+.fact-sources { margin-left: .45rem; white-space: nowrap; }
+.fact-sources a { color: var(--accent); font-size: .78em; font-weight: 700; margin-right: .25rem; }
+.fact-sources a:hover, .fact-sources a:focus-visible { text-decoration: underline; }
+.deep-section { margin-top: 2rem; }
+.deep-section h3 { font-size: 19px; font-weight: 500; letter-spacing: -.4px; margin: 0 0 10px; }
+.deep-section p { font-size: 14px; line-height: 2; color: #aab4ca; margin: 0 0 12px; }
+.deep-section .section-sources { font-size: 11px; line-height: 1.7; color: var(--muted); }
+.deep-section .section-sources a { color: var(--accent); }
+.deep-section .section-sources a:hover, .deep-section .section-sources a:focus-visible { text-decoration: underline; }
+.source-list li { scroll-margin-top: 100px; }
