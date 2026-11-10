@@ -69,11 +69,75 @@
       "category": "Cosmos",
       "eyebrow": "Gravity at its extreme",
       "summary": "Regions of spacetime where gravity is so strong that nothing—not even light—can escape from within the event horizon.",
-      "description": "Black holes form when matter is compressed into an extraordinarily dense region. Their event horizons mark the boundary beyond which escape is impossible. Astronomers study them through nearby matter, gravitational waves and images of glowing material around them.",
+      "description": "A black hole is not really a hole. It is a huge concentration of matter packed into a very tiny space — so dense that beneath its boundary, the event horizon, gravity allows nothing to escape, not even light. Black holes themselves are invisible, but they betray themselves constantly: through the glowing matter falling toward them, the stars that orbit them, the light they bend, and the ripples they send through spacetime when they collide. They range from a few times the Sun's mass to monsters tens of billions of times heavier, and one sits at the centre of nearly every large galaxy — including our own.",
       "facts": [
-        "The event horizon is a boundary, not a solid surface.",
-        "Black holes can grow by accreting matter and merging with other black holes.",
-        "They are detected through multiple kinds of evidence."
+        "A black hole is a huge concentration of matter packed into a very tiny space — so dense that at its boundary, the event horizon, gravity is strong enough that nothing, not even light, can escape. The event horizon is a boundary, not a solid surface.",
+        "One kind of black hole is born when a massive star runs out of fuel and explodes as a supernova, leaving a collapsed core behind.",
+        "Most Milky Way-sized galaxies have a monster black hole at their centre. Ours is called Sagittarius A*: it is 4 million times the Sun's mass and about 27,000 light-years away.",
+        "The most massive black hole observed, TON 618, is about 66 billion times the Sun's mass. The lightest known black hole is only 3.8 times the Sun's mass.",
+        "The nearest known black hole, Gaia BH1, is about 1,500 light-years away.",
+        "Black holes neither emit nor reflect light, so astronomers detect them by their effects — glowing rings of gas and dust called accretion disks, stars orbiting something invisible and massive, light bent by their gravity, and ripples in spacetime itself.",
+        "The Event Horizon Telescope linked eight radio observatories into a single Earth-sized virtual telescope, releasing the first image of a black hole — M87*, in a galaxy 55 million light-years away — in 2019, and the first image of Sagittarius A* in 2022.",
+        "On 14 September 2015, LIGO made the first direct detection of gravitational waves: ripples from two black holes of about 29 and 36 times the Sun's mass merging 1.3 billion years ago. About three Suns' worth of mass was converted into gravitational waves in a fraction of a second."
+      ],
+      "factSources": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "sections": [
+        {
+          "heading": "Born in a collapsing star — and grown ever since",
+          "body": "A stellar black hole starts with a death. When a massive star runs out of fuel it can explode as a supernova, and what remains of its core collapses into an extraordinarily dense object. From there, black holes grow: by pulling in gas and dust, and by merging with other black holes — the collisions LIGO now listens for. The giants are harder to explain. Supermassive black holes of millions to billions of solar masses sit at the centres of most large galaxies, and exactly how they grew so large is still an active question: the Event Horizon Telescope team notes that how gas behaves around supermassive black holes is not yet fully understood, even though that process is thought to be a key part of how galaxies form and evolve.",
+          "sources": [
+            0,
+            1
+          ]
+        },
+        {
+          "heading": "Photographing the unphotographable",
+          "body": "You cannot see a black hole — it is completely dark. What the Event Horizon Telescope images is the glowing gas around one: a dark central region, called the shadow, surrounded by a bright ring of light bent by the black hole's gravity. To capture something that appears in our sky about the size of a donut on the Moon, the collaboration linked eight radio observatories across the planet into a single Earth-sized virtual telescope, and more than 300 researchers from 80 institutes spent five years combining and analysing the data with supercomputers. Sagittarius A* was the harder portrait: its gas completes an orbit in mere minutes, so its appearance kept changing during the observations, while the larger M87* takes days to weeks per orbit. The size of Sagittarius A*'s ring matched the predictions of Einstein's general relativity.",
+          "sources": [
+            1
+          ]
+        },
+        {
+          "heading": "A common misconception: the cosmic vacuum cleaner",
+          "body": "Black holes do not suck things in. NASA puts it directly: they are not cosmic vacuum cleaners, and from far enough away a black hole's gravity behaves just like that of any other object of the same mass. If the Sun were replaced by a black hole of exactly the same mass, the planets would stay in their orbits — the solar system would get much colder and darker, but it would not be pulled in. A black hole is only dangerous to things that come very close: matter that strays near the event horizon can be squeezed horizontally and stretched vertically, an effect scientists genuinely call spaghettification. Nor are black holes wormholes or portals — they offer no shortcut to another place or universe.",
+          "sources": [
+            0
+          ]
+        },
+        {
+          "heading": "An open question: what happens to what falls in?",
+          "body": "Nobody knows what matter looks like inside an event horizon — no observation can reach past that boundary, and NASA lists it among the things we simply do not know about black holes. Theory makes it stranger. Stephen Hawking showed that black holes are not perfectly black: they leak radiation, now called Hawking radiation, and slowly evaporate over eons. That raised a problem Hawking himself became famous for: if a black hole evaporates away, is the information about everything that fell into it lost forever — which would violate fundamental laws of physics? Hawking wagered on information loss with Caltech's Kip Thorne and John Preskill, and eventually conceded he had been wrong. But how information survives, exactly, is still unresolved — one of the sharpest open problems in the struggle to unify gravity with quantum mechanics.",
+          "sources": [
+            0,
+            3
+          ]
+        }
       ],
       "related": [
         "milky-way",
@@ -87,10 +151,25 @@
           "title": "Black Holes",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/universe/black-holes/"
+        },
+        {
+          "title": "Astronomers Reveal First Image of the Black Hole at the Heart of Our Galaxy",
+          "publisher": "Event Horizon Telescope Collaboration",
+          "url": "https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy"
+        },
+        {
+          "title": "LIGO Opens New Window on the Universe with Observation of Gravitational Waves from Colliding Black Holes",
+          "publisher": "LIGO Laboratory, Caltech",
+          "url": "https://www.ligo.caltech.edu/page/press-release-gw150914"
+        },
+        {
+          "title": "Stephen Hawking, 1942–2018",
+          "publisher": "Caltech Magazine",
+          "url": "https://magazine.caltech.edu/post/q2v2ij0oe1ewum1m2czrimw78zfw0i"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-10"
     },
     {
       "slug": "orion-nebula",
