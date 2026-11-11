@@ -9,6 +9,7 @@ const positions:Record<string,Point>={
   universe:{x:470,y:82},galaxies:{x:325,y:110},"milky-way":{x:200,y:180},"black-holes":{x:390,y:200},
   "orion-nebula":{x:130,y:285},stars:{x:280,y:300},supernovae:{x:440,y:310},exoplanets:{x:570,y:190},
   mars:{x:720,y:155},pluto:{x:850,y:220},earth:{x:680,y:315},oceans:{x:770,y:410},
+  moon:{x:605,y:255},gravity:{x:480,y:250},
   "climate-change":{x:620,y:470},whales:{x:850,y:500},evolution:{x:430,y:455},dinosaurs:{x:300,y:500},
   "human-origins":{x:440,y:580},"ancient-civilizations":{x:610,y:590},mathematics:{x:790,y:80},
   "artificial-intelligence":{x:890,y:350},
@@ -50,6 +51,13 @@ const relationshipNotes:Record<string,string>={
   "mars|exoplanets":"Studying Mars alongside exoplanets helps scientists compare rocky worlds and ask which environments might support life.",
   "evolution|human-origins":"Human origins is part of evolutionary biology, drawing on fossils, genetics, archaeology, and comparative anatomy.",
   "earth|whales":"Whales are mammals that evolved on Earth and now depend on marine ecosystems across the planet.",
+  "earth|moon":"The Moon likely formed from debris of a giant collision with the early Earth, and its gravity still drives Earth's tides and has locked its rotation to its orbit.",
+  "moon|oceans":"The Moon's gravity is the main driver of ocean tides — the daily rise and fall that shapes coasts and marine life.",
+  "moon|pluto":"Pluto's moon Charon is so large relative to Pluto that the pair orbit a point in space between them — a useful contrast with the Earth–Moon system, where the Moon is about a quarter of Earth's width.",
+  "black-holes|gravity":"A black hole is gravity at its most extreme: mass packed so densely that its gravity will not allow even light to escape.",
+  "earth|gravity":"Earth's gravity holds the atmosphere, the oceans and us to the planet, and its strength is set by Earth's mass and size.",
+  "gravity|stars":"Gravity pulls gas clouds together to ignite stars, holds each star in balance against its own fusion pressure, and decides how a star ends.",
+  "gravity|universe":"Gravity shapes the universe at the largest scales, gathering gas into galaxies and clusters, while cosmic expansion stretches space itself.",
 };
 function explain(a:string,b:string){
   return relationshipNotes[pairKey(a,b)]??`These subjects are linked in Orion’s topic map. Explore both guides to investigate their shared concepts and evidence.`;

@@ -152,7 +152,8 @@
       "related": [
         "milky-way",
         "supernovae",
-        "universe"
+        "universe",
+        "gravity"
       ],
       "accent": "blue",
       "symbol": "◉",
@@ -333,7 +334,8 @@
       "related": [
         "mars",
         "earth",
-        "universe"
+        "universe",
+        "moon"
       ],
       "accent": "amber",
       "symbol": "♇",
@@ -342,6 +344,109 @@
           "title": "Pluto Facts",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/dwarf-planets/pluto/facts/"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-11"
+    },
+    {
+      "slug": "moon",
+      "title": "The Moon",
+      "category": "Solar System",
+      "eyebrow": "Earth's constant companion",
+      "summary": "Earth's only natural satellite: a world born from a giant collision that steadies our planet, drives the tides, and keeps the early solar system's history written in its craters.",
+      "description": "The Moon is Earth's only natural satellite, likely formed when a Mars-sized body struck the young Earth and the debris gathered into a new world. It orbits an average of 384,400 kilometres away, locked so that the same face always turns toward us, and its changing sunlit side gives us the lunar phases. Its gravity drives Earth's ocean tides, Apollo astronauts walked on it between 1969 and 1972, and its cratered, airless surface preserves a record of impacts that Earth has long since erased.",
+      "facts": [
+        "The Moon is less than a third of Earth's width, with a radius of about 1,740 kilometres, and it orbits an average of 384,400 kilometres away — far enough that 30 Earth-sized planets could fit between us and it.",
+        "The Moon likely formed after a Mars-sized body collided with Earth several billion years ago; debris from both bodies accumulated to form our natural satellite.",
+        "The Moon rotates at exactly the rate it orbits — synchronous rotation — so the same hemisphere always faces Earth. The far side is not permanently dark: it receives just as much sunlight.",
+        "Lunar phases are changing illumination, not shadows: a full moon is the Earth-facing side fully lit by the Sun, and a new moon is that side in darkness while the far side is fully lit.",
+        "The Moon's gravity is the main driver of Earth's ocean tides, with a tide-raising effect about twice the Sun's, pulling the oceans into bulges on the sides facing toward and away from it.",
+        "With too sparse an atmosphere to slow incoming objects, the Moon has been cratered by impacts for billions of years, and the craters preserve an impact history for the whole inner solar system.",
+        "Water ice hides in permanently shadowed craters at the lunar poles, and in 2020 NASA's SOFIA observatory confirmed water molecules on the sunlit surface as well.",
+        "Between 1969 and 1972, six Apollo missions landed on the Moon and 12 astronauts walked on its surface, returning 382 kilograms of lunar rock and soil — and no one has stood on it since."
+      ],
+      "factSources": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ],
+      "sections": [
+        {
+          "heading": "Born from a collision",
+          "body": "The leading explanation for the Moon's origin is a giant impact: several billion years ago, a Mars-sized body struck the young Earth, and debris from both bodies — flung into orbit — accumulated into the satellite we see. The newborn Moon was molten; within about 100 million years most of its global magma ocean had crystallised, with lighter rocks floating up to form the crust. The dark plains visible from Earth, the maria, came later: impact basins that flooded with lava between about 4.2 and 1.2 billion years ago. Apollo samples support the collision story — the returned rocks show the Moon formed roughly 4.5 billion years ago and preserve the chemistry of that violent beginning.",
+          "sources": [
+            0,
+            2
+          ]
+        },
+        {
+          "heading": "The Moon's grip on Earth",
+          "body": "The Moon's gravity is the main driver of the tides: its pull is strongest on the ocean facing it and weakest on the far side, raising two bulges that coasts pass through as Earth rotates. The Sun contributes too, but its tide-raising effect is only about half the Moon's. The same gravitational exchange that raises tides is slowly pushing the Moon away — it is receding from Earth by about an inch (a few centimetres) every year — and has locked its rotation to its orbit, which is why one face always greets us. On the Moon itself, surface gravity is one-sixth of Earth's, which is why Apollo astronauts seemed to bounce as they walked.",
+          "sources": [
+            0,
+            1
+          ]
+        },
+        {
+          "heading": "A common misconception: the 'dark side' is not dark",
+          "body": "The Moon's far side is often called its 'dark side', but the label misleads. Every part of the Moon takes its turn in sunlight as the Moon orbits: when we see a new moon, the far side is the one fully lit by the Sun. What the far side truly is, is unseen — synchronous rotation means it never turns toward Earth, so humanity had no image of it until spacecraft photographed it. Phases work the same way: we are not watching Earth's shadow cross the Moon (that is a lunar eclipse), just the changing angle of sunlight on the face turned toward us.",
+          "sources": [
+            0
+          ]
+        },
+        {
+          "heading": "Still unanswered: the water, the impactor, the return",
+          "body": "Big questions remain open. Scientists are still mapping how much water ice the shadowed polar craters hold and where that water came from — answers that matter for any future human presence, since polar ice could support long stays. The giant-impact story also has unfinished details: the impactor's exact size, speed and composition are still being reconstructed from lunar samples and simulations. And although orbiters study the Moon constantly, no person has stood on it since Apollo 17 in 1972 — so its surface holds decades of untouched science for whoever returns.",
+          "sources": [
+            0,
+            2
+          ]
+        }
+      ],
+      "related": [
+        "earth",
+        "oceans",
+        "pluto"
+      ],
+      "accent": "blue",
+      "symbol": "☾",
+      "sources": [
+        {
+          "title": "Moon Facts",
+          "publisher": "NASA Science",
+          "url": "https://science.nasa.gov/moon/facts/"
+        },
+        {
+          "title": "Tides and Water Levels",
+          "publisher": "NOAA Ocean Service",
+          "url": "https://oceanservice.noaa.gov/education/tutorial_tides/lessons/ups_downs.html"
+        },
+        {
+          "title": "Project Apollo",
+          "publisher": "The Planetary Society",
+          "url": "https://www.planetary.org/space-missions/apollo"
         }
       ],
       "editorialStatus": "published",
@@ -424,7 +529,8 @@
       "related": [
         "mars",
         "oceans",
-        "evolution"
+        "evolution",
+        "moon"
       ],
       "accent": "teal",
       "symbol": "◎",
@@ -643,7 +749,8 @@
       "related": [
         "earth",
         "evolution",
-        "dinosaurs"
+        "dinosaurs",
+        "moon"
       ],
       "accent": "blue",
       "symbol": "≈",
@@ -682,7 +789,8 @@
       "related": [
         "milky-way",
         "black-holes",
-        "supernovae"
+        "supernovae",
+        "gravity"
       ],
       "accent": "violet",
       "symbol": "∞",
@@ -696,6 +804,121 @@
           "title": "What Is the Universe?",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/exoplanets/what-is-the-universe/"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-11"
+    },
+    {
+      "slug": "gravity",
+      "title": "Gravity",
+      "category": "Science",
+      "eyebrow": "The universe's quiet architect",
+      "summary": "The weakest of the fundamental forces, yet the one that builds stars, steers planets, bends light and shapes the cosmos — described first by Newton, then reimagined by Einstein as the curvature of spacetime itself.",
+      "description": "Gravity is the attraction between anything with mass, and it runs the universe at large scales. Newton's law of universal gravitation (1687) made it predictable: pull grows with mass and fades with the square of distance. Einstein's general relativity (1915) went deeper, describing gravity not as a force but as the curvature of spacetime caused by mass and energy — a picture confirmed by bending starlight, Mercury's orbit, and the gravitational waves LIGO detected in 2015. Gravity gathers gas into stars and galaxies, holds planets in orbit, raises the tides — and still refuses to fit into quantum physics, leaving it the most familiar and least finished force in science.",
+      "facts": [
+        "Anything that has mass has gravity: the more mass an object has, the stronger its pull, and the pull weakens as distance grows.",
+        "Newton's law (1687) quantifies the attraction: it grows with both masses and falls with the square of the distance — which is why the nearby Moon raises about twice the Sun's tide despite the Sun's far greater mass.",
+        "You pull on Earth with exactly the same force Earth pulls on you; Earth's enormous mass is why its response to your pull is far too small to notice.",
+        "Einstein's general relativity describes gravity not as a force but as a curve in space that wraps around an object such as a star or planet, pulling nearby objects — even light — into the curve.",
+        "Gravity is by far the weakest of the four fundamental interactions, yet with infinite range and no cancellation it is the most significant force between objects at large scales, determining the motion of planets, stars, galaxies, and even light.",
+        "Changes in gravity travel at the speed of light: move a mass, and the resulting ripples in spacetime spread outward no faster than light does.",
+        "In 2015, LIGO detected those ripples directly — gravitational waves from two black holes of about 29 and 36 solar masses that collided 1.3 billion years ago, converting about 3 solar masses into the waves themselves.",
+        "Gravity is not the same everywhere on Earth: it is slightly stronger over places with more mass underground, and NASA's GRACE twin spacecraft mapped those variations, revealing changes in sea level and in Earth's crust after earthquakes."
+      ],
+      "factSources": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          4
+        ],
+        [
+          3
+        ],
+        [
+          2
+        ],
+        [
+          0
+        ]
+      ],
+      "sections": [
+        {
+          "heading": "Newton's law, Einstein's geometry",
+          "body": "Newton's Principia (1687) gave gravity a formula: attraction proportional to the product of the masses, inversely proportional to the square of the distance. It was powerful enough that in 1846 astronomers used it to predict Neptune's position from wobbles in Uranus's orbit — and found the planet within a day. But one number refused to fit: Mercury's orbit precesses by about 43 arcseconds per century more than Newton allows. Einstein's general relativity (1915) explained it exactly, by replacing force with geometry — mass curves spacetime, and objects follow the curves. Its prediction that starlight bends near the Sun was confirmed in the eclipse expeditions of 1919. For most everyday calculations Newton's law remains accurate enough, which is why spacecraft are still largely navigated with it.",
+          "sources": [
+            1,
+            4
+          ]
+        },
+        {
+          "heading": "The architect of structure",
+          "body": "Gravity built everything large. In the early universe it pulled the original gas together until it coalesced into stars, and stars into galaxies; today it holds planets in orbit around the Sun, the Moon in orbit around Earth, and stars in their galactic rounds. It is also the force we feel most directly: it holds down the atmosphere, keeps the oceans in their basins, gives us weight — and, through the Moon's pull, raises the tides twice a day. Black holes are its extreme case, packing so much mass into so little volume that their gravity keeps even light from escaping; the waves LIGO heard in 2015 were the sound of two such objects merging, a century after Einstein predicted ripples in spacetime.",
+          "sources": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "heading": "A common misconception: there is no 'zero gravity' in orbit",
+          "body": "Astronauts float in orbit not because gravity has switched off — at the space station's altitude it is nearly as strong as on the ground — but because they and their spacecraft are falling together around Earth, in continuous free fall that never lands. 'Zero gravity' is a misnomer for that shared falling. Two other confusions are worth clearing up: gravity needs no air or medium to work through (it acts across the vacuum of space), and it is not magnetism — it relates only to mass, pulling everything with mass, charged or not.",
+          "sources": [
+            3
+          ]
+        },
+        {
+          "heading": "Still unanswered: gravity and the quantum world",
+          "body": "For all its success, gravity is unfinished. General relativity describes the very large superbly and quantum mechanics describes the very small superbly, but the two frameworks still do not fit together, and scientists are working to develop a theory of quantum gravity that unites gravity with the other three fundamental interactions in one mathematical framework. Until that exists, the earliest moments of the universe and the interiors of black holes — where both theories must apply at once — stay partly out of reach. The weakest force remains the deepest puzzle.",
+          "sources": [
+            4
+          ]
+        }
+      ],
+      "related": [
+        "black-holes",
+        "stars",
+        "earth",
+        "universe"
+      ],
+      "accent": "violet",
+      "symbol": "∿",
+      "sources": [
+        {
+          "title": "What Is Gravity?",
+          "publisher": "NASA Space Place",
+          "url": "https://spaceplace.nasa.gov/what-is-gravity/en/"
+        },
+        {
+          "title": "Tides and Water Levels",
+          "publisher": "NOAA Ocean Service",
+          "url": "https://oceanservice.noaa.gov/education/tutorial_tides/lessons/ups_downs.html"
+        },
+        {
+          "title": "LIGO Opens New Window on the Universe with Observation of Gravitational Waves from Colliding Black Holes",
+          "publisher": "LIGO Laboratory, Caltech",
+          "url": "https://www.ligo.caltech.edu/page/press-release-gw150914"
+        },
+        {
+          "title": "Ask Us — Gravity",
+          "publisher": "NASA Cosmicopia, Goddard Space Flight Center",
+          "url": "https://science.gsfc.nasa.gov/attic/cosmicopia.gsfc.nasa.gov/qa_gp_gr.html"
+        },
+        {
+          "title": "Gravity",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Gravity"
         }
       ],
       "editorialStatus": "published",
@@ -716,7 +939,8 @@
       "related": [
         "orion-nebula",
         "supernovae",
-        "milky-way"
+        "milky-way",
+        "gravity"
       ],
       "accent": "amber",
       "symbol": "✧",
