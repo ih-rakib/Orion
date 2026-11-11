@@ -683,11 +683,80 @@
       "category": "Earth",
       "eyebrow": "A changing planetary system",
       "summary": "Long-term shifts in temperatures and weather patterns, with modern global warming driven primarily by human activities.",
-      "description": "Earth's climate has changed naturally throughout its history, but the rapid warming observed since the industrial era is primarily caused by human greenhouse-gas emissions. Climate science combines measurements, physical theory, historical records and models to understand causes, impacts and possible futures.",
+      "description": "Climate change is the long-term shift in Earth's climate now under way — and it differs from the slow natural swings of the ice ages in both speed and cause. The warming is measured by many independent instruments at once, and the IPCC assesses that human activities, principally greenhouse-gas emissions, have unequivocally caused it. The evidence is not a single graph: thermometers and satellites, ice cores and tree rings, tide gauges and ocean robots all record a planet accumulating heat — warming air and land, heating oceans, melting ice and raising seas. How much more warming this century brings is not fixed by physics alone; it depends substantially on emissions choices made in the coming decades.",
       "facts": [
-        "Carbon dioxide and other greenhouse gases trap heat in Earth's climate system.",
-        "Global warming affects oceans, ice, ecosystems and extreme-heat risks.",
-        "Climate projections depend partly on future emissions and human choices."
+        "The IPCC's Sixth Assessment Report states it without hedging: human activities, principally through emissions of greenhouse gases, have unequivocally caused global warming. Global surface temperature in 2011–2020 reached 1.1 °C above the 1850–1900 average.",
+        "2024 was the warmest year since global records began in 1850 — about 1.46 °C above the pre-industrial average — and the ten warmest years on record have all occurred in the last decade, 2015–2024.",
+        "The warming has accelerated: about 0.06 °C per decade since 1850, but 0.20 °C per decade since 1975. It has been nearly five decades since Earth last had a cooler-than-average year.",
+        "Atmospheric carbon dioxide reached 410 parts per million in 2019 — higher than at any time in at least 2 million years. Methane and nitrous oxide concentrations were higher than at any time in at least 800,000 years.",
+        "Of the warming between 1850–1900 and 2010–2019, the IPCC's best estimate of the human-caused share is 1.07 °C. Natural drivers — the Sun and volcanoes — changed global temperature by only about −0.1 to +0.1 °C over the same period.",
+        "The ocean stores about 90% of the extra energy trapped in the Earth system. Its top 100 metres have warmed by about 0.33 °C since 1969, and the acidity of surface ocean water has increased by about 30% since the Industrial Revolution.",
+        "The ice is going. Between 1993 and 2019, Greenland lost an average of about 279 billion tonnes of ice per year and Antarctica about 148 billion tonnes per year; glaciers are retreating almost everywhere, and Arctic sea ice has declined rapidly in both extent and thickness.",
+        "Global mean sea level rose about 20 centimetres between 1901 and 2018, and the rate has climbed — from about 1.3 millimetres a year early last century to 3.7 millimetres a year during 2006–2018 — driven by melting land ice and by seawater expanding as it warms."
+      ],
+      "factSources": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "sections": [
+        {
+          "heading": "Not one graph — a planet full of instruments",
+          "body": "The case for a warming planet does not rest on any single measurement. Weather stations and satellites track surface temperature, and multiple independent research groups analysing the data separately all show a similar upward trend. The oceans confirm it independently: a global fleet of buoys, ships and drifting robots measures rising heat content, and about 90% of the extra energy accumulating in the Earth system is stored there. Satellites weighing the ice sheets through their gravity (NASA's GRACE missions) watch Greenland and Antarctica lose mass; tide gauges running for over a century, and radar altimeters in orbit since the 1990s, watch sea level climb. And for the centuries before instruments, ice cores, tree rings, ocean sediments and coral reefs preserve a natural archive — one that shows today's warming standing out sharply from the past. Different methods, different teams, different physics: the same direction.",
+          "sources": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "heading": "Why the evidence points at greenhouse gases",
+          "body": "The basic mechanism is old, settled physics: scientists demonstrated the heat-trapping nature of carbon dioxide and other greenhouse gases in the mid-19th century. Greenhouse gases let Earth absorb more energy from the Sun than it radiates back to space, and the planet warms until the balance is restored. Attribution studies then ask what actually did it. The IPCC's accounting for 1850–1900 to 2010–2019 finds greenhouse gases alone contributed between 1.0 and 2.0 °C of warming, partly masked by a cooling effect from human aerosol pollution, while natural drivers — changes in the Sun and volcanic eruptions — contributed essentially nothing, between −0.1 and +0.1 °C. The fingerprint also shows in the speed of the carbon itself: carbon dioxide from human activities is increasing about 250 times faster than it did from natural sources after the last Ice Age.",
+          "sources": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "heading": "A common misconception: “the climate changed naturally before, so this is natural too”",
+          "body": "The first half is true. In just the last 800,000 years Earth has swung through eight cycles of ice ages and warmer periods, driven by very small variations in Earth's orbit that change the sunlight the planet receives — and nobody disputes that climate can change on its own. What the argument misses is rate and cause. Paleoclimate records show the current warming is occurring roughly ten times faster than the average rate of warming as Earth recovered from an ice age, and the IPCC finds global surface temperature has risen faster since 1970 than in any other 50-year period in at least 2,000 years. Meanwhile the natural drivers that explain past changes have been measured for this period and come out near zero — they cannot account for what is observed, while human greenhouse-gas emissions can. If anything, the ancient evidence strengthens the conclusion: ice cores show that Earth's climate responds directly to greenhouse-gas levels. When the gases moved slowly, climate moved slowly. Now the gases are moving fast.",
+          "sources": [
+            0,
+            1
+          ]
+        },
+        {
+          "heading": "An open question: how much more — and how fast can the ice go?",
+          "body": "The largest unknown in climate change is not the physics but us. The IPCC finds that continued emissions lead to increasing warming, with the best estimate reaching 1.5 °C in the near term in the scenarios it assessed — and that every increment of warming intensifies multiple hazards at once. Beyond that, how much warmer the planet gets depends mainly on how much carbon dioxide and other greenhouse gases are emitted in coming decades: a choice, not a constant. A second genuine unknown is the ice sheets. Some sea-level rise is already locked in — NOAA's interagency assessment concludes global mean sea level will rise at least about 0.3 metres above 2000 levels by 2100 even on the lowest emissions pathway — but the upper end depends on whether the Greenland and Antarctic ice sheets melt in a steady, predictable way or reach a tipping point and collapse rapidly. That difference is worth metres of sea level over the following century, and narrowing it down is one of the most consequential open problems in Earth science.",
+          "sources": [
+            1,
+            2,
+            3
+          ]
+        }
       ],
       "related": [
         "earth",
@@ -702,10 +771,25 @@
           "title": "Climate Change: Evidence",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/climate-change/evidence/"
+        },
+        {
+          "title": "Climate Change 2023: Synthesis Report — Summary for Policymakers",
+          "publisher": "IPCC (AR6)",
+          "url": "https://www.ipcc.ch/report/ar6/syr/summary-for-policymakers/"
+        },
+        {
+          "title": "Climate Change: Global Temperature",
+          "publisher": "NOAA Climate.gov",
+          "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature"
+        },
+        {
+          "title": "Climate Change: Global Sea Level",
+          "publisher": "NOAA Climate.gov",
+          "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "whales",
