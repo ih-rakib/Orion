@@ -36,9 +36,12 @@ const sourcedTextureFiles: Partial<Record<BodySlug, string>> = {
   saturn: "2k_saturn.jpg",
   uranus: "2k_uranus.jpg",
   neptune: "2k_neptune.jpg",
-  pluto: "2k_pluto.jpg",
+  // No Pluto entry: Solar System Scope publishes no 2k_pluto.jpg at the
+  // download path (verified 404 on 2026-11-11), so Pluto keeps its
+  // procedural surface, exactly as it did when the remote load failed.
 };
-const sourcedTextureBaseUrl = "https://www.solarsystemscope.com/textures/download/";
+const sourcedTextureBaseUrl = "/textures/";
+const sourcedTextureFallbackUrl = "https://www.solarsystemscope.com/textures/download/";
 
 function createPlanetTexture(slug: string, baseColor: string) {
   const width = 256;
@@ -127,21 +130,25 @@ function Planet({ body, selected, onSelect, paused, selectedLandmark, onSelectLa
     let active = true;
     const loader = new THREE.TextureLoader();
     loader.setCrossOrigin("anonymous");
+    const applyTexture = (texture: THREE.Texture) => {
+      if (!active) {
+        texture.dispose();
+        return;
+      }
+      texture.colorSpace = THREE.SRGBColorSpace;
+      texture.anisotropy = 4;
+      setSourced({ slug: body.slug, texture });
+    };
     loader.load(
       sourcedTextureBaseUrl + filename,
-      (texture) => {
-        if (!active) {
-          texture.dispose();
-          return;
-        }
-        texture.colorSpace = THREE.SRGBColorSpace;
-        texture.anisotropy = 4;
-        setSourced({ slug: body.slug, texture });
-      },
+      applyTexture,
       undefined,
       () => {
-        // Keep the generated procedural map as a resilient offline/network fallback:
-        // a failed load simply never replaces the derived texture for this body.
+        // Self-hosted copy unavailable: fall back to the original Solar System
+        // Scope URL, and beyond that to the generated procedural map — a failed
+        // load simply never replaces the derived texture for this body.
+        if (!active) return;
+        loader.load(sourcedTextureFallbackUrl + filename, applyTexture, undefined, () => {});
       },
     );
     return () => {
@@ -264,6 +271,6 @@ export function SolarSystem3D() {
       <div className="solar-3d-selector"><p className="eyebrow">CHOOSE A WORLD</p><div className="solar-3d-buttons">{bodies.map((body) => <button type="button" key={body.slug} className={body.slug === selectedSlug ? "active" : ""} aria-pressed={body.slug === selectedSlug} onClick={() => { setSelectedSlug(body.slug); setSelectedLandmark(null); }}><span style={{ "--object-color": body.color } as CSSProperties} className="solar-3d-dot" />{body.label}</button>)}</div><p className="eyebrow solar-3d-moon-heading">MOONS · SELECT TO EXPLORE</p><div className="solar-3d-buttons">{moons.map((moon) => <button type="button" key={moon.slug} className={moon.slug === selectedSlug ? "active" : ""} aria-pressed={moon.slug === selectedSlug} onClick={() => { setSelectedSlug(moon.slug); setSelectedLandmark(null); }}><span style={{ "--object-color": moon.color } as CSSProperties} className="solar-3d-dot" />{moon.label}</button>)}</div><p className="eyebrow solar-3d-moon-heading">SURFACE LANDMARKS · EARTH & MARS</p><div className="solar-3d-buttons">{landmarks.map((landmark) => <button type="button" key={landmark.slug} className={landmark.slug === selectedLandmark ? "active" : ""} aria-pressed={landmark.slug === selectedLandmark} onClick={() => { setSelectedSlug(landmark.parent); setSelectedLandmark(landmark.slug); }}><span style={{ "--object-color": landmark.color } as CSSProperties} className="solar-3d-dot" />{landmark.label}<small> · {landmark.parent === "earth" ? "Earth" : "Mars"}</small></button>)}</div></div>
       <aside className="solar-3d-info"><p className="eyebrow">{activeLandmark ? "SURFACE LANDMARK" : object?.kind.toUpperCase() ?? (selectedMoon ? "NATURAL SATELLITE" : "SOLAR SYSTEM OBJECT")}</p><h3>{activeLandmark?.label ?? selectedBody.label}</h3><p>{activeLandmark?.summary ?? object?.summary ?? selectedMoon?.summary ?? "The star at the heart of our planetary system."}</p><p className="solar-3d-fact">{activeLandmark?.fact ?? object?.fact ?? selectedMoon?.fact ?? "The Sun contains more than 99% of the Solar System’s mass."}</p><div className="solar-3d-links">{!activeLandmark && object?.orionPath && <Link href={object.orionPath}>Read Orion guide ↗</Link>}<a href={activeLandmark?.sourceUrl ?? object?.sourceUrl ?? selectedMoon?.sourceUrl ?? "https://science.nasa.gov/sun/"} target="_blank" rel="noopener noreferrer">{activeLandmark ? "Explore scientific source ↗" : "NASA further reading ↗"}</a></div></aside>
     </div>
-    <p className="solar-3d-disclaimer">Illustrative 3D model: planet sizes and orbital distances are compressed and not to scale. Motion is an educational visualization, not a precise ephemeris or prediction tool. Planet surface maps load from <a href="https://www.solarsystemscope.com/textures/" target="_blank" rel="noopener noreferrer">Solar System Scope</a> under CC BY 4.0; generated procedural maps remain as a fallback if a texture cannot load. The maps are educational visualizations, not validated datasets for scientific analysis. Surface landmark pins are illustrative locations, not high-resolution geographic maps.</p>
+    <p className="solar-3d-disclaimer">Illustrative 3D model: planet sizes and orbital distances are compressed and not to scale. Motion is an educational visualization, not a precise ephemeris or prediction tool. Planet surface maps are by <a href="https://www.solarsystemscope.com/textures/" target="_blank" rel="noopener noreferrer">Solar System Scope</a> under CC BY 4.0 and are hosted with this site, with the original source as a backup; generated procedural maps remain as a fallback if a texture cannot load. The maps are educational visualizations, not validated datasets for scientific analysis. Surface landmark pins are illustrative locations, not high-resolution geographic maps.</p>
   </div>;
 }
