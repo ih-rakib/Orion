@@ -473,11 +473,79 @@
       "category": "Life",
       "eyebrow": "Life through generations",
       "summary": "The change in inherited characteristics of populations across generations, shaping the diversity of life.",
-      "description": "Evolution is supported by evidence from fossils, genetics, anatomy, biogeography and observed changes in populations. Natural selection is one mechanism, alongside mutation, genetic drift and gene flow.",
+      "description": "Evolution is descent with inherited modification: populations change across generations, and given deep time, that process connects every living thing to shared ancestors. It is the unifying framework of biology, supported independently by fossils, comparative anatomy, biogeography and DNA — and observable in action today, from drug-resistant bacteria to fish adapting to polluted rivers. Its mechanisms are unspectacular: variation, inheritance, and more offspring than the environment can support. Compounded over billions of years, their product is the entire diversity of life. Humans are part of that story, not its destination — one twig on an immense tree, close cousins to chimpanzees and bonobos, and distant ones to oak trees and whales.",
       "facts": [
-        "Populations evolve; individual organisms do not evolve during their lifetimes in the biological sense.",
-        "All known life on Earth shares deep evolutionary relationships.",
-        "Evolution has no predetermined goal or single ladder of progress."
+        "Evolution is descent with inherited modification: changes in the inherited traits of populations across generations. Individuals do not evolve during their own lifetimes — populations do.",
+        "All life on Earth shares a common ancestor, just as cousins share a grandmother. Humans and oak trees, hummingbirds and whales, are distant relatives, connected through the fossil record and the living world.",
+        "Natural selection needs only three ingredients: variation in traits, differential reproduction (not every individual gets to reproduce equally), and heredity. Given those, evolution by natural selection follows automatically.",
+        "Selection is not the only mechanism. Mutation generates new variation, gene flow moves it between populations, and genetic drift changes trait frequencies purely by chance — an effect strongest in small populations but present in all of them.",
+        "Humans, chimpanzees and bonobos descend from a single ancestor species that lived six or seven million years ago. Humans and chimps share 98.8% of their DNA — and the remaining 1.2% of roughly three billion base pairs still amounts to about 35 million differences.",
+        "Evolution can be fast enough to watch. Within the past 50 years, scientists have documented microbes evolving resistance to new drugs, a fish species evolving resistance to toxins dumped in the Hudson River, and squirrels shifting their breeding times as the climate warms.",
+        "Humans are still evolving. Technology has changed which challenges matter — dense populations favour gene versions that protect against epidemic disease, for instance — and documented recent human adaptations include lactose tolerance persisting into adulthood and traits for thriving at high altitude.",
+        "Evolution has no ladder and no goal. It produces a branching tree, not progress toward perfection: some lineages, like certain mosses, fungi, sharks and opossums, have changed little physically over vast spans of time."
+      ],
+      "factSources": [
+        [
+          1,
+          3
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      "sections": [
+        {
+          "heading": "Three ingredients, and change follows",
+          "body": "Natural selection sounds grand, but UC Berkeley's classic example is a population of beetles. Some are green, some brown. Birds spot the green ones against the bark more easily, so brown beetles survive to reproduce more often. The trait is heritable, so the next generation is browner — and repeated over generations, the population changes. That is the whole engine: variation, differential reproduction, heredity. Two refinements matter. First, the variation itself arises by random mutation, but selection is not random — it systematically favours variants that leave more offspring, which is how intricate adaptations like the fit between a flower and its pollinator arise without any designer or foresight. Second, 'fitness' is not strength or health: it simply means getting more of your genes into the next generation. A small, drab organism that reproduces well is fitter, in the only sense evolution counts, than a magnificent one that leaves no offspring. And selection has no intentions — it cannot give a population what it 'needs'; if the useful variation is not there, the population may simply die out.",
+          "sources": [
+            2,
+            3
+          ]
+        },
+        {
+          "heading": "Independent evidence, one tree",
+          "body": "Evolution would be a weak idea if it rested on one kind of clue. Instead, separate fields keep arriving at the same family tree. The fossil record documents change over time directly, including fossils with transitional features — exactly what the theory predicts should sometimes be preserved, given how rarely fossilisation happens — and detailed sequences such as whales evolving gradually from land-dwelling mammal ancestors. Comparative anatomy finds the same nested pattern: groups within groups, sharing inherited structures. Genetics then tests that tree with entirely different data, and it holds: the American Museum of Natural History notes that humans and chimps have many identical genes, often used at different levels — the same brain genes, for example, expressed in different amounts — a pattern of shared inheritance with modification, not separate creation. For our own lineage, the Smithsonian's Human Origins Program organises the evidence the same way: fossil species, stone tools, ancient footprints, and ancient DNA, which has even shown that modern humans interbred with Neanderthals. Fossils predicted the relationships; DNA, unknown to Darwin, confirmed them.",
+          "sources": [
+            0,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "heading": "Two common misconceptions: “just a theory” and “humans evolved from chimps”",
+          "body": "The first is a confusion between two meanings of one word. In everyday speech, a theory is a hunch. In science, a theory is a broad explanation that has been strongly supported by many different lines of evidence — gravity and germs are 'theories' in exactly this sense. Evolutionary theory is not a guess awaiting proof; it is the framework that explains observations from antibiotic resistance to the match between flowers and their pollinators, and that makes accurate predictions, such as the finding that treating HIV with drug cocktails slows the virus's evolution. The second misconception gets the family tree wrong. Humans did not evolve from chimpanzees, and chimpanzees did not evolve from humans: both descend from a single ancestor species that lived six or seven million years ago, and each lineage has been evolving ever since. That is why the right picture is not a ladder with apes below and humans on top, but a branching tree — chimps are our cousins, not our grandparents, and we are one twig among millions.",
+          "sources": [
+            3,
+            4
+          ]
+        },
+        {
+          "heading": "An open question: what evolution does not claim to explain",
+          "body": "It is worth being precise about the boundary of the theory, because UC Berkeley's evolution resource states it plainly: evolutionary theory is mostly not about the origin of life. It deals with how life changed after it began — how one population branched into the diversity we see. How the first self-replicating chemistry became the first cell is a separate, genuinely open research problem (one this library's Earth guide flags as well), and uncertainty there is not evidence against evolution, any more than not knowing the Sun's exact birth cloud counts against astronomy. Within evolution itself, scientists debate plenty — but the debates are about how, not whether: how fast change happens in different lineages, the relative weight of selection versus drift, exactly where each fossil species sits on our own branch of the tree. Those arguments continue because new fossils and new genomes keep arriving to argue with. 'We do not know everything' is the normal condition of a living science, not a crack in this one.",
+          "sources": [
+            3
+          ]
+        }
       ],
       "related": [
         "dinosaurs",
@@ -491,10 +559,30 @@
           "title": "Evidence of Evolution",
           "publisher": "Smithsonian Human Origins Program",
           "url": "https://humanorigins.si.edu/evidence"
+        },
+        {
+          "title": "An Introduction to Evolution",
+          "publisher": "Understanding Evolution, UC Berkeley",
+          "url": "https://evolution.berkeley.edu/evolution-101/an-introduction-to-evolution/"
+        },
+        {
+          "title": "Natural Selection",
+          "publisher": "Understanding Evolution, UC Berkeley",
+          "url": "https://evolution.berkeley.edu/evolibrary/article/evo_25"
+        },
+        {
+          "title": "Misconceptions About Evolution",
+          "publisher": "Understanding Evolution, UC Berkeley",
+          "url": "https://evolution.berkeley.edu/evolibrary/misconceptions_faq.php"
+        },
+        {
+          "title": "Comparing Chimp, Bonobo and Human DNA",
+          "publisher": "American Museum of Natural History",
+          "url": "https://www.amnh.org/exhibitions/permanent/human-origins/understanding-our-past/dna-comparing-humans-and-chimps"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "supernovae",
