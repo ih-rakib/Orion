@@ -1,0 +1,107 @@
+/* Knowledge graph */
+.knowledge-graph-page{min-height:100vh}
+.graph-hero{max-width:var(--max);margin:0 auto;padding:62px 30px 42px}
+.graph-hero .back-link{display:inline-flex;margin-bottom:36px}
+.graph-hero h1{font-size:clamp(52px,7vw,88px);line-height:.98;letter-spacing:-4.5px;font-weight:500;margin:15px 0 22px}
+.graph-hero>p:not(.eyebrow):not(.back-link){max-width:650px;color:var(--muted);font-size:14px;line-height:1.9}
+.graph-stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:30px;color:#8793ad;font-size:9px;letter-spacing:1px}
+.graph-stats span{display:flex;align-items:center;gap:8px}
+.graph-stats strong{font-size:17px;color:#e3e5fa;letter-spacing:0}
+.graph-workspace{max-width:1500px;margin:0 auto;padding:0 30px 90px}
+.graph-toolbar{display:flex;flex-direction:column;gap:14px;margin-bottom:18px}
+.graph-search{display:flex;align-items:center;gap:12px;max-width:440px;height:46px;padding:0 14px;border:1px solid var(--line);background:#0d1221;color:#9aa5bd}
+.graph-search>span{font-size:23px}
+.graph-search input{width:100%;background:transparent;border:0;outline:0;color:var(--text);font-size:12px}
+.graph-filters{display:flex;gap:7px;flex-wrap:wrap}
+.graph-filter{background:transparent;border:1px solid #293249;color:#9da8c0;border-radius:99px;padding:7px 11px;font-size:10px;cursor:pointer}
+.graph-filter:hover,.graph-filter.active{background:#c1b7ff;border-color:#c1b7ff;color:#0b0c19}
+.graph-canvas-wrap{border:1px solid var(--line);background:radial-gradient(ellipse at 50% 45%,#171a32 0, #0a0f1d 68%);overflow:hidden}
+.knowledge-graph-svg{display:block;width:100%;height:auto;min-height:400px;max-height:760px}
+.graph-edge{stroke:#7773b2;stroke-opacity:.48;stroke-width:1.35;transition:stroke-opacity .2s}
+.graph-edge-muted{stroke-opacity:.055}
+.graph-node-link{cursor:pointer;outline:none}
+.graph-node{transition:r .2s,stroke-width .2s,filter .2s}
+.graph-node-link:hover .graph-node,.graph-node-link:focus .graph-node{stroke-width:4;filter:drop-shadow(0 0 7px currentColor)}
+.graph-node-label{font-size:12px;fill:#d8dcef;paint-order:stroke;stroke:#0b1020;stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+.graph-canvas-caption{display:flex;justify-content:space-between;gap:15px;padding:13px 17px;border-top:1px solid var(--line);font-size:8px;letter-spacing:1.3px;color:#8792ab}
+.graph-canvas-caption span:first-child{display:flex;align-items:center;gap:9px}
+.graph-subject-list{padding-top:58px}
+.graph-subject-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.graph-subject-card{display:flex;align-items:flex-start;gap:12px;padding:15px;border:1px solid var(--line);background:#0c1120;min-width:0;transition:border-color .2s,background .2s}
+.graph-subject-card:hover{border-color:#6f6a9c;background:#12172a}
+.graph-subject-dot{width:8px;height:8px;flex-shrink:0;border-radius:50%;margin-top:7px}
+.graph-subject-card>span:nth-child(2){display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.graph-subject-card strong{font-size:12px;font-weight:600}
+.graph-subject-card small{font-size:9px;line-height:1.6;color:#8995ad}
+.graph-subject-card>span:last-child{color:#b9b2ff}
+@media(max-width:900px){.graph-subject-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.graph-workspace{padding-left:20px;padding-right:20px}.graph-hero{padding-left:24px;padding-right:24px}.knowledge-graph-svg{min-height:330px}}
+@media(max-width:640px){.graph-hero{padding:38px 18px 30px}.graph-hero .back-link{margin-bottom:28px}.graph-hero h1{font-size:clamp(46px,12vw,64px);letter-spacing:-2.8px}.graph-hero>p:not(.eyebrow):not(.back-link){font-size:12px}.graph-stats{gap:15px}.graph-stats strong{font-size:15px}.graph-workspace{padding:0 12px 65px}.graph-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:5px}.graph-filter{white-space:nowrap;flex-shrink:0}.knowledge-graph-svg{min-height:0;min-width:720px;max-height:none}.graph-canvas-wrap{overflow-x:auto}.graph-canvas-caption{font-size:7px;padding:12px}.graph-subject-grid{grid-template-columns:1fr}.graph-subject-list{padding-top:40px}.graph-subject-card{padding:13px}}
+@media(prefers-reduced-motion:reduce){.graph-edge,.graph-node,.graph-subject-card{transition:none}}
+
+
+/* Explanations and path-finding for the Knowledge Graph */
+.graph-node-link{cursor:pointer}
+.graph-node-link:focus-visible{outline:none}
+.graph-node-link:focus-visible .graph-node{stroke:#fff;stroke-width:4}
+.graph-detail-panel{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.5fr);gap:30px;margin-top:18px;padding:clamp(20px,3vw,34px);border:1px solid var(--line);background:linear-gradient(135deg,#111729,#0c1120)}
+.graph-detail-main{padding:5px 0}
+.graph-detail-main h2{font-size:clamp(27px,3vw,40px);letter-spacing:-1.3px;line-height:1.15;margin:10px 0}
+.graph-detail-main>p:not(.eyebrow){color:var(--muted);font-size:13px;line-height:1.85}
+.graph-open-guide{display:inline-flex;gap:10px;align-items:center;margin-top:14px;padding:10px 14px;background:#c1b7ff;color:#0b0c19;font-size:11px;font-weight:700}
+.graph-detail-connections h3{font-size:16px;margin:0 0 4px}
+.graph-detail-intro{color:var(--muted);font-size:11px;margin:0 0 12px}
+.graph-relationship{width:100%;display:grid;grid-template-columns:8px minmax(0,1fr) 18px;gap:12px;align-items:start;text-align:left;padding:13px 0;border:0;border-top:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer}
+.graph-relationship:hover .graph-relationship-copy strong{color:#c9c0ff}
+.graph-relationship-line{width:7px;height:7px;border-radius:50%;margin-top:6px}
+.graph-relationship-copy{display:grid;gap:4px}
+.graph-relationship-copy strong{font-size:12px}
+.graph-relationship-copy small{font-size:11px;line-height:1.7;color:var(--muted)}
+.graph-relationship-arrow{color:#b9b2ff}
+.graph-pathfinder{margin-top:20px;padding:clamp(20px,3vw,34px);border:1px solid var(--line);background:#0d1221}
+.graph-pathfinder h2{font-size:clamp(22px,3vw,32px);letter-spacing:-.8px;margin:6px 0}
+.graph-pathfinder>div:first-child>p:last-child{max-width:700px;color:var(--muted);font-size:12px;line-height:1.8}
+.graph-path-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) auto;align-items:end;gap:12px;margin-top:22px}
+.graph-path-controls label{display:grid;gap:7px;color:#aab4cb;font-size:10px}
+.graph-path-controls select{width:100%;min-width:0;background:#111729;border:1px solid #293249;color:var(--text);padding:11px 10px;font-size:12px}
+.graph-find-path{border-radius:0;padding:12px 15px;white-space:nowrap}
+.graph-path-result{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.graph-path-result>p{color:var(--muted);font-size:11px}
+.graph-path-steps{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.graph-path-step{display:inline-flex;align-items:center;gap:10px;color:#a99bff}
+.graph-path-step button{border:1px solid #393453;background:#14182a;color:#f0edff;padding:8px 11px;font-size:11px;cursor:pointer}
+.graph-path-step button:hover{border-color:#a99bff}
+.graph-path-note{line-height:1.7}
+.graph-subject-card{font:inherit;text-align:left;color:var(--text);cursor:pointer}
+.graph-subject-card-active{border-color:#8f83db;background:#15182c}
+@media(max-width:760px){.graph-detail-panel{grid-template-columns:1fr;gap:25px}.graph-path-controls{grid-template-columns:1fr}.graph-find-path{justify-self:start}}
+
+/* Guided, cross-disciplinary learning paths */
+.learning-paths-page{min-height:100vh}
+.learning-paths-hero{max-width:var(--max);margin:0 auto;padding:48px 30px 66px;border-bottom:1px solid var(--line)}
+.learning-paths-hero h1{font-size:clamp(48px,8vw,88px);line-height:.99;letter-spacing:-4px;margin:24px 0}
+.learning-paths-hero>p:not(.eyebrow):not(.back-link){max-width:680px;color:var(--muted);font-size:15px;line-height:1.9}
+.learning-path-grid{max-width:var(--max);margin:0 auto;padding:34px 30px 70px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.learning-path-card{min-width:0;border:1px solid var(--line);background:linear-gradient(145deg,#111729,#0c1120);padding:clamp(20px,3vw,32px);display:flex;flex-direction:column}
+.learning-path-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.learning-path-number{font-size:12px;color:#a99bff;letter-spacing:2px}
+.learning-path-eyebrow{font-size:9px;letter-spacing:1.4px;color:var(--muted);text-align:right}
+.learning-path-card h2{font-size:clamp(24px,3vw,34px);letter-spacing:-1px;line-height:1.2;margin:24px 0 10px}
+.learning-path-description,.learning-path-why{color:var(--muted);font-size:12px;line-height:1.85}
+.learning-path-meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.learning-path-meta span{border:1px solid var(--line);padding:5px 8px;color:#d1d7e8;font-size:10px}
+.learning-path-why{border-left:2px solid #a99bff;padding-left:13px;margin:18px 0 20px}
+.learning-path-card h3{font-size:11px;text-transform:uppercase;letter-spacing:1.3px;color:#c7cde0}
+.learning-path-steps{list-style:none;padding:0;margin:0}
+.learning-path-steps li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:center;border-top:1px solid var(--line)}
+.learning-path-step-index{font-size:10px;color:#7f8ba5}
+.learning-path-steps li>a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0}
+.learning-path-steps li>a>span:first-child{display:grid;gap:2px}
+.learning-path-steps strong{font-size:12px}
+.learning-path-steps small{font-size:10px;color:var(--muted)}
+.learning-path-steps li>a:hover strong{color:#c4baff}
+.learning-path-start{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:24px;font-size:11px;font-weight:700;color:#c3b9ff}
+.learning-paths-footer{max-width:var(--max);margin:0 auto;padding:10px 30px 90px;text-align:center}
+.learning-paths-footer h2{font-size:clamp(26px,4vw,42px);letter-spacing:-1.4px;margin:10px 0}
+.learning-paths-footer>p:not(.eyebrow){color:var(--muted);font-size:12px;margin-bottom:24px}
+@media(max-width:760px){.learning-paths-hero{padding:34px 20px 45px}.learning-paths-hero h1{letter-spacing:-2.5px}.learning-path-grid{grid-template-columns:1fr;padding:22px 20px 50px}.learning-paths-footer{padding:0 20px 60px}}
+
