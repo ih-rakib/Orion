@@ -43,7 +43,7 @@
       "description": "The Milky Way is the galaxy that contains our Solar System. Seen from Earth as a pale band across a dark sky, it is a complex system of stars, gas, dust and dark matter. Our view from within makes mapping its full structure a remarkable scientific challenge.",
       "facts": [
         "The Solar System lies in a region called the Orion Arm, or Local Spur.",
-        "The galaxy contains hundreds of billions of stars, although estimates vary.",
+        "The galaxy contains more than 100 billion stars, although estimates vary.",
         "Its central region hosts a supermassive black hole called Sagittarius A*."
       ],
       "related": [
@@ -58,10 +58,20 @@
           "title": "Galaxies",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/universe/galaxies/"
+        },
+        {
+          "title": "Stars",
+          "publisher": "NASA Science",
+          "url": "https://science.nasa.gov/universe/stars/"
+        },
+        {
+          "title": "Apocalypse When? Hubble Casts Doubt on Certainty of Galactic Collision",
+          "publisher": "NASA Science",
+          "url": "https://science.nasa.gov/missions/hubble/apocalypse-when-hubble-casts-doubt-on-certainty-of-galactic-collision/"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "black-holes",
@@ -181,7 +191,7 @@
       "facts": [
         "It can be seen with the naked eye under dark skies.",
         "Its young stars help scientists study how planetary systems develop.",
-        "The nebula is hundreds of light-years away, within the Milky Way."
+        "The nebula is about 1,500 light-years away, within the Milky Way."
       ],
       "related": [
         "milky-way",
@@ -198,7 +208,7 @@
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "mars",
@@ -335,7 +345,7 @@
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "earth",
@@ -462,10 +472,15 @@
           "title": "Dinosaurs & Fossils",
           "publisher": "Smithsonian National Museum of Natural History",
           "url": "https://naturalhistory.si.edu/explore/dinosaurs-fossils"
+        },
+        {
+          "title": "The Dinosauria",
+          "publisher": "University of California Museum of Paleontology",
+          "url": "https://ucmp.berkeley.edu/diapsids/dinosaur.html"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "evolution",
@@ -611,7 +626,7 @@
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "oceans",
@@ -619,11 +634,11 @@
       "category": "Earth",
       "eyebrow": "A world beneath the waves",
       "summary": "A connected global ocean system that regulates climate and supports an immense diversity of life.",
-      "description": "The oceans store and move heat, absorb carbon, shape weather and provide habitats from sunlit reefs to deep-sea trenches. Much of the deep ocean remains difficult to observe, making it an important frontier for exploration.",
+      "description": "The oceans store and move heat, shape weather, and support diverse ecosystems — including deep-sea communities at hydrothermal vents that thrive without sunlight.",
       "facts": [
         "The ocean is central to Earth's climate system.",
         "Deep-sea ecosystems can thrive without sunlight, including near hydrothermal vents.",
-        "Ocean science combines biology, chemistry, geology, physics and climate research."
+        "Ocean science ranges from surface weather and currents to deep-sea ecosystems that thrive without sunlight near hydrothermal vents."
       ],
       "related": [
         "earth",
@@ -642,10 +657,15 @@
           "title": "How many oceans are there?",
           "publisher": "NOAA Ocean Service",
           "url": "https://oceanservice.noaa.gov/facts/howmanyoceans.html"
+        },
+        {
+          "title": "Factsheet: Hydrothermal Vents",
+          "publisher": "NOAA Ocean Exploration",
+          "url": "https://oceanexplorer.noaa.gov/fact-sheet/hydrothermal-vents-fact-sheet/"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "universe",
@@ -671,10 +691,15 @@
           "title": "Overview: The Universe’s History",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/universe/overview/"
+        },
+        {
+          "title": "What Is the Universe?",
+          "publisher": "NASA Science",
+          "url": "https://science.nasa.gov/exoplanets/what-is-the-universe/"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "stars",
@@ -682,11 +707,11 @@
       "category": "Cosmos",
       "eyebrow": "Engines of light",
       "summary": "Vast spheres of hot plasma whose life cycles help shape the chemistry and structure of the universe.",
-      "description": "Stars form from collapsing clouds of gas and dust. Their mass strongly influences how they shine, how long they live, and what remains after their fuel is exhausted. Starlight reveals temperature, composition, motion and age.",
+      "description": "Stars form from collapsing clouds of gas and dust. Their mass strongly influences how they shine, how long they live, and what remains after their fuel is exhausted.",
       "facts": [
         "A star's mass is one of the main factors determining its life cycle.",
         "Fusion in stellar interiors builds many elements found throughout the universe.",
-        "Stars form in groups and associations as well as in relative isolation."
+        "Most stars form as members of star clusters created by the collapse of dense clumps of gas and dust."
       ],
       "related": [
         "orion-nebula",
@@ -700,10 +725,15 @@
           "title": "Stars",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/universe/stars/"
+        },
+        {
+          "title": "Stellar Evolution",
+          "publisher": "Chandra X-ray Center (Smithsonian)",
+          "url": "https://chandra.si.edu/stellarev/phases.html"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "galaxies",
@@ -715,7 +745,7 @@
       "facts": [
         "Galaxies contain stars, interstellar gas and dust, and dark matter.",
         "Galaxy shapes and activity change over billions of years.",
-        "The Milky Way and Andromeda are expected to merge in the distant future."
+        "The Milky Way and Andromeda may collide and merge in the distant future, but recent Hubble and Gaia simulations put the chance of a collision within the next 10 billion years at roughly 50-50."
       ],
       "related": [
         "milky-way",
@@ -730,10 +760,15 @@
           "title": "Galaxies",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/universe/galaxies/"
+        },
+        {
+          "title": "Apocalypse When? Hubble Casts Doubt on Certainty of Galactic Collision",
+          "publisher": "NASA Science",
+          "url": "https://science.nasa.gov/missions/hubble/apocalypse-when-hubble-casts-doubt-on-certainty-of-galactic-collision/"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "exoplanets",
@@ -760,10 +795,15 @@
           "title": "Exoplanets",
           "publisher": "NASA Science",
           "url": "https://science.nasa.gov/exoplanets/"
+        },
+        {
+          "title": "How We Find and Characterize",
+          "publisher": "NASA Science",
+          "url": "https://science.nasa.gov/exoplanets/how-we-find-and-characterize/"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "climate-change",
@@ -907,7 +947,7 @@
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "human-origins",
@@ -918,7 +958,7 @@
       "description": "Human origins research brings together fossils, archaeology, genetics and comparisons with other primates. Human evolution was not a straight line: multiple hominin species existed, spread, adapted and sometimes interbred. New discoveries and methods continue to refine this picture.",
       "facts": [
         "Modern humans, Homo sapiens, evolved in Africa.",
-        "Many traits associated with humans evolved at different times rather than appearing all at once.",
+        "More than 20 hominin species are now known, and new fossil discoveries keep rearranging the human family tree.",
         "Genetic evidence shows that some people today carry ancestry from other ancient human groups."
       ],
       "related": [
@@ -934,10 +974,15 @@
           "title": "Human Evolution Evidence",
           "publisher": "Smithsonian National Museum of Natural History",
           "url": "https://humanorigins.si.edu/evidence"
+        },
+        {
+          "title": "Human Evolution",
+          "publisher": "Natural History Museum, London",
+          "url": "https://www.nhm.ac.uk/discover/human-evolution.html"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "ancient-civilizations",
@@ -961,13 +1006,18 @@
       "symbol": "⌁",
       "sources": [
         {
-          "title": "World History",
-          "publisher": "The Metropolitan Museum of Art",
-          "url": "https://www.metmuseum.org/essays"
+          "title": "Early Civilizations",
+          "publisher": "OpenStax World History Volume 1 (Rice University)",
+          "url": "https://openstax.org/books/world-history-volume-1/pages/3-1-early-civilizations"
+        },
+        {
+          "title": "Ancient Mesopotamia",
+          "publisher": "OpenStax World History Volume 1 (Rice University)",
+          "url": "https://openstax.org/books/world-history-volume-1/pages/3-2-ancient-mesopotamia"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "mathematics",
@@ -997,7 +1047,7 @@
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     },
     {
       "slug": "artificial-intelligence",
@@ -1024,10 +1074,15 @@
           "title": "Artificial Intelligence",
           "publisher": "Stanford Institute for Human-Centered Artificial Intelligence",
           "url": "https://hai.stanford.edu/"
+        },
+        {
+          "title": "Artificial Intelligence",
+          "publisher": "Stanford Encyclopedia of Philosophy",
+          "url": "https://plato.stanford.edu/entries/artificial-intelligence/"
         }
       ],
       "editorialStatus": "published",
-      "lastReviewedAt": null
+      "lastReviewedAt": "2026-11-11"
     }
   ]
 }
