@@ -16,6 +16,8 @@ const positions:Record<string,Point>={
   "artificial-intelligence":{x:890,y:350},
   baobab:{x:170,y:395},"coast-redwood":{x:80,y:480},"mango-tree":{x:250,y:540},bonsai:{x:100,y:590},
   "cherry-blossom":{x:320,y:600},"gods-eye-view":{x:935,y:445},
+  "radio-garden":{x:60,y:90},"zoom-earth":{x:950,y:90},windy:{x:45,y:365},
+  "stuff-in-space":{x:960,y:180},"earth-nullschool":{x:950,y:570},websdr:{x:60,y:180},
 };
 const categoryColors:Record<OrionCategory,string>={
   "Cosmos":"#a99bff","Solar System":"#83b8ff","Earth":"#78dfd0","Life":"#e9c27c",
@@ -81,6 +83,19 @@ const relationshipNotes:Record<string,string>={
   "cherry-blossom|climate-change":"Cherry blossom timing responds to spring temperatures, so bloom dates are watched as a living signal of a changing climate.",
   "artificial-intelligence|gods-eye-view":"God's Eye View is steered by a realtime AI voice agent, and uses AI to answer questions about the live scene it is showing.",
   "earth|gods-eye-view":"God's Eye View renders Earth as a live 3D globe, layering public signals — flights, ships, satellites, quakes and fires — onto the planet.",
+  "gods-eye-view|radio-garden":"Both turn the living planet into something you can explore — God's Eye View with live signals on a globe, Radio Garden with live voices from every dot on the map.",
+  "language|radio-garden":"Radio Garden lets you hear languages as they are spoken live, one local station at a time, anywhere on Earth.",
+  "radio-garden|websdr":"Both let you listen to the world live — Radio Garden through broadcast stations, WebSDR through raw radio spectrum.",
+  "language|websdr":"WebSDR carries voices across the airwaves — amateur radio, broadcasts and beacons in languages from everywhere.",
+  "climate-change|zoom-earth":"Zoom Earth shows wildfires and storms from satellites as they unfold — the visible face of a changing climate.",
+  "earth|zoom-earth":"Zoom Earth is a near-real-time satellite portrait of Earth itself, refreshed every ten minutes.",
+  "earth|windy":"Windy animates Earth's live weather — wind, waves and temperature — from forecast models.",
+  "oceans|windy":"Windy shows ocean waves and swells alongside the winds that drive them.",
+  "earth-nullschool|windy":"Windy and Earth Nullschool both animate the planet's wind from forecast models — two ways of watching the same sky.",
+  "earth|earth-nullschool":"Earth Nullschool animates Earth's wind, ocean and temperature as one flowing system.",
+  "earth-nullschool|oceans":"Earth Nullschool draws ocean currents and sea temperatures as moving streams.",
+  "earth|stuff-in-space":"Stuff in Space maps the thousands of satellites and debris fragments orbiting Earth right now.",
+  "gods-eye-view|stuff-in-space":"Both track what is above us live — God's Eye View on its globe, Stuff in Space as a 3D map of everything in orbit.",
 };
 function explain(a:string,b:string){
   return relationshipNotes[pairKey(a,b)]??`These subjects are linked in Orion’s topic map. Explore both guides to investigate their shared concepts and evidence.`;

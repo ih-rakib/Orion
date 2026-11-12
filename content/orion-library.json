@@ -538,7 +538,11 @@
         "moon",
         "baobab",
         "mango-tree",
-        "gods-eye-view"
+        "gods-eye-view",
+        "zoom-earth",
+        "windy",
+        "stuff-in-space",
+        "earth-nullschool"
       ],
       "accent": "teal",
       "symbol": "◎",
@@ -758,7 +762,9 @@
         "earth",
         "evolution",
         "dinosaurs",
-        "moon"
+        "moon",
+        "windy",
+        "earth-nullschool"
       ],
       "accent": "blue",
       "symbol": "≈",
@@ -1124,7 +1130,8 @@
         "human-origins",
         "artificial-intelligence",
         "coast-redwood",
-        "cherry-blossom"
+        "cherry-blossom",
+        "zoom-earth"
       ],
       "accent": "teal",
       "symbol": "≈",
@@ -1297,7 +1304,9 @@
       "related": [
         "human-origins",
         "ancient-civilizations",
-        "artificial-intelligence"
+        "artificial-intelligence",
+        "radio-garden",
+        "websdr"
       ],
       "accent": "amber",
       "symbol": "“",
@@ -1714,7 +1723,9 @@
       ],
       "related": [
         "artificial-intelligence",
-        "earth"
+        "earth",
+        "radio-garden",
+        "stuff-in-space"
       ],
       "accent": "blue",
       "symbol": "◈",
@@ -1723,6 +1734,202 @@
           "title": "God's Eye View",
           "publisher": "GitHub — bilawalsidhu",
           "url": "https://github.com/bilawalsidhu/gods-eye-view"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "radio-garden",
+      "title": "Radio Garden",
+      "category": "Interesting",
+      "eyebrow": "Every station on Earth, one spin away",
+      "summary": "Spin a 3D globe, tap a green dot, and listen to a live local radio station broadcasting from that exact place.",
+      "description": "Radio Garden is a non-profit Dutch project that turns the whole planet into a radio dial. Its globe is dotted with live stations grouped by city — tap one and you hear whatever is playing there right now, from music to news to voices in languages from everywhere. It began as a research project on how radio crosses borders, launched in December 2016, and reported over 40,000 stations in 2024.",
+      "facts": [
+        "Radio Garden shows a rotatable globe with stations listed on clicking a location; its “Live” homepage lets you hear what local stations are broadcasting at that moment, with the country the signal comes from.",
+        "It is a non-profit Dutch radio and digital research project developed from 2013 to 2016 by the Netherlands Institute for Sound and Vision, the Transnational Radio Knowledge Platform and five other European universities.",
+        "In 2016 it offered nearly 8,000 stations; by 2024 the service reported a collection of over 40,000 stations."
+      ],
+      "related": [
+        "language",
+        "gods-eye-view",
+        "websdr"
+      ],
+      "accent": "rose",
+      "symbol": "♫",
+      "sources": [
+        {
+          "title": "Radio Garden",
+          "publisher": "radio.garden",
+          "url": "https://radio.garden/"
+        },
+        {
+          "title": "Radio Garden",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Radio_Garden"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "zoom-earth",
+      "title": "Zoom Earth",
+      "category": "Interesting",
+      "eyebrow": "The planet from orbit, ten minutes ago",
+      "summary": "Near-real-time satellite imagery of the whole Earth — storms, fires, and weather as the satellites see them, refreshed every ten minutes.",
+      "description": "Zoom Earth is an interactive weather map of the world and a real-time hurricane tracker. It stitches live satellite imagery from geostationary weather satellites into one map you can zoom and animate, with layers for radar, wind, rain and temperature, plus hurricane tracks and wildfire hotspots.",
+      "facts": [
+        "Live satellite images from the NOAA GOES, JMA Himawari and EUMETSAT Meteosat geostationary satellites are updated every 10 minutes, and HD images arrive twice a day from NASA’s polar-orbiting Aqua and Terra satellites.",
+        "Its forecast maps use the latest model data from DWD ICON and NOAA/NCEP/NWS GFS, covering rain, wind, temperature, pressure and more.",
+        "Hurricane tracking uses data from NHC, JTWC, NRL and IBTrACS, and wildfire detections are updated daily with data from NASA FIRMS."
+      ],
+      "related": [
+        "earth",
+        "climate-change"
+      ],
+      "accent": "blue",
+      "symbol": "◍",
+      "sources": [
+        {
+          "title": "Zoom Earth",
+          "publisher": "zoom.earth",
+          "url": "https://zoom.earth/"
+        },
+        {
+          "title": "Zoom Earth – Weather Forecast",
+          "publisher": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.neave.zoomearth"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "windy",
+      "title": "Windy",
+      "category": "Interesting",
+      "eyebrow": "Watch the weather move",
+      "summary": "Animated wind, radar, satellite and waves on a globe you can spin — with the world’s big forecast models side by side.",
+      "description": "Windy is a weather visualization platform from Prague that turns forecast data into moving pictures: wind particles streaming around storms, rain bands, waves and temperature, all on an interactive global map. It began in 2014 as a wind-visualization hobby project and grew into a full weather platform used by pilots, sailors and weather enthusiasts.",
+      "facts": [
+        "Windy was founded in November 2014 by Ivo Lukačovič, the founder of Seznam.cz, as Windyty, initially focused on visualizing global wind patterns.",
+        "The service uses data from multiple numerical weather prediction models, including ECMWF, GFS and ICON, and lets users compare forecasts from different models for the same place.",
+        "In 2024 Windy acquired a majority stake in the Swiss weather company Meteoblue, and in 2025 its mobile app passed 50 million downloads on Google Play."
+      ],
+      "related": [
+        "earth",
+        "oceans",
+        "earth-nullschool"
+      ],
+      "accent": "teal",
+      "symbol": "≋",
+      "sources": [
+        {
+          "title": "Windy",
+          "publisher": "windy.com",
+          "url": "https://www.windy.com/"
+        },
+        {
+          "title": "Windy (weather service)",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Windy_(weather_service)"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "stuff-in-space",
+      "title": "Stuff in Space",
+      "category": "Interesting",
+      "eyebrow": "Everything in orbit, mapped live",
+      "summary": "A real-time 3D map of every tracked object in Earth orbit — satellites, spent rockets and debris — running in your browser.",
+      "description": "Stuff in Space is a realtime 3D map of objects in Earth orbit, visualized with WebGL. You can spin the planet, click any object to see its orbit and speed, and filter by groups from GPS and Galileo to SpaceX. The original stuffin.space domain has lapsed and now serves unrelated ads; the same open-source app runs at this mirror address.",
+      "facts": [
+        "Stuff in Space is a realtime 3D map of objects in Earth orbit, visualized using WebGL — satellites, spent rocket bodies and debris.",
+        "The map updates daily with orbit data from Space-Track.org and calculates satellite positions in the browser with the satellite.js library.",
+        "Objects can be filtered by group, including GPS, Iridium, GLONASS, Galileo, SpaceX and collision debris."
+      ],
+      "related": [
+        "earth",
+        "gods-eye-view"
+      ],
+      "accent": "violet",
+      "symbol": "⌖",
+      "sources": [
+        {
+          "title": "Stuff in Space",
+          "publisher": "stuffin-space.vader.zone",
+          "url": "https://stuffin-space.vader.zone/"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "earth-nullschool",
+      "title": "Earth Nullschool",
+      "category": "Interesting",
+      "eyebrow": "The atmosphere, drawn by a supercomputer",
+      "summary": "Wind, ocean currents, temperature and pollution flowing across an animated globe, drawn from supercomputer forecasts and refreshed every three hours.",
+      "description": "Earth Nullschool — “earth” — is a visualization of global weather conditions as an interactive animated map. Wind streams across the globe as thousands of moving particles, with layers for ocean currents, waves, temperature and more, all drawn from forecast models. It began in 2013 as a personal project to learn JavaScript, and its code is open source under the MIT license.",
+      "facts": [
+        "Earth shows current wind, weather, ocean and pollution conditions, as forecast by supercomputers, on an interactive animated map updated every three hours.",
+        "Its weather data is produced by the Global Forecast System (GFS), operated by the US National Weather Service, with forecasts produced four times daily.",
+        "“Earth” is a personal project its author built to learn JavaScript and browser programming, based on an earlier Tokyo Wind Map project, and its code is released under the MIT license."
+      ],
+      "related": [
+        "earth",
+        "oceans",
+        "windy"
+      ],
+      "accent": "amber",
+      "symbol": "◐",
+      "sources": [
+        {
+          "title": "earth",
+          "publisher": "earth.nullschool.net",
+          "url": "https://earth.nullschool.net/"
+        },
+        {
+          "title": "cambecc/earth",
+          "publisher": "GitHub",
+          "url": "https://github.com/cambecc/earth"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "websdr",
+      "title": "WebSDR",
+      "category": "Interesting",
+      "eyebrow": "Tune the world’s airwaves from your browser",
+      "summary": "Listen to real radio receivers around the world — shortwave voices, morse code, static and signals — tuned live in your browser.",
+      "description": "WebSDR is a worldwide system of internet-connected radio receivers you can tune from a web browser. Pick a receiver, drag across its waterfall display of the radio spectrum, and listen to whatever is on the air right now: amateur radio voices, morse code, broadcasts and beacons. It was developed by Pieter-Tjerk de Boer at the University of Twente in the Netherlands.",
+      "facts": [
+        "WebSDR is a worldwide system of internet-connected SDR receivers which allow you to listen to various radio bands and view a waterfall display in your browser.",
+        "It was developed by Dr. ir. Pieter-Tjerk de Boer (PA3FWM), a Dutch associate professor at the University of Twente.",
+        "Many users can access the receivers independently and tune to different signals, and the site lists available receivers filterable by band and region, with a worldwide map."
+      ],
+      "related": [
+        "radio-garden",
+        "language"
+      ],
+      "accent": "violet",
+      "symbol": "♪",
+      "sources": [
+        {
+          "title": "WebSDR",
+          "publisher": "websdr.org",
+          "url": "https://www.websdr.org/"
+        },
+        {
+          "title": "How to use WebSDR sites",
+          "publisher": "Online Amateur Radio Community Wiki",
+          "url": "https://wiki.oarc.uk/using_sdr"
         }
       ],
       "editorialStatus": "published",
