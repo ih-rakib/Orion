@@ -31,6 +31,10 @@
     {
       "name": "People & Culture",
       "description": "Human origins, societies, languages, art and the ways we make meaning."
+    },
+    {
+      "name": "Interesting",
+      "description": "Curious finds from around the web — tools, projects and ideas worth a look."
     }
   ],
   "subjects": [
@@ -533,7 +537,8 @@
         "evolution",
         "moon",
         "baobab",
-        "mango-tree"
+        "mango-tree",
+        "gods-eye-view"
       ],
       "accent": "teal",
       "symbol": "◎",
@@ -1520,7 +1525,8 @@
         "climate-change",
         "earth",
         "human-origins",
-        "language"
+        "language",
+        "gods-eye-view"
       ],
       "accent": "teal",
       "symbol": "⌘",
@@ -1689,6 +1695,34 @@
           "title": "History of the Cherry Trees",
           "publisher": "U.S. National Park Service",
           "url": "https://www.nps.gov/subjects/cherryblossom/history-of-the-cherry-trees.htm"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "gods-eye-view",
+      "title": "God's Eye View",
+      "category": "Interesting",
+      "eyebrow": "A live globe built from public signals",
+      "summary": "An open-source 3D globe that tracks live aircraft, ships, satellites, earthquakes and public cameras — all from data anyone can already see.",
+      "description": "God's Eye View is a free, open-source project by Bilawal Sidhu that gathers public signals — flight transponders, ship beacons, satellite orbits, seismographs and public cameras — into one explorable 3D globe that runs in the browser. It looks like a spy-satellite cockpit, but every feed is public data and the code is open for anyone to inspect. It needs no account or API keys to start, and it reached number one on GitHub Trending in August 2026.",
+      "facts": [
+        "God's Eye View shows live aircraft, ships, satellites, earthquakes, traffic and public cameras on a photorealistic 3D globe, with optional hands-free voice control from a realtime AI agent.",
+        "Every feed comes from public signals — flight transponders, ship beacons, orbital elements, seismographs and public cameras — and the app runs locally in the browser with source code anyone can inspect.",
+        "The project draws a line: it models events, assets, infrastructure and systems, and does not build features for named-person search, face recognition or tracking individuals."
+      ],
+      "related": [
+        "artificial-intelligence",
+        "earth"
+      ],
+      "accent": "blue",
+      "symbol": "◈",
+      "sources": [
+        {
+          "title": "God's Eye View",
+          "publisher": "GitHub — bilawalsidhu",
+          "url": "https://github.com/bilawalsidhu/gods-eye-view"
         }
       ],
       "editorialStatus": "published",

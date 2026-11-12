@@ -1,6 +1,6 @@
 import library from "../content/orion-library.json";
 
-export type OrionCategory = "Cosmos" | "Solar System" | "Earth" | "Life" | "Time & History" | "Science" | "Technology & Engineering" | "People & Culture";
+export type OrionCategory = "Cosmos" | "Solar System" | "Earth" | "Life" | "Time & History" | "Science" | "Technology & Engineering" | "People & Culture" | "Interesting";
 export type Subject = {
   slug: string;
   title: string;

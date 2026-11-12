@@ -15,11 +15,12 @@ const positions:Record<string,Point>={
   "human-origins":{x:440,y:580},"ancient-civilizations":{x:610,y:590},mathematics:{x:790,y:80},
   "artificial-intelligence":{x:890,y:350},
   baobab:{x:170,y:395},"coast-redwood":{x:80,y:480},"mango-tree":{x:250,y:540},bonsai:{x:100,y:590},
-  "cherry-blossom":{x:320,y:600},
+  "cherry-blossom":{x:320,y:600},"gods-eye-view":{x:935,y:445},
 };
 const categoryColors:Record<OrionCategory,string>={
   "Cosmos":"#a99bff","Solar System":"#83b8ff","Earth":"#78dfd0","Life":"#e9c27c",
   "Time & History":"#ff9ba9","Science":"#c1b7ff","Technology & Engineering":"#7dd3fc","People & Culture":"#f0abfc",
+  "Interesting":"#86efac",
 };
 const slugTitle=(slug:string)=>subjects.find(s=>s.slug===slug)?.title??slug;
 const pairKey=(a:string,b:string)=>[a,b].sort().join("|");
@@ -78,6 +79,8 @@ const relationshipNotes:Record<string,string>={
   "ancient-civilizations|bonsai":"Bonsai began in China more than a thousand years ago, in a civilization whose garden arts later shaped Japan's.",
   "bonsai|language":"Bonsai means “tray-planted” in Japanese — a word that travelled with the art itself from China to Japan and around the world.",
   "cherry-blossom|climate-change":"Cherry blossom timing responds to spring temperatures, so bloom dates are watched as a living signal of a changing climate.",
+  "artificial-intelligence|gods-eye-view":"God's Eye View is steered by a realtime AI voice agent, and uses AI to answer questions about the live scene it is showing.",
+  "earth|gods-eye-view":"God's Eye View renders Earth as a live 3D globe, layering public signals — flights, ships, satellites, quakes and fires — onto the planet.",
 };
 function explain(a:string,b:string){
   return relationshipNotes[pairKey(a,b)]??`These subjects are linked in Orion’s topic map. Explore both guides to investigate their shared concepts and evidence.`;
