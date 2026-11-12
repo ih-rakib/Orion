@@ -33,6 +33,7 @@ export function MobileMenu(){
       <Link href="/timeline" onClick={close}>Timeline</Link>
       <Link href="/knowledge-graph" onClick={close}>Knowledge Graph</Link>
       <Link href="/learning-paths" onClick={close}>Learning Paths</Link>
+      <Link href="/hubs" onClick={close}>Hubs</Link>
       <Link href="/solar-system" onClick={close}>Solar System</Link>
       <Link href="/#about" onClick={close}>Our vision</Link>
       <Link href="/#creator" onClick={close}>Creator</Link>

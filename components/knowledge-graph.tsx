@@ -14,6 +14,8 @@ const positions:Record<string,Point>={
   "climate-change":{x:620,y:470},whales:{x:850,y:500},evolution:{x:430,y:455},dinosaurs:{x:300,y:500},
   "human-origins":{x:440,y:580},"ancient-civilizations":{x:610,y:590},mathematics:{x:790,y:80},
   "artificial-intelligence":{x:890,y:350},
+  baobab:{x:170,y:395},"coast-redwood":{x:80,y:480},"mango-tree":{x:250,y:540},bonsai:{x:100,y:590},
+  "cherry-blossom":{x:320,y:600},
 };
 const categoryColors:Record<OrionCategory,string>={
   "Cosmos":"#a99bff","Solar System":"#83b8ff","Earth":"#78dfd0","Life":"#e9c27c",
@@ -65,6 +67,17 @@ const relationshipNotes:Record<string,string>={
   "earth|moon-landing":"The Moon landing launched from Earth and returned to it — the first time humans left their home planet and came back.",
   "human-origins|moon-landing":"The Moon landing was a human achievement built on millions of years of evolution — and on language, which let knowledge accumulate across generations.",
   "moon|moon-landing":"Apollo 11 landed in the Sea of Tranquility on the Moon; five more landings followed, all on the Earth-facing side.",
+  "baobab|coast-redwood":"Baobabs and coast redwoods are both record-holding trees — one for its massive water-storing trunk, the other for its height.",
+  "baobab|earth":"Baobabs grow in some of Earth's driest regions, storing water in their trunks to survive long dry seasons.",
+  "baobab|mango-tree":"Both trees are long-lived tropical species whose fruits and leaves have fed and served people for centuries.",
+  "climate-change|coast-redwood":"Coast redwoods depend on fog and a stable maritime climate, so their future is tied to how the climate changes.",
+  "coast-redwood|earth":"Coast redwoods are the tallest trees on Earth, growing only in a narrow coastal band along the Pacific.",
+  "cherry-blossom|mango-tree":"Cherry blossoms and mango trees both mark the seasons in their homelands — one with a brief spring bloom, the other with fruit that ripens as heat and humidity rise.",
+  "earth|mango-tree":"The mango tree is one of the most familiar domesticated trees of the tropical world, cultivated across the frost-free tropics.",
+  "bonsai|cherry-blossom":"Bonsai and cherry blossoms are both Japanese arts of appreciating trees — one shaped over decades in a pot, the other celebrated in a few spring days.",
+  "ancient-civilizations|bonsai":"Bonsai began in China more than a thousand years ago, in a civilization whose garden arts later shaped Japan's.",
+  "bonsai|language":"Bonsai means “tray-planted” in Japanese — a word that travelled with the art itself from China to Japan and around the world.",
+  "cherry-blossom|climate-change":"Cherry blossom timing responds to spring temperatures, so bloom dates are watched as a living signal of a changing climate.",
 };
 function explain(a:string,b:string){
   return relationshipNotes[pairKey(a,b)]??`These subjects are linked in Orion’s topic map. Explore both guides to investigate their shared concepts and evidence.`;

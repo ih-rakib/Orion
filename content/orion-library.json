@@ -531,7 +531,9 @@
         "mars",
         "oceans",
         "evolution",
-        "moon"
+        "moon",
+        "baobab",
+        "mango-tree"
       ],
       "accent": "teal",
       "symbol": "◎",
@@ -1115,7 +1117,9 @@
         "earth",
         "oceans",
         "human-origins",
-        "artificial-intelligence"
+        "artificial-intelligence",
+        "coast-redwood",
+        "cherry-blossom"
       ],
       "accent": "teal",
       "symbol": "≈",
@@ -1339,7 +1343,8 @@
         "earth",
         "mathematics",
         "evolution",
-        "language"
+        "language",
+        "bonsai"
       ],
       "accent": "amber",
       "symbol": "⌁",
@@ -1533,6 +1538,161 @@
       ],
       "editorialStatus": "published",
       "lastReviewedAt": "2026-11-11"
+    },
+    {
+      "slug": "baobab",
+      "title": "Baobab",
+      "category": "Life",
+      "eyebrow": "The upside-down tree of life",
+      "summary": "Nine species of long-lived trees with barrel-like trunks that store water, native to Madagascar, Africa and Australia.",
+      "description": "Baobabs are deciduous trees of the genus Adansonia, known for their barrel-like trunks and extraordinary longevity. An Arabian legend says the devil plucked up the baobab, thrust its branches into the earth, and left its roots in the air — the tree's shape really does look upside down. The African baobab is called the Tree of Life: local peoples use its edible leaves and fruit, its bark fibre for rope and cloth, and its hollow trunks as water reserves and shelter.",
+      "facts": [
+        "There are nine baobab species: seven are endemic to Madagascar, one is native to mainland Africa and the Arabian Peninsula, and one to northwestern Australia.",
+        "The African baobab boasts the oldest known angiosperm tree: carbon-14 dating places the age of a specimen in Namibia at about 1,275 years.",
+        "The African baobab's water-storing trunk may reach a diameter of 9 meters (30 feet) and a height of 18 meters (59 feet)."
+      ],
+      "related": [
+        "coast-redwood",
+        "mango-tree",
+        "earth"
+      ],
+      "accent": "amber",
+      "symbol": "❧",
+      "sources": [
+        {
+          "title": "Baobab",
+          "publisher": "Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/plant/baobab-tree-genus"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "coast-redwood",
+      "title": "Coast Redwood",
+      "category": "Life",
+      "eyebrow": "The tallest trees on Earth",
+      "summary": "Sequoia sempervirens, the world's tallest trees, living for two millennia in a narrow fog-fed coastal band.",
+      "description": "The coast redwood (Sequoia sempervirens) is an evergreen conifer of the cypress family, closely related to the giant sequoia. Its Latin name means “always green, flourishing”. Redwoods survive millennia with 12-inch-thick fire-resistant bark, tannins that repel insects and disease, and shallow roots that intertwine with neighbours for stability — yet they have no taproot at all.",
+      "facts": [
+        "A coast redwood's straight, reddish-brown trunk reaches over 350 feet, making it the tallest tree in the world; a mature tree can exceed 20 feet in diameter at ground level.",
+        "Redwood forests grow natively in a narrow band along the Pacific Coast, from central California to southern Oregon, depending on a maritime climate of stable temperature, moisture and fog.",
+        "Old-growth redwood forest historically covered 2 million acres in California; just 4% of the original old-growth forest remains today, much of it in Redwood National and State Parks."
+      ],
+      "related": [
+        "baobab",
+        "earth",
+        "climate-change"
+      ],
+      "accent": "teal",
+      "symbol": "❋",
+      "sources": [
+        {
+          "title": "Coast Redwood",
+          "publisher": "U.S. National Park Service",
+          "url": "https://www.nps.gov/articles/000/coast-redwood.htm"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "mango-tree",
+      "title": "Mango Tree",
+      "category": "Life",
+      "eyebrow": "The king of fruits, from South Asia",
+      "summary": "Mangifera indica, a long-lived tropical tree cultivated for thousands of years, and the national tree of Bangladesh.",
+      "description": "The mango tree (Mangifera indica) produces one of the most celebrated tropical fruits — and, surprisingly, belongs to the cashew family, notorious for embracing a number of highly poisonous plants. Native to southern Asia, it has been cultivated, praised and even revered in its homeland since ancient times, and Buddhist monks are believed to have carried it on voyages to Malaya and eastern Asia in the 4th and 5th centuries BCE.",
+      "facts": [
+        "A mango tree grows 30 to 100 feet high with a broad canopy up to 125 feet wide; the tree is long-lived, some specimens being known to be 300 years old and still fruiting.",
+        "The cultivated mango originated in the Indo-Burma region, and it has been grown in India for the last 6,000 years.",
+        "The mango is the national fruit of India, Pakistan and the Philippines, and the mango tree is the national tree of Bangladesh."
+      ],
+      "related": [
+        "baobab",
+        "cherry-blossom",
+        "earth"
+      ],
+      "accent": "amber",
+      "symbol": "✿",
+      "sources": [
+        {
+          "title": "Mango",
+          "publisher": "Purdue University — Fruits of Warm Climates",
+          "url": "https://www.hort.purdue.edu/newcrop/morton/mango_ars.html"
+        },
+        {
+          "title": "Mango",
+          "publisher": "National Library Board, Singapore",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=19f989c8-6334-4912-ae59-0c464ad557c9"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "bonsai",
+      "title": "Bonsai",
+      "category": "People & Culture",
+      "eyebrow": "A whole tree, in a tray",
+      "summary": "The art of training ordinary trees into miniature living sculptures in containers, from China to Japan and the world.",
+      "description": "Bonsai is a Japanese word meaning “tray-planted”. It refers both to miniature trees in containers and to the art of training and growing them. Bonsai specimens are ordinary trees and shrubs, not hereditary dwarfs: they are dwarfed by pruning roots and branches, with shapes controlled by wiring the trunk and branches. The art originated in China more than 1,000 years ago and has been pursued and developed mainly by the Japanese.",
+      "facts": [
+        "Bonsai specimens are ordinary trees and shrubs, not hereditary dwarfs; they are dwarfed by pruning roots and branches, and their shapes controlled by wiring the trunk and branches.",
+        "Bonsai originated in China more than 1,000 years ago, but it has been pursued and developed mainly by the Japanese.",
+        "In 1976 the people of Japan gave 53 bonsai and 6 viewing stones to the United States for the Bicentennial — 50 trees in honour of the 50 states, plus 3 from the Imperial family — founding the National Bonsai & Penjing Museum."
+      ],
+      "related": [
+        "cherry-blossom",
+        "ancient-civilizations",
+        "language"
+      ],
+      "accent": "violet",
+      "symbol": "❦",
+      "sources": [
+        {
+          "title": "Bonsai",
+          "publisher": "Britannica Kids",
+          "url": "https://kids.britannica.com/students/article/bonsai/273287"
+        },
+        {
+          "title": "U.S. National Arboretum Celebrates 50 Years of Bonsai",
+          "publisher": "USDA Agricultural Research Service",
+          "url": "https://www.ars.usda.gov/news-events/news/research-news/2026/us-national-arboretum-celebrates-50-years-of-bonsai/"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
+      "slug": "cherry-blossom",
+      "title": "Cherry Blossom",
+      "category": "Life",
+      "eyebrow": "Sakura, the flower of spring",
+      "summary": "The flowering cherry, or sakura — a centuries-old symbol in Japanese culture, and a gift of friendship carried around the world.",
+      "description": "In Japan, the flowering cherry tree, or sakura, is an important flowering plant, and the beauty of the cherry blossom is a symbol with rich meaning in Japanese culture. The tradition of celebrating the spring blooming of cherry trees in Japan is centuries old. In 1912, the people of Japan gave 3,020 cherry trees to the people of the United States as a gift of friendship, beginning a cycle of giving that continues today.",
+      "facts": [
+        "The tradition of celebrating the blooming of cherry trees in Japan is centuries old.",
+        "On 26 March 1912, 3,020 cherry trees from twelve varieties arrived in Washington, DC, as a gift of friendship from the people of Japan — after a first shipment of 2,000 trees in 1910 was found diseased and burned.",
+        "The giving went both ways: in 1952, the National Park Service shipped budwood from descendants of the 1912 trees back to Tokyo to help restore the famed cherry grove along the Arakawa River."
+      ],
+      "related": [
+        "bonsai",
+        "mango-tree",
+        "climate-change"
+      ],
+      "accent": "rose",
+      "symbol": "❀",
+      "sources": [
+        {
+          "title": "History of the Cherry Trees",
+          "publisher": "U.S. National Park Service",
+          "url": "https://www.nps.gov/subjects/cherryblossom/history-of-the-cherry-trees.htm"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
     }
   ]
 }
