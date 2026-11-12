@@ -10,6 +10,7 @@ const positions:Record<string,Point>={
   "orion-nebula":{x:130,y:285},stars:{x:280,y:300},supernovae:{x:440,y:310},exoplanets:{x:570,y:190},
   mars:{x:720,y:155},pluto:{x:850,y:220},earth:{x:680,y:315},oceans:{x:770,y:410},
   moon:{x:605,y:255},gravity:{x:480,y:250},
+  language:{x:730,y:565},"moon-landing":{x:560,y:360},
   "climate-change":{x:620,y:470},whales:{x:850,y:500},evolution:{x:430,y:455},dinosaurs:{x:300,y:500},
   "human-origins":{x:440,y:580},"ancient-civilizations":{x:610,y:590},mathematics:{x:790,y:80},
   "artificial-intelligence":{x:890,y:350},
@@ -58,6 +59,12 @@ const relationshipNotes:Record<string,string>={
   "earth|gravity":"Earth's gravity holds the atmosphere, the oceans and us to the planet, and its strength is set by Earth's mass and size.",
   "gravity|stars":"Gravity pulls gas clouds together to ignite stars, holds each star in balance against its own fusion pressure, and decides how a star ends.",
   "gravity|universe":"Gravity shapes the universe at the largest scales, gathering gas into galaxies and clusters, while cosmic expansion stretches space itself.",
+  "human-origins|language":"Language is one of the defining traits of our lineage — its origins are tied to the evolution of the human brain and social life.",
+  "ancient-civilizations|language":"The first civilizations invented writing, turning spoken language into records that could outlive their speakers.",
+  "artificial-intelligence|language":"Modern AI learned much of what it knows from human language — and large language models now generate it.",
+  "earth|moon-landing":"The Moon landing launched from Earth and returned to it — the first time humans left their home planet and came back.",
+  "human-origins|moon-landing":"The Moon landing was a human achievement built on millions of years of evolution — and on language, which let knowledge accumulate across generations.",
+  "moon|moon-landing":"Apollo 11 landed in the Sea of Tranquility on the Moon; five more landings followed, all on the Earth-facing side.",
 };
 function explain(a:string,b:string){
   return relationshipNotes[pairKey(a,b)]??`These subjects are linked in Orion’s topic map. Explore both guides to investigate their shared concepts and evidence.`;

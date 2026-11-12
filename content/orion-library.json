@@ -428,7 +428,8 @@
       "related": [
         "earth",
         "oceans",
-        "pluto"
+        "pluto",
+        "moon-landing"
       ],
       "accent": "blue",
       "symbol": "☾",
@@ -1189,7 +1190,8 @@
         "evolution",
         "dinosaurs",
         "ancient-civilizations",
-        "earth"
+        "earth",
+        "language"
       ],
       "accent": "rose",
       "symbol": "⌘",
@@ -1209,6 +1211,118 @@
       "lastReviewedAt": "2026-11-11"
     },
     {
+      "slug": "language",
+      "title": "Language",
+      "category": "People & Culture",
+      "eyebrow": "Humanity's defining skill",
+      "summary": "The shared system of sounds, signs and marks that lets humans share thoughts — more than 7,000 languages strong, learned effortlessly in childhood, and written down only in the last few thousand years.",
+      "description": "Language is a set of shared rules that lets people express ideas in a meaningful way — spoken aloud, signed with the hands, or written in marks. Every human community has one, and children acquire theirs in the first years of life simply by being surrounded by it. More than 7,000 languages are in use today, from the 23 that carry more than half of humanity to thousands spoken by small communities, roughly 40% of them endangered. Speech itself is ancient and leaves no direct record; writing is the recent invention, barely 5,000 years old, that let language outlive its speakers.",
+      "facts": [
+        "More than 7,000 languages are in use around the world today, and the count is always in flux as languages are documented, change, merge, or fall silent.",
+        "Speakers are spread very unevenly: just 23 languages account for more than half of the world's population.",
+        "Roughly 40% of the world's languages are endangered, often with fewer than 1,000 users remaining.",
+        "Sign languages are fully fledged natural languages, structurally distinct from spoken languages: more than 70 million deaf people use more than 300 of them.",
+        "The first three years of life are the most intensive period for acquiring speech and language, and there appear to be critical periods when the brain is best able to absorb it.",
+        "By six months of age, most babies already recognise the basic sounds of their native language, and one or two first words typically follow by the first birthday.",
+        "The earliest known writing system was Sumerian cuneiform, traced to the end of the 4th millennium BCE; its earliest records are pictographic tablets from Uruk listing commodities, numerals and personal names.",
+        "Writing grew out of bookkeeping: clay tokens used to count goods as early as about 8000 BCE evolved, via marked clay envelopes, into inscribed clay tablets — the first writing."
+      ],
+      "factSources": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          2
+        ],
+        [
+          4
+        ]
+      ],
+      "sections": [
+        {
+          "heading": "How children learn a language",
+          "body": "Children do not learn their first language from lessons. The first three years of life are the most intensive period for acquiring speech and language, and the skills develop best in a world rich with sounds and consistent exposure to the speech of others. The timetable is remarkably regular: by six months most babies recognise the basic sounds of their native language; one or two words arrive around the first birthday; two-word phrases follow, then sentences, and by four or five most children use adult grammar. There appear to be critical periods when the brain is best able to absorb language — if they pass without exposure, learning becomes much harder. And language is not only speech: it is a set of shared rules that may be expressed verbally, by writing, by signing, or by other gestures.",
+          "sources": [
+            3
+          ]
+        },
+        {
+          "heading": "Writing: language that outlives its speakers",
+          "body": "Spoken language is ancient; writing is young. The earliest known writing system was Sumerian cuneiform, emerging around the end of the 4th millennium BCE in southern Mesopotamia. Its roots were practical: small clay tokens used to count grain, sheep and cattle — some dating to about 8000 BCE — were sealed in clay envelopes, the envelopes were marked with the tokens' shapes, and eventually the marks alone, pressed into clay with a stylus, became the record. The earliest tablets from Uruk are ledgers: lists of commodities with drawings, numerals and personal names. Over time signs came to stand for sounds as well as things, and cuneiform spread across cultures and languages for three millennia. Other societies devised their own systems with independent indigenous origins — Egyptian hieroglyphs and Chinese characters among them — each turning fleeting speech into something that could cross centuries.",
+          "sources": [
+            2,
+            4
+          ]
+        },
+        {
+          "heading": "A common misconception: sign language is one universal code of gestures",
+          "body": "There is no single sign language. More than 300 distinct sign languages are in use, each a fully fledged natural language, structurally distinct from the spoken languages around it — British and American sign languages, for example, are mutually unintelligible despite sharing English as a neighbour. Sign languages have their own grammar, vocabulary and regional dialects, and they evolve naturally within their communities, exactly as spoken languages do. The one partial exception proves the rule: International Sign, used at conferences and Deaf sporting events, is a simplified contact system — a pidgin, not a full language. The UN Convention on the Rights of Persons with Disabilities recognises sign languages as equal in status to spoken languages.",
+          "sources": [
+            1
+          ]
+        },
+        {
+          "heading": "Still unanswered: where did language itself come from?",
+          "body": "Writing's birth is documented in clay; speech leaves no fossils. When language emerged — whether gradually over hundreds of thousands of years or in a more sudden leap — and what exactly changed in the human brain and vocal tract to make it possible, remains one of science's great open questions. Researchers attack it from many sides: the fossil record of our ancestors, the genetics of speech and hearing, the study of how children acquire language so effortlessly, and comparisons with how other animals communicate. A related question is more urgent than academic: with roughly 40% of today's languages endangered, much of humanity's linguistic diversity — and the knowledge carried only in those languages — could vanish within generations unless communities and linguists document and revive them.",
+          "sources": [
+            0,
+            3
+          ]
+        }
+      ],
+      "related": [
+        "human-origins",
+        "ancient-civilizations",
+        "artificial-intelligence"
+      ],
+      "accent": "amber",
+      "symbol": "“",
+      "sources": [
+        {
+          "title": "How many languages are there in the world?",
+          "publisher": "Ethnologue",
+          "url": "https://www.ethnologue.com/insights/how-many-languages/"
+        },
+        {
+          "title": "International Day of Sign Languages",
+          "publisher": "United Nations",
+          "url": "https://www.un.org/en/observances/sign-languages-day"
+        },
+        {
+          "title": "Cuneiform",
+          "publisher": "Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/topic/cuneiform"
+        },
+        {
+          "title": "Speech and Language Developmental Milestones",
+          "publisher": "National Institute on Deafness and Other Communication Disorders",
+          "url": "https://www.nidcd.nih.gov/sites/default/files/Documents/health/voice/NIDCD-Speech-Language-Dev-Milestones.pdf"
+        },
+        {
+          "title": "Writing: Sumerian writing",
+          "publisher": "Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/topic/writing/Sumerian-writing"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
+    },
+    {
       "slug": "ancient-civilizations",
       "title": "Ancient Civilizations",
       "category": "Time & History",
@@ -1224,7 +1338,8 @@
         "human-origins",
         "earth",
         "mathematics",
-        "evolution"
+        "evolution",
+        "language"
       ],
       "accent": "amber",
       "symbol": "⌁",
@@ -1242,6 +1357,116 @@
       ],
       "editorialStatus": "published",
       "lastReviewedAt": "2026-11-11"
+    },
+    {
+      "slug": "moon-landing",
+      "title": "The Moon Landing",
+      "category": "Time & History",
+      "eyebrow": "Humanity's first step on another world",
+      "summary": "On 20 July 1969, Apollo 11 put the first humans on the Moon — the end of an eight-year race, watched by an estimated 650 million people, and the first of six landings that brought back 382 kilograms of another world.",
+      "description": "The Moon landing was the moment humanity first stood on another world. Apollo 11 launched on 16 July 1969, and four days later Neil Armstrong and Buzz Aldrin landed the lunar module Eagle in the Sea of Tranquility while Michael Collins orbited above in Columbia. They spent 21 hours 36 minutes on the surface, gathered samples, deployed experiments — including a laser reflector still in use today — and splashed down safely on 24 July. Five more landings followed by 1972, and no one has stood on the Moon since. The hardware they left behind has since been photographed from lunar orbit, and the rocks they brought back are still being studied.",
+      "facts": [
+        "Apollo 11's objective was a national goal set by President John F. Kennedy on 25 May 1961: a crewed lunar landing and safe return to Earth — achieved eight years later.",
+        "Apollo 11 launched from Cape Kennedy on 16 July 1969 carrying Neil Armstrong, Michael Collins and Edwin “Buzz” Aldrin, and flew a free-return trajectory that could bring it home without an engine firing until lunar orbit insertion.",
+        "Eagle landed in the Sea of Tranquility on 20 July 1969, partially piloted manually by Armstrong, who flew past a crater in the final seconds — touching down about four miles past the predicted point.",
+        "Armstrong stepped onto the surface about 109 hours 42 minutes into the flight, Aldrin followed about 20 minutes later, and an estimated 650 million people watched the televised step.",
+        "The two astronauts spent 21 hours 36 minutes on the surface, including a moonwalk of more than two and a half hours, ranging up to 300 feet from Eagle and gathering lunar samples.",
+        "Apollo 11 splashed down in the Pacific Ocean on 24 July 1969, 13 miles from the recovery ship USS Hornet, after a flight of 8 days, 3 hours and 18 minutes covering 953,054 miles.",
+        "Apollo 11 was the first of six successful landings: between 1969 and 1972, 12 astronauts walked on the Moon and returned 382 kilograms of lunar rock and soil.",
+        "The landing sites are still visible and measurable: in 2009 the Lunar Reconnaissance Orbiter photographed the descent stages and astronaut footpaths, and the laser reflector Apollo 11 left behind is still ranged by telescopes on Earth."
+      ],
+      "factSources": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "sections": [
+        {
+          "heading": "The race to the Moon",
+          "body": "Apollo 11 was the end of a race, not the start of one. In May 1961, weeks after Yuri Gagarin became the first human in space, President Kennedy set the United States a goal that sounded impossible: land a person on the Moon and return them safely before the decade was out. The Apollo program that answered him grew into one of the largest peacetime undertakings in history, employing some 400,000 people at its peak and costing roughly $257 billion in 2020 dollars. Apollo 11 flew a free-return trajectory — a path that would loop around the Moon and bring the crew home even if the main engine failed — and it was the last Apollo mission to do so. When Eagle separated from Columbia on 20 July, the goal was eight years old, and the whole world was watching.",
+          "sources": [
+            0,
+            1
+          ]
+        },
+        {
+          "heading": "Eight days in July",
+          "body": "Apollo 11 launched at 9:32 a.m. EDT on 16 July 1969. After a translunar burn, the crew coasted for three days, entered lunar orbit on 19 July, and on 20 July Armstrong and Aldrin climbed into Eagle and began their descent. The final minutes were the tensest of the mission: Armstrong took partial manual control, flew past a boulder-strewn crater, and landed with the descent running 40 seconds longer than planned. The first moonwalk had been scheduled after a four-hour rest; instead, Armstrong stepped out about four hours after landing, deployed the television camera, and spoke the line an estimated 650 million people heard live. The crew deployed experiments, gathered samples, slept seven hours on the surface, then lifted off to dock with Collins and fly home — splashing down in the Pacific on 24 July, 13 miles from the USS Hornet.",
+          "sources": [
+            0
+          ]
+        },
+        {
+          "heading": "A common misconception: it was faked in a studio",
+          "body": "No historical event of the 20th century has attracted more conspiracy theories — and few are so thoroughly checkable. The hardware is still there: in July 2009, NASA's Lunar Reconnaissance Orbiter photographed five of the six landing sites, showing the lunar module descent stages, the experiment packages, and the faint trails of astronaut footprints between them; the sixth site followed weeks later. The science is still running: the panel of 100 mirrors Apollo 11 left behind — with two more from Apollos 14 and 15 — is still ranged by lasers from telescopes on Earth, measuring the Earth–Moon distance precisely enough to reveal the Moon's liquid core and test general relativity. And the evidence is in laboratories: 382 kilograms of lunar rock and soil, returned by six crews, have been studied by scientists in many countries for over fifty years.",
+          "sources": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "heading": "Still unanswered: why we stopped, and what comes next",
+          "body": "The strangest fact about the Moon landings may be that they ended. Apollo 17 left the surface in December 1972, and no human has stood on the Moon since — the program was cancelled as its cost and political urgency faded, not because the science was finished. The unfinished work is still there: Apollo samples continue to yield discoveries as new instruments examine them, and the laser reflectors are now joined by proposals for a new generation of arrays that could probe dark matter and dark energy. The Moon itself has not changed — the footprints, the descent stages and the mirrors sit exactly where they were left, in a world with no wind to erase them. The open question is not whether we can go back, but when, and what we will do differently when we do.",
+          "sources": [
+            1,
+            3
+          ]
+        }
+      ],
+      "related": [
+        "moon",
+        "earth",
+        "human-origins"
+      ],
+      "accent": "rose",
+      "symbol": "⚑",
+      "sources": [
+        {
+          "title": "Apollo 11 Mission Overview",
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/missions/apollo/apollo-11/apollo-11-mission-overview/"
+        },
+        {
+          "title": "Project Apollo",
+          "publisher": "The Planetary Society",
+          "url": "https://www.planetary.org/space-missions/apollo"
+        },
+        {
+          "title": "LROC's first look at the Apollo landing sites",
+          "publisher": "Arizona State University",
+          "url": "https://phys.org/news/2009-07-lroc-apollo-sites.html"
+        },
+        {
+          "title": "Mirrors on the Moon",
+          "publisher": "University of Maryland, Terp Magazine",
+          "url": "https://terp.umd.edu/mirrors-on-the-moon"
+        }
+      ],
+      "editorialStatus": "published",
+      "lastReviewedAt": "2026-11-12"
     },
     {
       "slug": "mathematics",
@@ -1289,7 +1514,8 @@
         "mathematics",
         "climate-change",
         "earth",
-        "human-origins"
+        "human-origins",
+        "language"
       ],
       "accent": "teal",
       "symbol": "⌘",
